@@ -141,7 +141,7 @@ export default {
       if(this.taskData.level<this.tasksCompleted){
         return true;
       } else{
-        //this.checkProgress()
+        this.checkProgress()
         return false;
       }
     }

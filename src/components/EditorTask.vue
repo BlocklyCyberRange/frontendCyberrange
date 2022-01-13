@@ -93,12 +93,12 @@
       <br />
 
       <div
-          :class="{ 'directive-completed': taskCompleted || completedBefore}"
+          :class="{ 'directive-completed': showTlx || completedBefore}"
           v-if="showTask"
       >
         <div
             class="buttons is-left mt-2"
-            v-if="!taskCompleted && !completedBefore"
+            v-if="!showTlx && !completedBefore"
         >
           <button
               class="button is-small submit-button is-rounded"
@@ -168,7 +168,7 @@
       </text>
       <div
           class="buttons is-right mt-4"
-          v-if="!taskCompleted && !completedBefore"
+          v-if="!showTlx && !completedBefore"
       >
         <span
             v-if="!hintActivated && taskData.dataTooltip != null "
@@ -182,7 +182,7 @@
           RESET
         </button>
 
-        <button
+        <button 
             class="button is-small submit-button is-rounded"
             @click="onJsonSave(json)"
         >
@@ -363,7 +363,8 @@ export default {
       //NEW
 
       try {
-        if (this.triesLeft == 0) {
+        console.log("***TRIES*", this.triesLeft)
+        if (this.triesLeft <= 0) {
           console.log(true);
           this.showTlx = true;
           this.taskStarted = true;
