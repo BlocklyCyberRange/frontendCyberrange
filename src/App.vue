@@ -3157,17 +3157,25 @@
         <!--Endpage-->
         <div v-if="gameCompleted" class="is-vhcentered has-text-centered">
 
-            <h1 class="is-json title  mt-5">GameCompleted.</h1>
+            <img src="./assets/attackerDefeated.png" class="image is-hcentered pb-5" style="width: 300px">
+
+
+            <h1 class="is-json title mt-5">GameCompleted.</h1>
 
             <h2 class="is-json subtitle  mb-2">
                 <strong>Congratulations.</strong> With your help the attacker was defeated.
                 You earned <strong>{{this.points}} points.</strong>
 
+            </h2> <br>
+
+
+            <h2 class="subtitle mb-6">
+                To complete the cyber range training please take part in our
+<a class="title is-json is-primary-darker " href="https://quizizz.com/join?gc=58940713">
+final quiz</a>
+and let one of the trainers know when you finished. 
             </h2>
-            <h2 class="is-json mb-6">
-                Please let one of the coaches know you finished to take part in the final quiz.  &#128640;
-            </h2>
-            <img src="./assets/attackerDefeated.png" class="image is-hcentered" style="width: 500px">
+          
 
         </div>
 
