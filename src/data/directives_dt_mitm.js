@@ -2,6 +2,18 @@
 
 const Task3 =
 {
+    blockly_task: 3,
+    blockly_block_order: [
+        6,
+        7,
+        8,
+        3,
+        4,
+        5,
+        0,
+        1,
+        2
+    ],
     title: "3.3 Task:Man-In-The-Middle-Attack",
     tileNo: "task3",
     apiPath: "mitm",
@@ -81,7 +93,7 @@ const Task3 =
 
 
     },
-    
+
 
     blanks: [
         {

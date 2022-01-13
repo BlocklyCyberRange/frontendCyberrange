@@ -1,7 +1,3073 @@
 <template >
     <body>
+        <!--XML-->
+
+        <xml id="toolbox_default" style="display: none">
+          <block type="directive">
+            <field css-container="dirtext" name="DIRECTIVE">Directive</field>
+            <field name="DIRECTIVE_ID">...</field>
+            <field name="DIRECTIVE_NAME">...</field>
+            <field name="DIRECTIVE_PRIORITY">...</field>
+            <field name="DIRECTIVE_DISABLED">DIRECTIVE_DISABLED_FALSE</field>
+            <field name="DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE">DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE_FALSE</field>
+            <field name="DIRECTIVE_KINGDOM">...</field>
+            <field name="DIRECTIVE_CATEGORY">...</field>
+          </block>
+          <block type="rule">
+            <field name="RULE">Rule</field>
+            <field name="RULE_NAME">...</field>
+            <field name="RULE_STAGE">...</field>
+            <field name="RULE_OCCURRENCE">...</field>
+            <field name="RULE_PLUGIN_ID">...</field>
+            <field name="RULE_PLUGIN_SID">...</field>
+            <field name="RULE_FROM">...</field>
+            <field name="RULE_TO">...</field>
+            <field name="RULE_TYPE">...</field>
+            <field name="RULE_PROTOCOL">...</field>
+            <field name="RULE_PORT_FROM">...</field>
+            <field name="RULE_PORT_TO">...</field>
+            <field name="RULE_RELIABILITY">...</field>
+            <field name="RULE_TIMEOUT">...</field>
+          </block>
+        </xml>
+
+        <!-- -------------------------------------------------------------- -->
+
+        <xml id="toolbox_disabled" style="display: none">
+          <label text=" "></label>
+          <!--<block type="empty" disabled="true"></block>-->
+        </xml>
+
+        <!-- -------------------------------------------------------------- -->
+
+        <xml id="workspaceBlocks_task2" style="display: none">
+          <block type="directive" id="directive_task2" x="0" y="30">
+            <field name="DIRECTIVE">Directive</field>
+            <field name="DIRECTIVE_ID">1</field>
+            <field name="DIRECTIVE_NAME">Unknown IP in network</field>
+            <field name="DIRECTIVE_PRIORITY">3</field>
+            <field name="DIRECTIVE_DISABLED">DIRECTIVE_DISABLED_FALSE</field>
+            <field name="DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE">DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE_FALSE</field>
+            <field name="DIRECTIVE_KINGDOM">Attacks</field>
+            <field name="DIRECTIVE_CATEGORY">Malicious Insider</field>
+            <statement name="NAME">
+              <block type="rule" id="rule_task2">
+                <field name="RULE">Rule</field>
+                <field name="RULE_NAME">...</field>
+                <field name="RULE_STAGE">1</field>
+                <field name="RULE_OCCURRENCE">1</field>
+                <field name="RULE_PLUGIN_ID">1008</field>
+                <field name="RULE_PLUGIN_SID">...</field>
+                <field name="RULE_FROM">ANY</field>
+                <field name="RULE_TO">ANY</field>
+                <field name="RULE_TYPE">PluginRule</field>
+                <field name="RULE_PROTOCOL">ANY</field>
+                <field name="RULE_PORT_FROM">ANY</field>
+                <field name="RULE_PORT_TO">ANY</field>
+                <field name="RULE_RELIABILITY">10</field>
+                <field name="RULE_TIMEOUT">0</field>
+              </block>
+            </statement>
+          </block>
+        </xml>
+
+        <xml id="workspaceBlocks_task2_solution" style="display: none">
+          <block type="directive" id="*" x="0" y="30">
+            <field name="DIRECTIVE">Directive</field>
+            <field name="DIRECTIVE_ID">1</field>
+            <field name="DIRECTIVE_NAME">Unknown IP in network</field>
+            <field name="DIRECTIVE_PRIORITY">3</field>
+            <field name="DIRECTIVE_DISABLED">DIRECTIVE_DISABLED_FALSE</field>
+            <field name="DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE">DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE_FALSE</field>
+            <field name="DIRECTIVE_KINGDOM">Attacks</field>
+            <field name="DIRECTIVE_CATEGORY">Malicious Insider</field>
+            <statement name="NAME">
+              <block type="rule" id="*">
+                <field name="RULE">Rule</field>
+                <field name="RULE_NAME">FIREWALL-WARNING</field>
+                <field name="RULE_STAGE">1</field>
+                <field name="RULE_OCCURRENCE">1</field>
+                <field name="RULE_PLUGIN_ID">1008</field>
+                <field name="RULE_PLUGIN_SID">9</field>
+                <field name="RULE_FROM">ANY</field>
+                <field name="RULE_TO">ANY</field>
+                <field name="RULE_TYPE">PluginRule</field>
+                <field name="RULE_PROTOCOL">ANY</field>
+                <field name="RULE_PORT_FROM">ANY</field>
+                <field name="RULE_PORT_TO">ANY</field>
+                <field name="RULE_RELIABILITY">10</field>
+                <field name="RULE_TIMEOUT">0</field>
+              </block>
+            </statement>
+          </block>
+        </xml>
+
+        <xml id="workspaceBlocks_task2_solution0" style="display: none">
+          <block type="directive" id="*" x="*" y="*">
+            <field name="DIRECTIVE">Directive</field>
+            <field name="DIRECTIVE_ID">*</field>
+            <field name="DIRECTIVE_NAME">*</field>
+            <field name="DIRECTIVE_PRIORITY">*</field>
+            <field name="DIRECTIVE_DISABLED">*</field>
+            <field name="DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE">*</field>
+            <field name="DIRECTIVE_KINGDOM">*</field>
+            <field name="DIRECTIVE_CATEGORY">*</field>
+            <statement name="NAME">
+              <block type="rule" id="*">
+                <field name="RULE">Rule</field>
+                <field name="RULE_NAME">FIREWALL-WARNING</field>
+                <field name="RULE_STAGE">*</field>
+                <field name="RULE_OCCURRENCE">*</field>
+                <field name="RULE_PLUGIN_ID">*</field>
+                <field name="RULE_PLUGIN_SID">*</field>
+                <field name="RULE_FROM">*</field>
+                <field name="RULE_TO">*</field>
+                <field name="RULE_TYPE">*</field>
+                <field name="RULE_PROTOCOL">*</field>
+                <field name="RULE_PORT_FROM">*</field>
+                <field name="RULE_PORT_TO">*</field>
+                <field name="RULE_RELIABILITY">*</field>
+                <field name="RULE_TIMEOUT">*</field>
+              </block>
+            </statement>
+          </block>
+        </xml>
+
+        <xml id="workspaceBlocks_task2_solution1" style="display: none">
+          <block type="directive" id="*" x="*" y="*">
+            <field name="DIRECTIVE">Directive</field>
+            <field name="DIRECTIVE_ID">*</field>
+            <field name="DIRECTIVE_NAME">*</field>
+            <field name="DIRECTIVE_PRIORITY">*</field>
+            <field name="DIRECTIVE_DISABLED">*</field>
+            <field name="DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE">*</field>
+            <field name="DIRECTIVE_KINGDOM">*</field>
+            <field name="DIRECTIVE_CATEGORY">*</field>
+            <statement name="NAME">
+              <block type="rule" id="*">
+                <field name="RULE">Rule</field>
+                <field name="RULE_NAME">*</field>
+                <field name="RULE_STAGE">*</field>
+                <field name="RULE_OCCURRENCE">*</field>
+                <field name="RULE_PLUGIN_ID">*</field>
+                <field name="RULE_PLUGIN_SID">9</field>
+                <field name="RULE_FROM">*</field>
+                <field name="RULE_TO">*</field>
+                <field name="RULE_TYPE">*</field>
+                <field name="RULE_PROTOCOL">*</field>
+                <field name="RULE_PORT_FROM">*</field>
+                <field name="RULE_PORT_TO">*</field>
+                <field name="RULE_RELIABILITY">*</field>
+                <field name="RULE_TIMEOUT">*</field>
+              </block>
+            </statement>
+          </block>
+        </xml>
+
+        <xml id="workspaceBlocks_task2_empty0" style="display: none">
+          <block type="directive" id="*" x="*" y="*">
+            <field name="DIRECTIVE">Directive</field>
+            <field name="DIRECTIVE_ID">*</field>
+            <field name="DIRECTIVE_NAME">*</field>
+            <field name="DIRECTIVE_PRIORITY">*</field>
+            <field name="DIRECTIVE_DISABLED">*</field>
+            <field name="DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE">*</field>
+            <field name="DIRECTIVE_KINGDOM">*</field>
+            <field name="DIRECTIVE_CATEGORY">*</field>
+            <statement name="NAME">
+              <block type="rule" id="*">
+                <field name="RULE">Rule</field>
+                <field name="RULE_NAME">...</field>
+                <field name="RULE_STAGE">*</field>
+                <field name="RULE_OCCURRENCE">*</field>
+                <field name="RULE_PLUGIN_ID">*</field>
+                <field name="RULE_PLUGIN_SID">*</field>
+                <field name="RULE_FROM">*</field>
+                <field name="RULE_TO">*</field>
+                <field name="RULE_TYPE">*</field>
+                <field name="RULE_PROTOCOL">*</field>
+                <field name="RULE_PORT_FROM">*</field>
+                <field name="RULE_PORT_TO">*</field>
+                <field name="RULE_RELIABILITY">*</field>
+                <field name="RULE_TIMEOUT">*</field>
+              </block>
+            </statement>
+          </block>
+        </xml>
+
+        <xml id="workspaceBlocks_task2_empty1" style="display: none">
+          <block type="directive" id="*" x="*" y="*">
+            <field name="DIRECTIVE">Directive</field>
+            <field name="DIRECTIVE_ID">*</field>
+            <field name="DIRECTIVE_NAME">*</field>
+            <field name="DIRECTIVE_PRIORITY">*</field>
+            <field name="DIRECTIVE_DISABLED">*</field>
+            <field name="DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE">*</field>
+            <field name="DIRECTIVE_KINGDOM">*</field>
+            <field name="DIRECTIVE_CATEGORY">*</field>
+            <statement name="NAME">
+              <block type="rule" id="*">
+                <field name="RULE">Rule</field>
+                <field name="RULE_NAME">*</field>
+                <field name="RULE_STAGE">*</field>
+                <field name="RULE_OCCURRENCE">*</field>
+                <field name="RULE_PLUGIN_ID">*</field>
+                <field name="RULE_PLUGIN_SID">...</field>
+                <field name="RULE_FROM">*</field>
+                <field name="RULE_TO">*</field>
+                <field name="RULE_TYPE">*</field>
+                <field name="RULE_PROTOCOL">*</field>
+                <field name="RULE_PORT_FROM">*</field>
+                <field name="RULE_PORT_TO">*</field>
+                <field name="RULE_RELIABILITY">*</field>
+                <field name="RULE_TIMEOUT">*</field>
+              </block>
+            </statement>
+          </block>
+        </xml>
+
+        <!-- -------------------------------------------------------------- -->
+
+        <xml id="workspaceBlocks_task3" style="display: none">
+          <block type="directive" id="directive_task3" x="0" y="30">
+            <field name="DIRECTIVE">Directive</field>
+            <field name="DIRECTIVE_ID">2</field>
+            <field name="DIRECTIVE_NAME">MITM Attack</field>
+            <field name="DIRECTIVE_PRIORITY">3</field>
+            <field name="DIRECTIVE_DISABLED">DIRECTIVE_DISABLED_FALSE</field>
+            <field name="DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE">DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE_FALSE</field>
+            <field name="DIRECTIVE_KINGDOM">Attacks</field>
+            <field name="DIRECTIVE_CATEGORY">Spoofing</field>
+            <statement name="NAME">
+              <block type="rule" id="rule_task3_1">
+                <field name="RULE">Rule</field>
+                <field name="RULE_NAME">Liquid level (SENSOR 3) is not received. Program is unable to proceed properly</field>
+                <field name="RULE_STAGE">...</field>
+                <field name="RULE_OCCURRENCE">...</field>
+                <field name="RULE_PLUGIN_ID">1008</field>
+                <field name="RULE_PLUGIN_SID">6</field>
+                <field name="RULE_FROM">ANY</field>
+                <field name="RULE_TO">ANY</field>
+                <field name="RULE_TYPE">PluginRule</field>
+                <field name="RULE_PROTOCOL">ANY</field>
+                <field name="RULE_PORT_FROM">ANY</field>
+                <field name="RULE_PORT_TO">ANY</field>
+                <field name="RULE_RELIABILITY">2</field>
+                <field name="RULE_TIMEOUT">...</field>
+                <next>
+                  <block type="rule" id="rule_task3_2">
+                    <field name="RULE">Rule</field>
+                    <field name="RULE_NAME">Liquid level (SENSOR 3) is not received. Program is unable to proceed properly</field>
+                    <field name="RULE_STAGE">...</field>
+                    <field name="RULE_OCCURRENCE">...</field>
+                    <field name="RULE_PLUGIN_ID">1008</field>
+                    <field name="RULE_PLUGIN_SID">6</field>
+                    <field name="RULE_FROM">ANY</field>
+                    <field name="RULE_TO">ANY</field>
+                    <field name="RULE_TYPE">PluginRule</field>
+                    <field name="RULE_PROTOCOL">ANY</field>
+                    <field name="RULE_PORT_FROM">ANY</field>
+                    <field name="RULE_PORT_TO">ANY</field>
+                    <field name="RULE_RELIABILITY">2</field>
+                    <field name="RULE_TIMEOUT">...</field>
+                    <next>
+                      <block type="rule" id="rule_task3_3">
+                        <field name="RULE">Rule</field>
+                        <field name="RULE_NAME">Internal ENIP tag (SENSOR 3) updated</field>
+                        <field name="RULE_STAGE">...</field>
+                        <field name="RULE_OCCURRENCE">...</field>
+                        <field name="RULE_PLUGIN_ID">1008</field>
+                        <field name="RULE_PLUGIN_SID">2</field>
+                        <field name="RULE_FROM">ANY</field>
+                        <field name="RULE_TO">ANY</field>
+                        <field name="RULE_TYPE">PluginRule</field>
+                        <field name="RULE_PROTOCOL">ANY</field>
+                        <field name="RULE_PORT_FROM">ANY</field>
+                        <field name="RULE_PORT_TO">ANY</field>
+                        <field name="RULE_RELIABILITY">8</field>
+                        <field name="RULE_TIMEOUT">...</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </xml>
+
+        <xml id="workspaceBlocks_task3_solution" style="display: none">
+          <block type="directive" id="*" x="0" y="30">
+            <field name="DIRECTIVE">Directive</field>
+            <field name="DIRECTIVE_ID">2</field>
+            <field name="DIRECTIVE_NAME">MITM Attack</field>
+            <field name="DIRECTIVE_PRIORITY">3</field>
+            <field name="DIRECTIVE_DISABLED">DIRECTIVE_DISABLED_FALSE</field>
+            <field name="DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE">DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE_FALSE</field>
+            <field name="DIRECTIVE_KINGDOM">Attacks</field>
+            <field name="DIRECTIVE_CATEGORY">Spoofing</field>
+            <statement name="NAME">
+              <block type="rule" id="*">
+                <field name="RULE">Rule</field>
+                <field name="RULE_NAME">Liquid level (SENSOR 3) is not received. Program is unable to proceed properly</field>
+                <field name="RULE_STAGE">1</field>
+                <field name="RULE_OCCURRENCE">1</field>
+                <field name="RULE_PLUGIN_ID">1008</field>
+                <field name="RULE_PLUGIN_SID">6</field>
+                <field name="RULE_FROM">ANY</field>
+                <field name="RULE_TO">ANY</field>
+                <field name="RULE_TYPE">PluginRule</field>
+                <field name="RULE_PROTOCOL">ANY</field>
+                <field name="RULE_PORT_FROM">ANY</field>
+                <field name="RULE_PORT_TO">ANY</field>
+                <field name="RULE_RELIABILITY">2</field>
+                <field name="RULE_TIMEOUT">0</field>
+                <next>
+                  <block type="rule" id="*">
+                    <field name="RULE">Rule</field>
+                    <field name="RULE_NAME">Liquid level (SENSOR 3) is not received. Program is unable to proceed properly</field>
+                    <field name="RULE_STAGE">2</field>
+                    <field name="RULE_OCCURRENCE">2</field>
+                    <field name="RULE_PLUGIN_ID">1008</field>
+                    <field name="RULE_PLUGIN_SID">6</field>
+                    <field name="RULE_FROM">ANY</field>
+                    <field name="RULE_TO">ANY</field>
+                    <field name="RULE_TYPE">PluginRule</field>
+                    <field name="RULE_PROTOCOL">ANY</field>
+                    <field name="RULE_PORT_FROM">ANY</field>
+                    <field name="RULE_PORT_TO">ANY</field>
+                    <field name="RULE_RELIABILITY">2</field>
+                    <field name="RULE_TIMEOUT">60</field>
+                    <next>
+                      <block type="rule" id="*">
+                        <field name="RULE">Rule</field>
+                        <field name="RULE_NAME">Internal ENIP tag (SENSOR 3) updated</field>
+                        <field name="RULE_STAGE">3</field>
+                        <field name="RULE_OCCURRENCE">1</field>
+                        <field name="RULE_PLUGIN_ID">1008</field>
+                        <field name="RULE_PLUGIN_SID">2</field>
+                        <field name="RULE_FROM">ANY</field>
+                        <field name="RULE_TO">ANY</field>
+                        <field name="RULE_TYPE">PluginRule</field>
+                        <field name="RULE_PROTOCOL">ANY</field>
+                        <field name="RULE_PORT_FROM">ANY</field>
+                        <field name="RULE_PORT_TO">ANY</field>
+                        <field name="RULE_RELIABILITY">8</field>
+                        <field name="RULE_TIMEOUT">60</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </xml>
+
+        <xml id="workspaceBlocks_task3_solution0" style="display: none">
+          <block type="directive" id="*" x="*" y="*">
+            <field name="DIRECTIVE">Directive</field>
+            <field name="DIRECTIVE_ID">*</field>
+            <field name="DIRECTIVE_NAME">*</field>
+            <field name="DIRECTIVE_PRIORITY">*</field>
+            <field name="DIRECTIVE_DISABLED">*</field>
+            <field name="DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE">*</field>
+            <field name="DIRECTIVE_KINGDOM">*</field>
+            <field name="DIRECTIVE_CATEGORY">*</field>
+            <statement name="NAME">
+              <block type="rule" id="*">
+                <field name="RULE">Rule</field>
+                <field name="RULE_NAME">*</field>
+                <field name="RULE_STAGE">1</field>
+                <field name="RULE_OCCURRENCE">*</field>
+                <field name="RULE_PLUGIN_ID">*</field>
+                <field name="RULE_PLUGIN_SID">*</field>
+                <field name="RULE_FROM">*</field>
+                <field name="RULE_TO">*</field>
+                <field name="RULE_TYPE">*</field>
+                <field name="RULE_PROTOCOL">*</field>
+                <field name="RULE_PORT_FROM">*</field>
+                <field name="RULE_PORT_TO">*</field>
+                <field name="RULE_RELIABILITY">*</field>
+                <field name="RULE_TIMEOUT">*</field>
+                <next>
+                  <block type="rule" id="*">
+                    <field name="RULE">Rule</field>
+                    <field name="RULE_NAME">*</field>
+                    <field name="RULE_STAGE">*</field>
+                    <field name="RULE_OCCURRENCE">*</field>
+                    <field name="RULE_PLUGIN_ID">*</field>
+                    <field name="RULE_PLUGIN_SID">*</field>
+                    <field name="RULE_FROM">*</field>
+                    <field name="RULE_TO">*</field>
+                    <field name="RULE_TYPE">*</field>
+                    <field name="RULE_PROTOCOL">*</field>
+                    <field name="RULE_PORT_FROM">*</field>
+                    <field name="RULE_PORT_TO">*</field>
+                    <field name="RULE_RELIABILITY">*</field>
+                    <field name="RULE_TIMEOUT">*</field>
+                    <next>
+                      <block type="rule" id="*">
+                        <field name="RULE">Rule</field>
+                        <field name="RULE_NAME">*</field>
+                        <field name="RULE_STAGE">*</field>
+                        <field name="RULE_OCCURRENCE">*</field>
+                        <field name="RULE_PLUGIN_ID">*</field>
+                        <field name="RULE_PLUGIN_SID">*</field>
+                        <field name="RULE_FROM">*</field>
+                        <field name="RULE_TO">*</field>
+                        <field name="RULE_TYPE">*</field>
+                        <field name="RULE_PROTOCOL">*</field>
+                        <field name="RULE_PORT_FROM">*</field>
+                        <field name="RULE_PORT_TO">*</field>
+                        <field name="RULE_RELIABILITY">*</field>
+                        <field name="RULE_TIMEOUT">*</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </xml>
+
+
+        <xml id="workspaceBlocks_task3_empty0" style="display: none">
+          <block type="directive" id="*" x="*" y="*">
+            <field name="DIRECTIVE">Directive</field>
+            <field name="DIRECTIVE_ID">*</field>
+            <field name="DIRECTIVE_NAME">*</field>
+            <field name="DIRECTIVE_PRIORITY">*</field>
+            <field name="DIRECTIVE_DISABLED">*</field>
+            <field name="DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE">*</field>
+            <field name="DIRECTIVE_KINGDOM">*</field>
+            <field name="DIRECTIVE_CATEGORY">*</field>
+            <statement name="NAME">
+              <block type="rule" id="*">
+                <field name="RULE">Rule</field>
+                <field name="RULE_NAME">*</field>
+                <field name="RULE_STAGE">...</field>
+                <field name="RULE_OCCURRENCE">*</field>
+                <field name="RULE_PLUGIN_ID">*</field>
+                <field name="RULE_PLUGIN_SID">*</field>
+                <field name="RULE_FROM">*</field>
+                <field name="RULE_TO">*</field>
+                <field name="RULE_TYPE">*</field>
+                <field name="RULE_PROTOCOL">*</field>
+                <field name="RULE_PORT_FROM">*</field>
+                <field name="RULE_PORT_TO">*</field>
+                <field name="RULE_RELIABILITY">*</field>
+                <field name="RULE_TIMEOUT">*</field>
+                <next>
+                  <block type="rule" id="*">
+                    <field name="RULE">Rule</field>
+                    <field name="RULE_NAME">*</field>
+                    <field name="RULE_STAGE">*</field>
+                    <field name="RULE_OCCURRENCE">*</field>
+                    <field name="RULE_PLUGIN_ID">*</field>
+                    <field name="RULE_PLUGIN_SID">*</field>
+                    <field name="RULE_FROM">*</field>
+                    <field name="RULE_TO">*</field>
+                    <field name="RULE_TYPE">*</field>
+                    <field name="RULE_PROTOCOL">*</field>
+                    <field name="RULE_PORT_FROM">*</field>
+                    <field name="RULE_PORT_TO">*</field>
+                    <field name="RULE_RELIABILITY">*</field>
+                    <field name="RULE_TIMEOUT">*</field>
+                    <next>
+                      <block type="rule" id="*">
+                        <field name="RULE">Rule</field>
+                        <field name="RULE_NAME">*</field>
+                        <field name="RULE_STAGE">*</field>
+                        <field name="RULE_OCCURRENCE">*</field>
+                        <field name="RULE_PLUGIN_ID">*</field>
+                        <field name="RULE_PLUGIN_SID">*</field>
+                        <field name="RULE_FROM">*</field>
+                        <field name="RULE_TO">*</field>
+                        <field name="RULE_TYPE">*</field>
+                        <field name="RULE_PROTOCOL">*</field>
+                        <field name="RULE_PORT_FROM">*</field>
+                        <field name="RULE_PORT_TO">*</field>
+                        <field name="RULE_RELIABILITY">*</field>
+                        <field name="RULE_TIMEOUT">*</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </xml>
+
+        <xml id="workspaceBlocks_task3_solution1" style="display: none">
+          <block type="directive" id="*" x="*" y="*">
+            <field name="DIRECTIVE">Directive</field>
+            <field name="DIRECTIVE_ID">*</field>
+            <field name="DIRECTIVE_NAME">*</field>
+            <field name="DIRECTIVE_PRIORITY">*</field>
+            <field name="DIRECTIVE_DISABLED">*</field>
+            <field name="DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE">*</field>
+            <field name="DIRECTIVE_KINGDOM">*</field>
+            <field name="DIRECTIVE_CATEGORY">*</field>
+            <statement name="NAME">
+              <block type="rule" id="*">
+                <field name="RULE">Rule</field>
+                <field name="RULE_NAME">*</field>
+                <field name="RULE_STAGE">*</field>
+                <field name="RULE_OCCURRENCE">1</field>
+                <field name="RULE_PLUGIN_ID">*</field>
+                <field name="RULE_PLUGIN_SID">*</field>
+                <field name="RULE_FROM">*</field>
+                <field name="RULE_TO">*</field>
+                <field name="RULE_TYPE">*</field>
+                <field name="RULE_PROTOCOL">*</field>
+                <field name="RULE_PORT_FROM">*</field>
+                <field name="RULE_PORT_TO">*</field>
+                <field name="RULE_RELIABILITY">*</field>
+                <field name="RULE_TIMEOUT">*</field>
+                <next>
+                  <block type="rule" id="*">
+                    <field name="RULE">Rule</field>
+                    <field name="RULE_NAME">*</field>
+                    <field name="RULE_STAGE">*</field>
+                    <field name="RULE_OCCURRENCE">*</field>
+                    <field name="RULE_PLUGIN_ID">*</field>
+                    <field name="RULE_PLUGIN_SID">*</field>
+                    <field name="RULE_FROM">*</field>
+                    <field name="RULE_TO">*</field>
+                    <field name="RULE_TYPE">*</field>
+                    <field name="RULE_PROTOCOL">*</field>
+                    <field name="RULE_PORT_FROM">*</field>
+                    <field name="RULE_PORT_TO">*</field>
+                    <field name="RULE_RELIABILITY">*</field>
+                    <field name="RULE_TIMEOUT">*</field>
+                    <next>
+                      <block type="rule" id="*">
+                        <field name="RULE">Rule</field>
+                        <field name="RULE_NAME">*</field>
+                        <field name="RULE_STAGE">*</field>
+                        <field name="RULE_OCCURRENCE">*</field>
+                        <field name="RULE_PLUGIN_ID">*</field>
+                        <field name="RULE_PLUGIN_SID">*</field>
+                        <field name="RULE_FROM">*</field>
+                        <field name="RULE_TO">*</field>
+                        <field name="RULE_TYPE">*</field>
+                        <field name="RULE_PROTOCOL">*</field>
+                        <field name="RULE_PORT_FROM">*</field>
+                        <field name="RULE_PORT_TO">*</field>
+                        <field name="RULE_RELIABILITY">*</field>
+                        <field name="RULE_TIMEOUT">*</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </xml>
+
+
+        <xml id="workspaceBlocks_task3_empty1" style="display: none">
+          <block type="directive" id="*" x="*" y="*">
+            <field name="DIRECTIVE">Directive</field>
+            <field name="DIRECTIVE_ID">*</field>
+            <field name="DIRECTIVE_NAME">*</field>
+            <field name="DIRECTIVE_PRIORITY">*</field>
+            <field name="DIRECTIVE_DISABLED">*</field>
+            <field name="DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE">*</field>
+            <field name="DIRECTIVE_KINGDOM">*</field>
+            <field name="DIRECTIVE_CATEGORY">*</field>
+            <statement name="NAME">
+              <block type="rule" id="*">
+                <field name="RULE">Rule</field>
+                <field name="RULE_NAME">*</field>
+                <field name="RULE_STAGE">*</field>
+                <field name="RULE_OCCURRENCE">...</field>
+                <field name="RULE_PLUGIN_ID">*</field>
+                <field name="RULE_PLUGIN_SID">*</field>
+                <field name="RULE_FROM">*</field>
+                <field name="RULE_TO">*</field>
+                <field name="RULE_TYPE">*</field>
+                <field name="RULE_PROTOCOL">*</field>
+                <field name="RULE_PORT_FROM">*</field>
+                <field name="RULE_PORT_TO">*</field>
+                <field name="RULE_RELIABILITY">*</field>
+                <field name="RULE_TIMEOUT">*</field>
+                <next>
+                  <block type="rule" id="*">
+                    <field name="RULE">Rule</field>
+                    <field name="RULE_NAME">*</field>
+                    <field name="RULE_STAGE">*</field>
+                    <field name="RULE_OCCURRENCE">*</field>
+                    <field name="RULE_PLUGIN_ID">*</field>
+                    <field name="RULE_PLUGIN_SID">*</field>
+                    <field name="RULE_FROM">*</field>
+                    <field name="RULE_TO">*</field>
+                    <field name="RULE_TYPE">*</field>
+                    <field name="RULE_PROTOCOL">*</field>
+                    <field name="RULE_PORT_FROM">*</field>
+                    <field name="RULE_PORT_TO">*</field>
+                    <field name="RULE_RELIABILITY">*</field>
+                    <field name="RULE_TIMEOUT">*</field>
+                    <next>
+                      <block type="rule" id="*">
+                        <field name="RULE">Rule</field>
+                        <field name="RULE_NAME">*</field>
+                        <field name="RULE_STAGE">*</field>
+                        <field name="RULE_OCCURRENCE">*</field>
+                        <field name="RULE_PLUGIN_ID">*</field>
+                        <field name="RULE_PLUGIN_SID">*</field>
+                        <field name="RULE_FROM">*</field>
+                        <field name="RULE_TO">*</field>
+                        <field name="RULE_TYPE">*</field>
+                        <field name="RULE_PROTOCOL">*</field>
+                        <field name="RULE_PORT_FROM">*</field>
+                        <field name="RULE_PORT_TO">*</field>
+                        <field name="RULE_RELIABILITY">*</field>
+                        <field name="RULE_TIMEOUT">*</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </xml>
+
+        <xml id="workspaceBlocks_task3_solution2" style="display: none">
+          <block type="directive" id="*" x="*" y="*">
+            <field name="DIRECTIVE">Directive</field>
+            <field name="DIRECTIVE_ID">*</field>
+            <field name="DIRECTIVE_NAME">*</field>
+            <field name="DIRECTIVE_PRIORITY">*</field>
+            <field name="DIRECTIVE_DISABLED">*</field>
+            <field name="DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE">*</field>
+            <field name="DIRECTIVE_KINGDOM">*</field>
+            <field name="DIRECTIVE_CATEGORY">*</field>
+            <statement name="NAME">
+              <block type="rule" id="*">
+                <field name="RULE">Rule</field>
+                <field name="RULE_NAME">*</field>
+                <field name="RULE_STAGE">*</field>
+                <field name="RULE_OCCURRENCE">*</field>
+                <field name="RULE_PLUGIN_ID">*</field>
+                <field name="RULE_PLUGIN_SID">*</field>
+                <field name="RULE_FROM">*</field>
+                <field name="RULE_TO">*</field>
+                <field name="RULE_TYPE">*</field>
+                <field name="RULE_PROTOCOL">*</field>
+                <field name="RULE_PORT_FROM">*</field>
+                <field name="RULE_PORT_TO">*</field>
+                <field name="RULE_RELIABILITY">*</field>
+                <field name="RULE_TIMEOUT">0</field>
+                <next>
+                  <block type="rule" id="*">
+                    <field name="RULE">Rule</field>
+                    <field name="RULE_NAME">*</field>
+                    <field name="RULE_STAGE">*</field>
+                    <field name="RULE_OCCURRENCE">*</field>
+                    <field name="RULE_PLUGIN_ID">*</field>
+                    <field name="RULE_PLUGIN_SID">*</field>
+                    <field name="RULE_FROM">*</field>
+                    <field name="RULE_TO">*</field>
+                    <field name="RULE_TYPE">*</field>
+                    <field name="RULE_PROTOCOL">*</field>
+                    <field name="RULE_PORT_FROM">*</field>
+                    <field name="RULE_PORT_TO">*</field>
+                    <field name="RULE_RELIABILITY">*</field>
+                    <field name="RULE_TIMEOUT">*</field>
+                    <next>
+                      <block type="rule" id="*">
+                        <field name="RULE">Rule</field>
+                        <field name="RULE_NAME">*</field>
+                        <field name="RULE_STAGE">*</field>
+                        <field name="RULE_OCCURRENCE">*</field>
+                        <field name="RULE_PLUGIN_ID">*</field>
+                        <field name="RULE_PLUGIN_SID">*</field>
+                        <field name="RULE_FROM">*</field>
+                        <field name="RULE_TO">*</field>
+                        <field name="RULE_TYPE">*</field>
+                        <field name="RULE_PROTOCOL">*</field>
+                        <field name="RULE_PORT_FROM">*</field>
+                        <field name="RULE_PORT_TO">*</field>
+                        <field name="RULE_RELIABILITY">*</field>
+                        <field name="RULE_TIMEOUT">*</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </xml>
+
+
+        <xml id="workspaceBlocks_task3_empty2" style="display: none">
+          <block type="directive" id="*" x="*" y="*">
+            <field name="DIRECTIVE">Directive</field>
+            <field name="DIRECTIVE_ID">*</field>
+            <field name="DIRECTIVE_NAME">*</field>
+            <field name="DIRECTIVE_PRIORITY">*</field>
+            <field name="DIRECTIVE_DISABLED">*</field>
+            <field name="DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE">*</field>
+            <field name="DIRECTIVE_KINGDOM">*</field>
+            <field name="DIRECTIVE_CATEGORY">*</field>
+            <statement name="NAME">
+              <block type="rule" id="*">
+                <field name="RULE">Rule</field>
+                <field name="RULE_NAME">*</field>
+                <field name="RULE_STAGE">*</field>
+                <field name="RULE_OCCURRENCE">*</field>
+                <field name="RULE_PLUGIN_ID">*</field>
+                <field name="RULE_PLUGIN_SID">*</field>
+                <field name="RULE_FROM">*</field>
+                <field name="RULE_TO">*</field>
+                <field name="RULE_TYPE">*</field>
+                <field name="RULE_PROTOCOL">*</field>
+                <field name="RULE_PORT_FROM">*</field>
+                <field name="RULE_PORT_TO">*</field>
+                <field name="RULE_RELIABILITY">*</field>
+                <field name="RULE_TIMEOUT">...</field>
+                <next>
+                  <block type="rule" id="*">
+                    <field name="RULE">Rule</field>
+                    <field name="RULE_NAME">*</field>
+                    <field name="RULE_STAGE">*</field>
+                    <field name="RULE_OCCURRENCE">*</field>
+                    <field name="RULE_PLUGIN_ID">*</field>
+                    <field name="RULE_PLUGIN_SID">*</field>
+                    <field name="RULE_FROM">*</field>
+                    <field name="RULE_TO">*</field>
+                    <field name="RULE_TYPE">*</field>
+                    <field name="RULE_PROTOCOL">*</field>
+                    <field name="RULE_PORT_FROM">*</field>
+                    <field name="RULE_PORT_TO">*</field>
+                    <field name="RULE_RELIABILITY">*</field>
+                    <field name="RULE_TIMEOUT">*</field>
+                    <next>
+                      <block type="rule" id="*">
+                        <field name="RULE">Rule</field>
+                        <field name="RULE_NAME">*</field>
+                        <field name="RULE_STAGE">*</field>
+                        <field name="RULE_OCCURRENCE">*</field>
+                        <field name="RULE_PLUGIN_ID">*</field>
+                        <field name="RULE_PLUGIN_SID">*</field>
+                        <field name="RULE_FROM">*</field>
+                        <field name="RULE_TO">*</field>
+                        <field name="RULE_TYPE">*</field>
+                        <field name="RULE_PROTOCOL">*</field>
+                        <field name="RULE_PORT_FROM">*</field>
+                        <field name="RULE_PORT_TO">*</field>
+                        <field name="RULE_RELIABILITY">*</field>
+                        <field name="RULE_TIMEOUT">*</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </xml>
+
+        <xml id="workspaceBlocks_task3_solution3" style="display: none">
+          <block type="directive" id="*" x="*" y="*">
+            <field name="DIRECTIVE">Directive</field>
+            <field name="DIRECTIVE_ID">*</field>
+            <field name="DIRECTIVE_NAME">*</field>
+            <field name="DIRECTIVE_PRIORITY">*</field>
+            <field name="DIRECTIVE_DISABLED">*</field>
+            <field name="DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE">*</field>
+            <field name="DIRECTIVE_KINGDOM">*</field>
+            <field name="DIRECTIVE_CATEGORY">*</field>
+            <statement name="NAME">
+              <block type="rule" id="*">
+                <field name="RULE">Rule</field>
+                <field name="RULE_NAME">*</field>
+                <field name="RULE_STAGE">*</field>
+                <field name="RULE_OCCURRENCE">*</field>
+                <field name="RULE_PLUGIN_ID">*</field>
+                <field name="RULE_PLUGIN_SID">*</field>
+                <field name="RULE_FROM">*</field>
+                <field name="RULE_TO">*</field>
+                <field name="RULE_TYPE">*</field>
+                <field name="RULE_PROTOCOL">*</field>
+                <field name="RULE_PORT_FROM">*</field>
+                <field name="RULE_PORT_TO">*</field>
+                <field name="RULE_RELIABILITY">*</field>
+                <field name="RULE_TIMEOUT">*</field>
+                <next>
+                  <block type="rule" id="*">
+                    <field name="RULE">Rule</field>
+                    <field name="RULE_NAME">*</field>
+                    <field name="RULE_STAGE">2</field>
+                    <field name="RULE_OCCURRENCE">*</field>
+                    <field name="RULE_PLUGIN_ID">*</field>
+                    <field name="RULE_PLUGIN_SID">*</field>
+                    <field name="RULE_FROM">*</field>
+                    <field name="RULE_TO">*</field>
+                    <field name="RULE_TYPE">*</field>
+                    <field name="RULE_PROTOCOL">*</field>
+                    <field name="RULE_PORT_FROM">*</field>
+                    <field name="RULE_PORT_TO">*</field>
+                    <field name="RULE_RELIABILITY">*</field>
+                    <field name="RULE_TIMEOUT">*</field>
+                    <next>
+                      <block type="rule" id="*">
+                        <field name="RULE">Rule</field>
+                        <field name="RULE_NAME">*</field>
+                        <field name="RULE_STAGE">*</field>
+                        <field name="RULE_OCCURRENCE">*</field>
+                        <field name="RULE_PLUGIN_ID">*</field>
+                        <field name="RULE_PLUGIN_SID">*</field>
+                        <field name="RULE_FROM">*</field>
+                        <field name="RULE_TO">*</field>
+                        <field name="RULE_TYPE">*</field>
+                        <field name="RULE_PROTOCOL">*</field>
+                        <field name="RULE_PORT_FROM">*</field>
+                        <field name="RULE_PORT_TO">*</field>
+                        <field name="RULE_RELIABILITY">*</field>
+                        <field name="RULE_TIMEOUT">*</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </xml>
+
+
+        <xml id="workspaceBlocks_task3_empty3" style="display: none">
+          <block type="directive" id="*" x="*" y="*">
+            <field name="DIRECTIVE">Directive</field>
+            <field name="DIRECTIVE_ID">*</field>
+            <field name="DIRECTIVE_NAME">*</field>
+            <field name="DIRECTIVE_PRIORITY">*</field>
+            <field name="DIRECTIVE_DISABLED">*</field>
+            <field name="DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE">*</field>
+            <field name="DIRECTIVE_KINGDOM">*</field>
+            <field name="DIRECTIVE_CATEGORY">*</field>
+            <statement name="NAME">
+              <block type="rule" id="*">
+                <field name="RULE">Rule</field>
+                <field name="RULE_NAME">*</field>
+                <field name="RULE_STAGE">*</field>
+                <field name="RULE_OCCURRENCE">*</field>
+                <field name="RULE_PLUGIN_ID">*</field>
+                <field name="RULE_PLUGIN_SID">*</field>
+                <field name="RULE_FROM">*</field>
+                <field name="RULE_TO">*</field>
+                <field name="RULE_TYPE">*</field>
+                <field name="RULE_PROTOCOL">*</field>
+                <field name="RULE_PORT_FROM">*</field>
+                <field name="RULE_PORT_TO">*</field>
+                <field name="RULE_RELIABILITY">*</field>
+                <field name="RULE_TIMEOUT">*</field>
+                <next>
+                  <block type="rule" id="*">
+                    <field name="RULE">Rule</field>
+                    <field name="RULE_NAME">*</field>
+                    <field name="RULE_STAGE">...</field>
+                    <field name="RULE_OCCURRENCE">*</field>
+                    <field name="RULE_PLUGIN_ID">*</field>
+                    <field name="RULE_PLUGIN_SID">*</field>
+                    <field name="RULE_FROM">*</field>
+                    <field name="RULE_TO">*</field>
+                    <field name="RULE_TYPE">*</field>
+                    <field name="RULE_PROTOCOL">*</field>
+                    <field name="RULE_PORT_FROM">*</field>
+                    <field name="RULE_PORT_TO">*</field>
+                    <field name="RULE_RELIABILITY">*</field>
+                    <field name="RULE_TIMEOUT">*</field>
+                    <next>
+                      <block type="rule" id="*">
+                        <field name="RULE">Rule</field>
+                        <field name="RULE_NAME">*</field>
+                        <field name="RULE_STAGE">*</field>
+                        <field name="RULE_OCCURRENCE">*</field>
+                        <field name="RULE_PLUGIN_ID">*</field>
+                        <field name="RULE_PLUGIN_SID">*</field>
+                        <field name="RULE_FROM">*</field>
+                        <field name="RULE_TO">*</field>
+                        <field name="RULE_TYPE">*</field>
+                        <field name="RULE_PROTOCOL">*</field>
+                        <field name="RULE_PORT_FROM">*</field>
+                        <field name="RULE_PORT_TO">*</field>
+                        <field name="RULE_RELIABILITY">*</field>
+                        <field name="RULE_TIMEOUT">*</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </xml>
+
+        <xml id="workspaceBlocks_task3_solution4" style="display: none">
+          <block type="directive" id="*" x="*" y="*">
+            <field name="DIRECTIVE">Directive</field>
+            <field name="DIRECTIVE_ID">*</field>
+            <field name="DIRECTIVE_NAME">*</field>
+            <field name="DIRECTIVE_PRIORITY">*</field>
+            <field name="DIRECTIVE_DISABLED">*</field>
+            <field name="DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE">*</field>
+            <field name="DIRECTIVE_KINGDOM">*</field>
+            <field name="DIRECTIVE_CATEGORY">*</field>
+            <statement name="NAME">
+              <block type="rule" id="*">
+                <field name="RULE">Rule</field>
+                <field name="RULE_NAME">*</field>
+                <field name="RULE_STAGE">*</field>
+                <field name="RULE_OCCURRENCE">*</field>
+                <field name="RULE_PLUGIN_ID">*</field>
+                <field name="RULE_PLUGIN_SID">*</field>
+                <field name="RULE_FROM">*</field>
+                <field name="RULE_TO">*</field>
+                <field name="RULE_TYPE">*</field>
+                <field name="RULE_PROTOCOL">*</field>
+                <field name="RULE_PORT_FROM">*</field>
+                <field name="RULE_PORT_TO">*</field>
+                <field name="RULE_RELIABILITY">*</field>
+                <field name="RULE_TIMEOUT">*</field>
+                <next>
+                  <block type="rule" id="*">
+                    <field name="RULE">Rule</field>
+                    <field name="RULE_NAME">*</field>
+                    <field name="RULE_STAGE">*</field>
+                    <field name="RULE_OCCURRENCE">2</field>
+                    <field name="RULE_PLUGIN_ID">*</field>
+                    <field name="RULE_PLUGIN_SID">*</field>
+                    <field name="RULE_FROM">*</field>
+                    <field name="RULE_TO">*</field>
+                    <field name="RULE_TYPE">*</field>
+                    <field name="RULE_PROTOCOL">*</field>
+                    <field name="RULE_PORT_FROM">*</field>
+                    <field name="RULE_PORT_TO">*</field>
+                    <field name="RULE_RELIABILITY">*</field>
+                    <field name="RULE_TIMEOUT">*</field>
+                    <next>
+                      <block type="rule" id="*">
+                        <field name="RULE">Rule</field>
+                        <field name="RULE_NAME">*</field>
+                        <field name="RULE_STAGE">*</field>
+                        <field name="RULE_OCCURRENCE">*</field>
+                        <field name="RULE_PLUGIN_ID">*</field>
+                        <field name="RULE_PLUGIN_SID">*</field>
+                        <field name="RULE_FROM">*</field>
+                        <field name="RULE_TO">*</field>
+                        <field name="RULE_TYPE">*</field>
+                        <field name="RULE_PROTOCOL">*</field>
+                        <field name="RULE_PORT_FROM">*</field>
+                        <field name="RULE_PORT_TO">*</field>
+                        <field name="RULE_RELIABILITY">*</field>
+                        <field name="RULE_TIMEOUT">*</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </xml>
+
+
+        <xml id="workspaceBlocks_task3_empty4" style="display: none">
+          <block type="directive" id="*" x="*" y="*">
+            <field name="DIRECTIVE">Directive</field>
+            <field name="DIRECTIVE_ID">*</field>
+            <field name="DIRECTIVE_NAME">*</field>
+            <field name="DIRECTIVE_PRIORITY">*</field>
+            <field name="DIRECTIVE_DISABLED">*</field>
+            <field name="DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE">*</field>
+            <field name="DIRECTIVE_KINGDOM">*</field>
+            <field name="DIRECTIVE_CATEGORY">*</field>
+            <statement name="NAME">
+              <block type="rule" id="*">
+                <field name="RULE">Rule</field>
+                <field name="RULE_NAME">*</field>
+                <field name="RULE_STAGE">*</field>
+                <field name="RULE_OCCURRENCE">*</field>
+                <field name="RULE_PLUGIN_ID">*</field>
+                <field name="RULE_PLUGIN_SID">*</field>
+                <field name="RULE_FROM">*</field>
+                <field name="RULE_TO">*</field>
+                <field name="RULE_TYPE">*</field>
+                <field name="RULE_PROTOCOL">*</field>
+                <field name="RULE_PORT_FROM">*</field>
+                <field name="RULE_PORT_TO">*</field>
+                <field name="RULE_RELIABILITY">*</field>
+                <field name="RULE_TIMEOUT">*</field>
+                <next>
+                  <block type="rule" id="*">
+                    <field name="RULE">Rule</field>
+                    <field name="RULE_NAME">*</field>
+                    <field name="RULE_STAGE">*</field>
+                    <field name="RULE_OCCURRENCE">...</field>
+                    <field name="RULE_PLUGIN_ID">*</field>
+                    <field name="RULE_PLUGIN_SID">*</field>
+                    <field name="RULE_FROM">*</field>
+                    <field name="RULE_TO">*</field>
+                    <field name="RULE_TYPE">*</field>
+                    <field name="RULE_PROTOCOL">*</field>
+                    <field name="RULE_PORT_FROM">*</field>
+                    <field name="RULE_PORT_TO">*</field>
+                    <field name="RULE_RELIABILITY">*</field>
+                    <field name="RULE_TIMEOUT">*</field>
+                    <next>
+                      <block type="rule" id="*">
+                        <field name="RULE">Rule</field>
+                        <field name="RULE_NAME">*</field>
+                        <field name="RULE_STAGE">*</field>
+                        <field name="RULE_OCCURRENCE">*</field>
+                        <field name="RULE_PLUGIN_ID">*</field>
+                        <field name="RULE_PLUGIN_SID">*</field>
+                        <field name="RULE_FROM">*</field>
+                        <field name="RULE_TO">*</field>
+                        <field name="RULE_TYPE">*</field>
+                        <field name="RULE_PROTOCOL">*</field>
+                        <field name="RULE_PORT_FROM">*</field>
+                        <field name="RULE_PORT_TO">*</field>
+                        <field name="RULE_RELIABILITY">*</field>
+                        <field name="RULE_TIMEOUT">*</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </xml>
+
+        <xml id="workspaceBlocks_task3_solution5" style="display: none">
+          <block type="directive" id="*" x="*" y="*">
+            <field name="DIRECTIVE">Directive</field>
+            <field name="DIRECTIVE_ID">*</field>
+            <field name="DIRECTIVE_NAME">*</field>
+            <field name="DIRECTIVE_PRIORITY">*</field>
+            <field name="DIRECTIVE_DISABLED">*</field>
+            <field name="DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE">*</field>
+            <field name="DIRECTIVE_KINGDOM">*</field>
+            <field name="DIRECTIVE_CATEGORY">*</field>
+            <statement name="NAME">
+              <block type="rule" id="*">
+                <field name="RULE">Rule</field>
+                <field name="RULE_NAME">*</field>
+                <field name="RULE_STAGE">*</field>
+                <field name="RULE_OCCURRENCE">*</field>
+                <field name="RULE_PLUGIN_ID">*</field>
+                <field name="RULE_PLUGIN_SID">*</field>
+                <field name="RULE_FROM">*</field>
+                <field name="RULE_TO">*</field>
+                <field name="RULE_TYPE">*</field>
+                <field name="RULE_PROTOCOL">*</field>
+                <field name="RULE_PORT_FROM">*</field>
+                <field name="RULE_PORT_TO">*</field>
+                <field name="RULE_RELIABILITY">*</field>
+                <field name="RULE_TIMEOUT">*</field>
+                <next>
+                  <block type="rule" id="*">
+                    <field name="RULE">Rule</field>
+                    <field name="RULE_NAME">*</field>
+                    <field name="RULE_STAGE">*</field>
+                    <field name="RULE_OCCURRENCE">*</field>
+                    <field name="RULE_PLUGIN_ID">*</field>
+                    <field name="RULE_PLUGIN_SID">*</field>
+                    <field name="RULE_FROM">*</field>
+                    <field name="RULE_TO">*</field>
+                    <field name="RULE_TYPE">*</field>
+                    <field name="RULE_PROTOCOL">*</field>
+                    <field name="RULE_PORT_FROM">*</field>
+                    <field name="RULE_PORT_TO">*</field>
+                    <field name="RULE_RELIABILITY">*</field>
+                    <field name="RULE_TIMEOUT">60</field>
+                    <next>
+                      <block type="rule" id="*">
+                        <field name="RULE">Rule</field>
+                        <field name="RULE_NAME">*</field>
+                        <field name="RULE_STAGE">*</field>
+                        <field name="RULE_OCCURRENCE">*</field>
+                        <field name="RULE_PLUGIN_ID">*</field>
+                        <field name="RULE_PLUGIN_SID">*</field>
+                        <field name="RULE_FROM">*</field>
+                        <field name="RULE_TO">*</field>
+                        <field name="RULE_TYPE">*</field>
+                        <field name="RULE_PROTOCOL">*</field>
+                        <field name="RULE_PORT_FROM">*</field>
+                        <field name="RULE_PORT_TO">*</field>
+                        <field name="RULE_RELIABILITY">*</field>
+                        <field name="RULE_TIMEOUT">*</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </xml>
+
+
+        <xml id="workspaceBlocks_task3_empty5" style="display: none">
+          <block type="directive" id="*" x="*" y="*">
+            <field name="DIRECTIVE">Directive</field>
+            <field name="DIRECTIVE_ID">*</field>
+            <field name="DIRECTIVE_NAME">*</field>
+            <field name="DIRECTIVE_PRIORITY">*</field>
+            <field name="DIRECTIVE_DISABLED">*</field>
+            <field name="DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE">*</field>
+            <field name="DIRECTIVE_KINGDOM">*</field>
+            <field name="DIRECTIVE_CATEGORY">*</field>
+            <statement name="NAME">
+              <block type="rule" id="*">
+                <field name="RULE">Rule</field>
+                <field name="RULE_NAME">*</field>
+                <field name="RULE_STAGE">*</field>
+                <field name="RULE_OCCURRENCE">*</field>
+                <field name="RULE_PLUGIN_ID">*</field>
+                <field name="RULE_PLUGIN_SID">*</field>
+                <field name="RULE_FROM">*</field>
+                <field name="RULE_TO">*</field>
+                <field name="RULE_TYPE">*</field>
+                <field name="RULE_PROTOCOL">*</field>
+                <field name="RULE_PORT_FROM">*</field>
+                <field name="RULE_PORT_TO">*</field>
+                <field name="RULE_RELIABILITY">*</field>
+                <field name="RULE_TIMEOUT">*</field>
+                <next>
+                  <block type="rule" id="*">
+                    <field name="RULE">Rule</field>
+                    <field name="RULE_NAME">*</field>
+                    <field name="RULE_STAGE">*</field>
+                    <field name="RULE_OCCURRENCE">*</field>
+                    <field name="RULE_PLUGIN_ID">*</field>
+                    <field name="RULE_PLUGIN_SID">*</field>
+                    <field name="RULE_FROM">*</field>
+                    <field name="RULE_TO">*</field>
+                    <field name="RULE_TYPE">*</field>
+                    <field name="RULE_PROTOCOL">*</field>
+                    <field name="RULE_PORT_FROM">*</field>
+                    <field name="RULE_PORT_TO">*</field>
+                    <field name="RULE_RELIABILITY">*</field>
+                    <field name="RULE_TIMEOUT">...</field>
+                    <next>
+                      <block type="rule" id="*">
+                        <field name="RULE">Rule</field>
+                        <field name="RULE_NAME">*</field>
+                        <field name="RULE_STAGE">*</field>
+                        <field name="RULE_OCCURRENCE">*</field>
+                        <field name="RULE_PLUGIN_ID">*</field>
+                        <field name="RULE_PLUGIN_SID">*</field>
+                        <field name="RULE_FROM">*</field>
+                        <field name="RULE_TO">*</field>
+                        <field name="RULE_TYPE">*</field>
+                        <field name="RULE_PROTOCOL">*</field>
+                        <field name="RULE_PORT_FROM">*</field>
+                        <field name="RULE_PORT_TO">*</field>
+                        <field name="RULE_RELIABILITY">*</field>
+                        <field name="RULE_TIMEOUT">*</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </xml>
+
+        <xml id="workspaceBlocks_task3_solution6" style="display: none">
+          <block type="directive" id="*" x="*" y="*">
+            <field name="DIRECTIVE">Directive</field>
+            <field name="DIRECTIVE_ID">*</field>
+            <field name="DIRECTIVE_NAME">*</field>
+            <field name="DIRECTIVE_PRIORITY">*</field>
+            <field name="DIRECTIVE_DISABLED">*</field>
+            <field name="DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE">*</field>
+            <field name="DIRECTIVE_KINGDOM">*</field>
+            <field name="DIRECTIVE_CATEGORY">*</field>
+            <statement name="NAME">
+              <block type="rule" id="*">
+                <field name="RULE">Rule</field>
+                <field name="RULE_NAME">*</field>
+                <field name="RULE_STAGE">*</field>
+                <field name="RULE_OCCURRENCE">*</field>
+                <field name="RULE_PLUGIN_ID">*</field>
+                <field name="RULE_PLUGIN_SID">*</field>
+                <field name="RULE_FROM">*</field>
+                <field name="RULE_TO">*</field>
+                <field name="RULE_TYPE">*</field>
+                <field name="RULE_PROTOCOL">*</field>
+                <field name="RULE_PORT_FROM">*</field>
+                <field name="RULE_PORT_TO">*</field>
+                <field name="RULE_RELIABILITY">*</field>
+                <field name="RULE_TIMEOUT">*</field>
+                <next>
+                  <block type="rule" id="*">
+                    <field name="RULE">Rule</field>
+                    <field name="RULE_NAME">*</field>
+                    <field name="RULE_STAGE">*</field>
+                    <field name="RULE_OCCURRENCE">*</field>
+                    <field name="RULE_PLUGIN_ID">*</field>
+                    <field name="RULE_PLUGIN_SID">*</field>
+                    <field name="RULE_FROM">*</field>
+                    <field name="RULE_TO">*</field>
+                    <field name="RULE_TYPE">*</field>
+                    <field name="RULE_PROTOCOL">*</field>
+                    <field name="RULE_PORT_FROM">*</field>
+                    <field name="RULE_PORT_TO">*</field>
+                    <field name="RULE_RELIABILITY">*</field>
+                    <field name="RULE_TIMEOUT">*</field>
+                    <next>
+                      <block type="rule" id="*">
+                        <field name="RULE">Rule</field>
+                        <field name="RULE_NAME">*</field>
+                        <field name="RULE_STAGE">3</field>
+                        <field name="RULE_OCCURRENCE">*</field>
+                        <field name="RULE_PLUGIN_ID">*</field>
+                        <field name="RULE_PLUGIN_SID">*</field>
+                        <field name="RULE_FROM">*</field>
+                        <field name="RULE_TO">*</field>
+                        <field name="RULE_TYPE">*</field>
+                        <field name="RULE_PROTOCOL">*</field>
+                        <field name="RULE_PORT_FROM">*</field>
+                        <field name="RULE_PORT_TO">*</field>
+                        <field name="RULE_RELIABILITY">*</field>
+                        <field name="RULE_TIMEOUT">*</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </xml>
+
+
+        <xml id="workspaceBlocks_task3_empty6" style="display: none">
+          <block type="directive" id="*" x="*" y="*">
+            <field name="DIRECTIVE">Directive</field>
+            <field name="DIRECTIVE_ID">*</field>
+            <field name="DIRECTIVE_NAME">*</field>
+            <field name="DIRECTIVE_PRIORITY">*</field>
+            <field name="DIRECTIVE_DISABLED">*</field>
+            <field name="DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE">*</field>
+            <field name="DIRECTIVE_KINGDOM">*</field>
+            <field name="DIRECTIVE_CATEGORY">*</field>
+            <statement name="NAME">
+              <block type="rule" id="*">
+                <field name="RULE">Rule</field>
+                <field name="RULE_NAME">*</field>
+                <field name="RULE_STAGE">*</field>
+                <field name="RULE_OCCURRENCE">*</field>
+                <field name="RULE_PLUGIN_ID">*</field>
+                <field name="RULE_PLUGIN_SID">*</field>
+                <field name="RULE_FROM">*</field>
+                <field name="RULE_TO">*</field>
+                <field name="RULE_TYPE">*</field>
+                <field name="RULE_PROTOCOL">*</field>
+                <field name="RULE_PORT_FROM">*</field>
+                <field name="RULE_PORT_TO">*</field>
+                <field name="RULE_RELIABILITY">*</field>
+                <field name="RULE_TIMEOUT">*</field>
+                <next>
+                  <block type="rule" id="*">
+                    <field name="RULE">Rule</field>
+                    <field name="RULE_NAME">*</field>
+                    <field name="RULE_STAGE">*</field>
+                    <field name="RULE_OCCURRENCE">*</field>
+                    <field name="RULE_PLUGIN_ID">*</field>
+                    <field name="RULE_PLUGIN_SID">*</field>
+                    <field name="RULE_FROM">*</field>
+                    <field name="RULE_TO">*</field>
+                    <field name="RULE_TYPE">*</field>
+                    <field name="RULE_PROTOCOL">*</field>
+                    <field name="RULE_PORT_FROM">*</field>
+                    <field name="RULE_PORT_TO">*</field>
+                    <field name="RULE_RELIABILITY">*</field>
+                    <field name="RULE_TIMEOUT">*</field>
+                    <next>
+                      <block type="rule" id="*">
+                        <field name="RULE">Rule</field>
+                        <field name="RULE_NAME">*</field>
+                        <field name="RULE_STAGE">...</field>
+                        <field name="RULE_OCCURRENCE">*</field>
+                        <field name="RULE_PLUGIN_ID">*</field>
+                        <field name="RULE_PLUGIN_SID">*</field>
+                        <field name="RULE_FROM">*</field>
+                        <field name="RULE_TO">*</field>
+                        <field name="RULE_TYPE">*</field>
+                        <field name="RULE_PROTOCOL">*</field>
+                        <field name="RULE_PORT_FROM">*</field>
+                        <field name="RULE_PORT_TO">*</field>
+                        <field name="RULE_RELIABILITY">*</field>
+                        <field name="RULE_TIMEOUT">*</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </xml>
+
+        <xml id="workspaceBlocks_task3_solution7" style="display: none">
+          <block type="directive" id="*" x="*" y="*">
+            <field name="DIRECTIVE">Directive</field>
+            <field name="DIRECTIVE_ID">*</field>
+            <field name="DIRECTIVE_NAME">*</field>
+            <field name="DIRECTIVE_PRIORITY">*</field>
+            <field name="DIRECTIVE_DISABLED">*</field>
+            <field name="DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE">*</field>
+            <field name="DIRECTIVE_KINGDOM">*</field>
+            <field name="DIRECTIVE_CATEGORY">*</field>
+            <statement name="NAME">
+              <block type="rule" id="*">
+                <field name="RULE">Rule</field>
+                <field name="RULE_NAME">*</field>
+                <field name="RULE_STAGE">*</field>
+                <field name="RULE_OCCURRENCE">*</field>
+                <field name="RULE_PLUGIN_ID">*</field>
+                <field name="RULE_PLUGIN_SID">*</field>
+                <field name="RULE_FROM">*</field>
+                <field name="RULE_TO">*</field>
+                <field name="RULE_TYPE">*</field>
+                <field name="RULE_PROTOCOL">*</field>
+                <field name="RULE_PORT_FROM">*</field>
+                <field name="RULE_PORT_TO">*</field>
+                <field name="RULE_RELIABILITY">*</field>
+                <field name="RULE_TIMEOUT">*</field>
+                <next>
+                  <block type="rule" id="*">
+                    <field name="RULE">Rule</field>
+                    <field name="RULE_NAME">*</field>
+                    <field name="RULE_STAGE">*</field>
+                    <field name="RULE_OCCURRENCE">*</field>
+                    <field name="RULE_PLUGIN_ID">*</field>
+                    <field name="RULE_PLUGIN_SID">*</field>
+                    <field name="RULE_FROM">*</field>
+                    <field name="RULE_TO">*</field>
+                    <field name="RULE_TYPE">*</field>
+                    <field name="RULE_PROTOCOL">*</field>
+                    <field name="RULE_PORT_FROM">*</field>
+                    <field name="RULE_PORT_TO">*</field>
+                    <field name="RULE_RELIABILITY">*</field>
+                    <field name="RULE_TIMEOUT">*</field>
+                    <next>
+                      <block type="rule" id="*">
+                        <field name="RULE">Rule</field>
+                        <field name="RULE_NAME">*</field>
+                        <field name="RULE_STAGE">*</field>
+                        <field name="RULE_OCCURRENCE">1</field>
+                        <field name="RULE_PLUGIN_ID">*</field>
+                        <field name="RULE_PLUGIN_SID">*</field>
+                        <field name="RULE_FROM">*</field>
+                        <field name="RULE_TO">*</field>
+                        <field name="RULE_TYPE">*</field>
+                        <field name="RULE_PROTOCOL">*</field>
+                        <field name="RULE_PORT_FROM">*</field>
+                        <field name="RULE_PORT_TO">*</field>
+                        <field name="RULE_RELIABILITY">*</field>
+                        <field name="RULE_TIMEOUT">*</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </xml>
+
+
+        <xml id="workspaceBlocks_task3_empty7" style="display: none">
+          <block type="directive" id="*" x="*" y="*">
+            <field name="DIRECTIVE">Directive</field>
+            <field name="DIRECTIVE_ID">*</field>
+            <field name="DIRECTIVE_NAME">*</field>
+            <field name="DIRECTIVE_PRIORITY">*</field>
+            <field name="DIRECTIVE_DISABLED">*</field>
+            <field name="DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE">*</field>
+            <field name="DIRECTIVE_KINGDOM">*</field>
+            <field name="DIRECTIVE_CATEGORY">*</field>
+            <statement name="NAME">
+              <block type="rule" id="*">
+                <field name="RULE">Rule</field>
+                <field name="RULE_NAME">*</field>
+                <field name="RULE_STAGE">*</field>
+                <field name="RULE_OCCURRENCE">*</field>
+                <field name="RULE_PLUGIN_ID">*</field>
+                <field name="RULE_PLUGIN_SID">*</field>
+                <field name="RULE_FROM">*</field>
+                <field name="RULE_TO">*</field>
+                <field name="RULE_TYPE">*</field>
+                <field name="RULE_PROTOCOL">*</field>
+                <field name="RULE_PORT_FROM">*</field>
+                <field name="RULE_PORT_TO">*</field>
+                <field name="RULE_RELIABILITY">*</field>
+                <field name="RULE_TIMEOUT">*</field>
+                <next>
+                  <block type="rule" id="*">
+                    <field name="RULE">Rule</field>
+                    <field name="RULE_NAME">*</field>
+                    <field name="RULE_STAGE">*</field>
+                    <field name="RULE_OCCURRENCE">*</field>
+                    <field name="RULE_PLUGIN_ID">*</field>
+                    <field name="RULE_PLUGIN_SID">*</field>
+                    <field name="RULE_FROM">*</field>
+                    <field name="RULE_TO">*</field>
+                    <field name="RULE_TYPE">*</field>
+                    <field name="RULE_PROTOCOL">*</field>
+                    <field name="RULE_PORT_FROM">*</field>
+                    <field name="RULE_PORT_TO">*</field>
+                    <field name="RULE_RELIABILITY">*</field>
+                    <field name="RULE_TIMEOUT">*</field>
+                    <next>
+                      <block type="rule" id="*">
+                        <field name="RULE">Rule</field>
+                        <field name="RULE_NAME">*</field>
+                        <field name="RULE_STAGE">*</field>
+                        <field name="RULE_OCCURRENCE">...</field>
+                        <field name="RULE_PLUGIN_ID">*</field>
+                        <field name="RULE_PLUGIN_SID">*</field>
+                        <field name="RULE_FROM">*</field>
+                        <field name="RULE_TO">*</field>
+                        <field name="RULE_TYPE">*</field>
+                        <field name="RULE_PROTOCOL">*</field>
+                        <field name="RULE_PORT_FROM">*</field>
+                        <field name="RULE_PORT_TO">*</field>
+                        <field name="RULE_RELIABILITY">*</field>
+                        <field name="RULE_TIMEOUT">*</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </xml>
+
+        <xml id="workspaceBlocks_task3_solution8" style="display: none">
+          <block type="directive" id="*" x="*" y="*">
+            <field name="DIRECTIVE">Directive</field>
+            <field name="DIRECTIVE_ID">*</field>
+            <field name="DIRECTIVE_NAME">*</field>
+            <field name="DIRECTIVE_PRIORITY">*</field>
+            <field name="DIRECTIVE_DISABLED">*</field>
+            <field name="DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE">*</field>
+            <field name="DIRECTIVE_KINGDOM">*</field>
+            <field name="DIRECTIVE_CATEGORY">*</field>
+            <statement name="NAME">
+              <block type="rule" id="*">
+                <field name="RULE">Rule</field>
+                <field name="RULE_NAME">*</field>
+                <field name="RULE_STAGE">*</field>
+                <field name="RULE_OCCURRENCE">*</field>
+                <field name="RULE_PLUGIN_ID">*</field>
+                <field name="RULE_PLUGIN_SID">*</field>
+                <field name="RULE_FROM">*</field>
+                <field name="RULE_TO">*</field>
+                <field name="RULE_TYPE">*</field>
+                <field name="RULE_PROTOCOL">*</field>
+                <field name="RULE_PORT_FROM">*</field>
+                <field name="RULE_PORT_TO">*</field>
+                <field name="RULE_RELIABILITY">*</field>
+                <field name="RULE_TIMEOUT">*</field>
+                <next>
+                  <block type="rule" id="*">
+                    <field name="RULE">Rule</field>
+                    <field name="RULE_NAME">*</field>
+                    <field name="RULE_STAGE">*</field>
+                    <field name="RULE_OCCURRENCE">*</field>
+                    <field name="RULE_PLUGIN_ID">*</field>
+                    <field name="RULE_PLUGIN_SID">*</field>
+                    <field name="RULE_FROM">*</field>
+                    <field name="RULE_TO">*</field>
+                    <field name="RULE_TYPE">*</field>
+                    <field name="RULE_PROTOCOL">*</field>
+                    <field name="RULE_PORT_FROM">*</field>
+                    <field name="RULE_PORT_TO">*</field>
+                    <field name="RULE_RELIABILITY">*</field>
+                    <field name="RULE_TIMEOUT">*</field>
+                    <next>
+                      <block type="rule" id="*">
+                        <field name="RULE">Rule</field>
+                        <field name="RULE_NAME">*</field>
+                        <field name="RULE_STAGE">*</field>
+                        <field name="RULE_OCCURRENCE">*</field>
+                        <field name="RULE_PLUGIN_ID">*</field>
+                        <field name="RULE_PLUGIN_SID">*</field>
+                        <field name="RULE_FROM">*</field>
+                        <field name="RULE_TO">*</field>
+                        <field name="RULE_TYPE">*</field>
+                        <field name="RULE_PROTOCOL">*</field>
+                        <field name="RULE_PORT_FROM">*</field>
+                        <field name="RULE_PORT_TO">*</field>
+                        <field name="RULE_RELIABILITY">*</field>
+                        <field name="RULE_TIMEOUT">60</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </xml>
+
+
+        <xml id="workspaceBlocks_task3_empty8" style="display: none">
+          <block type="directive" id="*" x="*" y="*">
+            <field name="DIRECTIVE">Directive</field>
+            <field name="DIRECTIVE_ID">*</field>
+            <field name="DIRECTIVE_NAME">*</field>
+            <field name="DIRECTIVE_PRIORITY">*</field>
+            <field name="DIRECTIVE_DISABLED">*</field>
+            <field name="DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE">*</field>
+            <field name="DIRECTIVE_KINGDOM">*</field>
+            <field name="DIRECTIVE_CATEGORY">*</field>
+            <statement name="NAME">
+              <block type="rule" id="*">
+                <field name="RULE">Rule</field>
+                <field name="RULE_NAME">*</field>
+                <field name="RULE_STAGE">*</field>
+                <field name="RULE_OCCURRENCE">*</field>
+                <field name="RULE_PLUGIN_ID">*</field>
+                <field name="RULE_PLUGIN_SID">*</field>
+                <field name="RULE_FROM">*</field>
+                <field name="RULE_TO">*</field>
+                <field name="RULE_TYPE">*</field>
+                <field name="RULE_PROTOCOL">*</field>
+                <field name="RULE_PORT_FROM">*</field>
+                <field name="RULE_PORT_TO">*</field>
+                <field name="RULE_RELIABILITY">*</field>
+                <field name="RULE_TIMEOUT">*</field>
+                <next>
+                  <block type="rule" id="*">
+                    <field name="RULE">Rule</field>
+                    <field name="RULE_NAME">*</field>
+                    <field name="RULE_STAGE">*</field>
+                    <field name="RULE_OCCURRENCE">*</field>
+                    <field name="RULE_PLUGIN_ID">*</field>
+                    <field name="RULE_PLUGIN_SID">*</field>
+                    <field name="RULE_FROM">*</field>
+                    <field name="RULE_TO">*</field>
+                    <field name="RULE_TYPE">*</field>
+                    <field name="RULE_PROTOCOL">*</field>
+                    <field name="RULE_PORT_FROM">*</field>
+                    <field name="RULE_PORT_TO">*</field>
+                    <field name="RULE_RELIABILITY">*</field>
+                    <field name="RULE_TIMEOUT">*</field>
+                    <next>
+                      <block type="rule" id="*">
+                        <field name="RULE">Rule</field>
+                        <field name="RULE_NAME">*</field>
+                        <field name="RULE_STAGE">*</field>
+                        <field name="RULE_OCCURRENCE">*</field>
+                        <field name="RULE_PLUGIN_ID">*</field>
+                        <field name="RULE_PLUGIN_SID">*</field>
+                        <field name="RULE_FROM">*</field>
+                        <field name="RULE_TO">*</field>
+                        <field name="RULE_TYPE">*</field>
+                        <field name="RULE_PROTOCOL">*</field>
+                        <field name="RULE_PORT_FROM">*</field>
+                        <field name="RULE_PORT_TO">*</field>
+                        <field name="RULE_RELIABILITY">*</field>
+                        <field name="RULE_TIMEOUT">...</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </xml>
+
+        <!-- -------------------------------------------------------------- -->
+
+        <xml id="workspaceBlocks_task4" style="display: none">
+          <block type="directive" id="directive_task4" x="0" y="30">
+            <field name="DIRECTIVE">Directive</field>
+            <field name="DIRECTIVE_ID">6</field>
+            <field name="DIRECTIVE_NAME">Arp-Spoof Attack</field>
+            <field name="DIRECTIVE_PRIORITY">5</field>
+            <field name="DIRECTIVE_DISABLED">DIRECTIVE_DISABLED_FALSE</field>
+            <field name="DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE">DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE_FALSE</field>
+            <field name="DIRECTIVE_KINGDOM">Attacks</field>
+            <field name="DIRECTIVE_CATEGORY">Spoofing</field>
+            <statement name="NAME">
+              <block type="rule" id="rule_task4_1">
+                <field name="RULE">Rule</field>
+                <field name="RULE_NAME">ARP-REPLY</field>
+                <field name="RULE_STAGE">1</field>
+                <field name="RULE_OCCURRENCE">1</field>
+                <field name="RULE_PLUGIN_ID">1008</field>
+                <field name="RULE_PLUGIN_SID">14</field>
+                <field name="RULE_FROM">ANY</field>
+                <field name="RULE_TO">ANY</field>
+                <field name="RULE_TYPE">PluginRule</field>
+                <field name="RULE_PROTOCOL">ANY</field>
+                <field name="RULE_PORT_FROM">ANY</field>
+                <field name="RULE_PORT_TO">ANY</field>
+                <field name="RULE_RELIABILITY">5</field>
+                <field name="RULE_TIMEOUT">0</field>
+                <next>
+                  <block type="rule" id="rule_task4_2">
+                    <field name="RULE">Rule</field>
+                    <field name="RULE_NAME">ARP-REPLY</field>
+                    <field name="RULE_STAGE">2</field>
+                    <field name="RULE_OCCURRENCE">4</field>
+                    <field name="RULE_PLUGIN_ID">1008</field>
+                    <field name="RULE_PLUGIN_SID">14</field>
+                    <field name="RULE_FROM">...</field>
+                    <field name="RULE_TO">ANY</field>
+                    <field name="RULE_TYPE">PluginRule</field>
+                    <field name="RULE_PROTOCOL">ANY</field>
+                    <field name="RULE_PORT_FROM">ANY</field>
+                    <field name="RULE_PORT_TO">ANY</field>
+                    <field name="RULE_RELIABILITY">5</field>
+                    <field name="RULE_TIMEOUT">60</field>
+                    <next>
+                      <block type="rule" id="rule_task4_3">
+                        <field name="RULE">Rule</field>
+                        <field name="RULE_NAME">...</field>
+                        <field name="RULE_STAGE">3</field>
+                        <field name="RULE_OCCURRENCE">...</field>
+                        <field name="RULE_PLUGIN_ID">1008</field>
+                        <field name="RULE_PLUGIN_SID">...</field>
+                        <field name="RULE_FROM">...</field>
+                        <field name="RULE_TO">ANY</field>
+                        <field name="RULE_TYPE">PluginRule</field>
+                        <field name="RULE_PROTOCOL">ANY</field>
+                        <field name="RULE_PORT_FROM">ANY</field>
+                        <field name="RULE_PORT_TO">ANY</field>
+                        <field name="RULE_RELIABILITY">10</field>
+                        <field name="RULE_TIMEOUT">60</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </xml>
+
+        <xml id="workspaceBlocks_task4_solution" style="display: none">
+          <block type="directive" id="*" x="0" y="30">
+            <field name="DIRECTIVE">Directive</field>
+            <field name="DIRECTIVE_ID">6</field>
+            <field name="DIRECTIVE_NAME">Arp-Spoof Attack</field>
+            <field name="DIRECTIVE_PRIORITY">5</field>
+            <field name="DIRECTIVE_DISABLED">DIRECTIVE_DISABLED_FALSE</field>
+            <field name="DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE">DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE_FALSE</field>
+            <field name="DIRECTIVE_KINGDOM">Attacks</field>
+            <field name="DIRECTIVE_CATEGORY">Spoofing</field>
+            <statement name="NAME">
+              <block type="rule" id="*">
+                <field name="RULE">Rule</field>
+                <field name="RULE_NAME">ARP-REPLY</field>
+                <field name="RULE_STAGE">1</field>
+                <field name="RULE_OCCURRENCE">1</field>
+                <field name="RULE_PLUGIN_ID">1008</field>
+                <field name="RULE_PLUGIN_SID">14</field>
+                <field name="RULE_FROM">ANY</field>
+                <field name="RULE_TO">ANY</field>
+                <field name="RULE_TYPE">PluginRule</field>
+                <field name="RULE_PROTOCOL">ANY</field>
+                <field name="RULE_PORT_FROM">ANY</field>
+                <field name="RULE_PORT_TO">ANY</field>
+                <field name="RULE_RELIABILITY">5</field>
+                <field name="RULE_TIMEOUT">0</field>
+                <next>
+                  <block type="rule" id="*">
+                    <field name="RULE">Rule</field>
+                    <field name="RULE_NAME">ARP-REPLY</field>
+                    <field name="RULE_STAGE">2</field>
+                    <field name="RULE_OCCURRENCE">4</field>
+                    <field name="RULE_PLUGIN_ID">1008</field>
+                    <field name="RULE_PLUGIN_SID">14</field>
+                    <field name="RULE_FROM">:1</field>
+                    <field name="RULE_TO">ANY</field>
+                    <field name="RULE_TYPE">PluginRule</field>
+                    <field name="RULE_PROTOCOL">ANY</field>
+                    <field name="RULE_PORT_FROM">ANY</field>
+                    <field name="RULE_PORT_TO">ANY</field>
+                    <field name="RULE_RELIABILITY">5</field>
+                    <field name="RULE_TIMEOUT">60</field>
+                    <next>
+                      <block type="rule" id="*">
+                        <field name="RULE">Rule</field>
+                        <field name="RULE_NAME">ARP-SPOOF-WARNING</field>
+                        <field name="RULE_STAGE">3</field>
+                        <field name="RULE_OCCURRENCE">1</field>
+                        <field name="RULE_PLUGIN_ID">1008</field>
+                        <field name="RULE_PLUGIN_SID">10</field>
+                        <field name="RULE_FROM">:1</field>
+                        <field name="RULE_TO">ANY</field>
+                        <field name="RULE_TYPE">PluginRule</field>
+                        <field name="RULE_PROTOCOL">ANY</field>
+                        <field name="RULE_PORT_FROM">ANY</field>
+                        <field name="RULE_PORT_TO">ANY</field>
+                        <field name="RULE_RELIABILITY">10</field>
+                        <field name="RULE_TIMEOUT">60</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </xml>
+
+        <xml id="workspaceBlocks_task4_solution0" style="display: none">
+          <block type="directive" id="*" x="*" y="*">
+            <field name="DIRECTIVE">Directive</field>
+            <field name="DIRECTIVE_ID">*</field>
+            <field name="DIRECTIVE_NAME">*</field>
+            <field name="DIRECTIVE_PRIORITY">*</field>
+            <field name="DIRECTIVE_DISABLED">*</field>
+            <field name="DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE">*</field>
+            <field name="DIRECTIVE_KINGDOM">*</field>
+            <field name="DIRECTIVE_CATEGORY">*</field>
+            <statement name="NAME">
+              <block type="rule" id="*">
+                <field name="RULE">Rule</field>
+                <field name="RULE_NAME">*</field>
+                <field name="RULE_STAGE">*</field>
+                <field name="RULE_OCCURRENCE">*</field>
+                <field name="RULE_PLUGIN_ID">*</field>
+                <field name="RULE_PLUGIN_SID">*</field>
+                <field name="RULE_FROM">*</field>
+                <field name="RULE_TO">*</field>
+                <field name="RULE_TYPE">*</field>
+                <field name="RULE_PROTOCOL">*</field>
+                <field name="RULE_PORT_FROM">*</field>
+                <field name="RULE_PORT_TO">*</field>
+                <field name="RULE_RELIABILITY">*</field>
+                <field name="RULE_TIMEOUT">*</field>
+                <next>
+                  <block type="rule" id="*">
+                    <field name="RULE">Rule</field>
+                    <field name="RULE_NAME">*</field>
+                    <field name="RULE_STAGE">*</field>
+                    <field name="RULE_OCCURRENCE">*</field>
+                    <field name="RULE_PLUGIN_ID">*</field>
+                    <field name="RULE_PLUGIN_SID">*</field>
+                    <field name="RULE_FROM">:1</field>
+                    <field name="RULE_TO">*</field>
+                    <field name="RULE_TYPE">*</field>
+                    <field name="RULE_PROTOCOL">*</field>
+                    <field name="RULE_PORT_FROM">*</field>
+                    <field name="RULE_PORT_TO">*</field>
+                    <field name="RULE_RELIABILITY">*</field>
+                    <field name="RULE_TIMEOUT">*</field>
+                    <next>
+                      <block type="rule" id="*">
+                        <field name="RULE">Rule</field>
+                        <field name="RULE_NAME">*</field>
+                        <field name="RULE_STAGE">*</field>
+                        <field name="RULE_OCCURRENCE">*</field>
+                        <field name="RULE_PLUGIN_ID">*</field>
+                        <field name="RULE_PLUGIN_SID">*</field>
+                        <field name="RULE_FROM">*</field>
+                        <field name="RULE_TO">*</field>
+                        <field name="RULE_TYPE">*</field>
+                        <field name="RULE_PROTOCOL">*</field>
+                        <field name="RULE_PORT_FROM">*</field>
+                        <field name="RULE_PORT_TO">*</field>
+                        <field name="RULE_RELIABILITY">*</field>
+                        <field name="RULE_TIMEOUT">*</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </xml>
+
+        <xml id="workspaceBlocks_task4_empty0" style="display: none">
+          <block type="directive" id="*" x="*" y="*">
+            <field name="DIRECTIVE">Directive</field>
+            <field name="DIRECTIVE_ID">*</field>
+            <field name="DIRECTIVE_NAME">*</field>
+            <field name="DIRECTIVE_PRIORITY">*</field>
+            <field name="DIRECTIVE_DISABLED">*</field>
+            <field name="DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE">*</field>
+            <field name="DIRECTIVE_KINGDOM">*</field>
+            <field name="DIRECTIVE_CATEGORY">*</field>
+            <statement name="NAME">
+              <block type="rule" id="*">
+                <field name="RULE">Rule</field>
+                <field name="RULE_NAME">*</field>
+                <field name="RULE_STAGE">*</field>
+                <field name="RULE_OCCURRENCE">*</field>
+                <field name="RULE_PLUGIN_ID">*</field>
+                <field name="RULE_PLUGIN_SID">*</field>
+                <field name="RULE_FROM">*</field>
+                <field name="RULE_TO">*</field>
+                <field name="RULE_TYPE">*</field>
+                <field name="RULE_PROTOCOL">*</field>
+                <field name="RULE_PORT_FROM">*</field>
+                <field name="RULE_PORT_TO">*</field>
+                <field name="RULE_RELIABILITY">*</field>
+                <field name="RULE_TIMEOUT">*</field>
+                <next>
+                  <block type="rule" id="*">
+                    <field name="RULE">Rule</field>
+                    <field name="RULE_NAME">*</field>
+                    <field name="RULE_STAGE">*</field>
+                    <field name="RULE_OCCURRENCE">*</field>
+                    <field name="RULE_PLUGIN_ID">*</field>
+                    <field name="RULE_PLUGIN_SID">*</field>
+                    <field name="RULE_FROM">...</field>
+                    <field name="RULE_TO">*</field>
+                    <field name="RULE_TYPE">*</field>
+                    <field name="RULE_PROTOCOL">*</field>
+                    <field name="RULE_PORT_FROM">*</field>
+                    <field name="RULE_PORT_TO">*</field>
+                    <field name="RULE_RELIABILITY">*</field>
+                    <field name="RULE_TIMEOUT">*</field>
+                    <next>
+                      <block type="rule" id="*">
+                        <field name="RULE">Rule</field>
+                        <field name="RULE_NAME">*</field>
+                        <field name="RULE_STAGE">*</field>
+                        <field name="RULE_OCCURRENCE">*</field>
+                        <field name="RULE_PLUGIN_ID">*</field>
+                        <field name="RULE_PLUGIN_SID">*</field>
+                        <field name="RULE_FROM">*</field>
+                        <field name="RULE_TO">*</field>
+                        <field name="RULE_TYPE">*</field>
+                        <field name="RULE_PROTOCOL">*</field>
+                        <field name="RULE_PORT_FROM">*</field>
+                        <field name="RULE_PORT_TO">*</field>
+                        <field name="RULE_RELIABILITY">*</field>
+                        <field name="RULE_TIMEOUT">*</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </xml>
+
+        <xml id="workspaceBlocks_task4_solution1" style="display: none">
+          <block type="directive" id="*" x="*" y="*">
+            <field name="DIRECTIVE">Directive</field>
+            <field name="DIRECTIVE_ID">*</field>
+            <field name="DIRECTIVE_NAME">*</field>
+            <field name="DIRECTIVE_PRIORITY">*</field>
+            <field name="DIRECTIVE_DISABLED">*</field>
+            <field name="DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE">*</field>
+            <field name="DIRECTIVE_KINGDOM">*</field>
+            <field name="DIRECTIVE_CATEGORY">*</field>
+            <statement name="NAME">
+              <block type="rule" id="*">
+                <field name="RULE">Rule</field>
+                <field name="RULE_NAME">*</field>
+                <field name="RULE_STAGE">*</field>
+                <field name="RULE_OCCURRENCE">*</field>
+                <field name="RULE_PLUGIN_ID">*</field>
+                <field name="RULE_PLUGIN_SID">*</field>
+                <field name="RULE_FROM">*</field>
+                <field name="RULE_TO">*</field>
+                <field name="RULE_TYPE">*</field>
+                <field name="RULE_PROTOCOL">*</field>
+                <field name="RULE_PORT_FROM">*</field>
+                <field name="RULE_PORT_TO">*</field>
+                <field name="RULE_RELIABILITY">*</field>
+                <field name="RULE_TIMEOUT">*</field>
+                <next>
+                  <block type="rule" id="*">
+                    <field name="RULE">Rule</field>
+                    <field name="RULE_NAME">*</field>
+                    <field name="RULE_STAGE">*</field>
+                    <field name="RULE_OCCURRENCE">*</field>
+                    <field name="RULE_PLUGIN_ID">*</field>
+                    <field name="RULE_PLUGIN_SID">*</field>
+                    <field name="RULE_FROM">*</field>
+                    <field name="RULE_TO">*</field>
+                    <field name="RULE_TYPE">*</field>
+                    <field name="RULE_PROTOCOL">*</field>
+                    <field name="RULE_PORT_FROM">*</field>
+                    <field name="RULE_PORT_TO">*</field>
+                    <field name="RULE_RELIABILITY">*</field>
+                    <field name="RULE_TIMEOUT">*</field>
+                    <next>
+                      <block type="rule" id="*">
+                        <field name="RULE">Rule</field>
+                        <field name="RULE_NAME">ARP-SPOOF-WARNING</field>
+                        <field name="RULE_STAGE">*</field>
+                        <field name="RULE_OCCURRENCE">*</field>
+                        <field name="RULE_PLUGIN_ID">*</field>
+                        <field name="RULE_PLUGIN_SID">*</field>
+                        <field name="RULE_FROM">*</field>
+                        <field name="RULE_TO">*</field>
+                        <field name="RULE_TYPE">*</field>
+                        <field name="RULE_PROTOCOL">*</field>
+                        <field name="RULE_PORT_FROM">*</field>
+                        <field name="RULE_PORT_TO">*</field>
+                        <field name="RULE_RELIABILITY">*</field>
+                        <field name="RULE_TIMEOUT">*</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </xml>
+
+        <xml id="workspaceBlocks_task4_empty1" style="display: none">
+          <block type="directive" id="*" x="*" y="*">
+            <field name="DIRECTIVE">Directive</field>
+            <field name="DIRECTIVE_ID">*</field>
+            <field name="DIRECTIVE_NAME">*</field>
+            <field name="DIRECTIVE_PRIORITY">*</field>
+            <field name="DIRECTIVE_DISABLED">*</field>
+            <field name="DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE">*</field>
+            <field name="DIRECTIVE_KINGDOM">*</field>
+            <field name="DIRECTIVE_CATEGORY">*</field>
+            <statement name="NAME">
+              <block type="rule" id="*">
+                <field name="RULE">Rule</field>
+                <field name="RULE_NAME">*</field>
+                <field name="RULE_STAGE">*</field>
+                <field name="RULE_OCCURRENCE">*</field>
+                <field name="RULE_PLUGIN_ID">*</field>
+                <field name="RULE_PLUGIN_SID">*</field>
+                <field name="RULE_FROM">*</field>
+                <field name="RULE_TO">*</field>
+                <field name="RULE_TYPE">*</field>
+                <field name="RULE_PROTOCOL">*</field>
+                <field name="RULE_PORT_FROM">*</field>
+                <field name="RULE_PORT_TO">*</field>
+                <field name="RULE_RELIABILITY">*</field>
+                <field name="RULE_TIMEOUT">*</field>
+                <next>
+                  <block type="rule" id="*">
+                    <field name="RULE">Rule</field>
+                    <field name="RULE_NAME">*</field>
+                    <field name="RULE_STAGE">*</field>
+                    <field name="RULE_OCCURRENCE">*</field>
+                    <field name="RULE_PLUGIN_ID">*</field>
+                    <field name="RULE_PLUGIN_SID">*</field>
+                    <field name="RULE_FROM">*</field>
+                    <field name="RULE_TO">*</field>
+                    <field name="RULE_TYPE">*</field>
+                    <field name="RULE_PROTOCOL">*</field>
+                    <field name="RULE_PORT_FROM">*</field>
+                    <field name="RULE_PORT_TO">*</field>
+                    <field name="RULE_RELIABILITY">*</field>
+                    <field name="RULE_TIMEOUT">*</field>
+                    <next>
+                      <block type="rule" id="*">
+                        <field name="RULE">Rule</field>
+                        <field name="RULE_NAME">...</field>
+                        <field name="RULE_STAGE">*</field>
+                        <field name="RULE_OCCURRENCE">*</field>
+                        <field name="RULE_PLUGIN_ID">*</field>
+                        <field name="RULE_PLUGIN_SID">*</field>
+                        <field name="RULE_FROM">*</field>
+                        <field name="RULE_TO">*</field>
+                        <field name="RULE_TYPE">*</field>
+                        <field name="RULE_PROTOCOL">*</field>
+                        <field name="RULE_PORT_FROM">*</field>
+                        <field name="RULE_PORT_TO">*</field>
+                        <field name="RULE_RELIABILITY">*</field>
+                        <field name="RULE_TIMEOUT">*</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </xml>
+
+        <xml id="workspaceBlocks_task4_solution2" style="display: none">
+          <block type="directive" id="*" x="*" y="*">
+            <field name="DIRECTIVE">Directive</field>
+            <field name="DIRECTIVE_ID">*</field>
+            <field name="DIRECTIVE_NAME">*</field>
+            <field name="DIRECTIVE_PRIORITY">*</field>
+            <field name="DIRECTIVE_DISABLED">*</field>
+            <field name="DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE">*</field>
+            <field name="DIRECTIVE_KINGDOM">*</field>
+            <field name="DIRECTIVE_CATEGORY">*</field>
+            <statement name="NAME">
+              <block type="rule" id="*">
+                <field name="RULE">Rule</field>
+                <field name="RULE_NAME">*</field>
+                <field name="RULE_STAGE">*</field>
+                <field name="RULE_OCCURRENCE">*</field>
+                <field name="RULE_PLUGIN_ID">*</field>
+                <field name="RULE_PLUGIN_SID">*</field>
+                <field name="RULE_FROM">*</field>
+                <field name="RULE_TO">*</field>
+                <field name="RULE_TYPE">*</field>
+                <field name="RULE_PROTOCOL">*</field>
+                <field name="RULE_PORT_FROM">*</field>
+                <field name="RULE_PORT_TO">*</field>
+                <field name="RULE_RELIABILITY">*</field>
+                <field name="RULE_TIMEOUT">*</field>
+                <next>
+                  <block type="rule" id="*">
+                    <field name="RULE">Rule</field>
+                    <field name="RULE_NAME">*</field>
+                    <field name="RULE_STAGE">*</field>
+                    <field name="RULE_OCCURRENCE">*</field>
+                    <field name="RULE_PLUGIN_ID">*</field>
+                    <field name="RULE_PLUGIN_SID">*</field>
+                    <field name="RULE_FROM">*</field>
+                    <field name="RULE_TO">*</field>
+                    <field name="RULE_TYPE">*</field>
+                    <field name="RULE_PROTOCOL">*</field>
+                    <field name="RULE_PORT_FROM">*</field>
+                    <field name="RULE_PORT_TO">*</field>
+                    <field name="RULE_RELIABILITY">*</field>
+                    <field name="RULE_TIMEOUT">*</field>
+                    <next>
+                      <block type="rule" id="*">
+                        <field name="RULE">Rule</field>
+                        <field name="RULE_NAME">*</field>
+                        <field name="RULE_STAGE">*</field>
+                        <field name="RULE_OCCURRENCE">*</field>
+                        <field name="RULE_PLUGIN_ID">*</field>
+                        <field name="RULE_PLUGIN_SID">10</field>
+                        <field name="RULE_FROM">*</field>
+                        <field name="RULE_TO">*</field>
+                        <field name="RULE_TYPE">*</field>
+                        <field name="RULE_PROTOCOL">*</field>
+                        <field name="RULE_PORT_FROM">*</field>
+                        <field name="RULE_PORT_TO">*</field>
+                        <field name="RULE_RELIABILITY">*</field>
+                        <field name="RULE_TIMEOUT">*</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </xml>
+
+        <xml id="workspaceBlocks_task4_empty2" style="display: none">
+          <block type="directive" id="*" x="*" y="*">
+            <field name="DIRECTIVE">Directive</field>
+            <field name="DIRECTIVE_ID">*</field>
+            <field name="DIRECTIVE_NAME">*</field>
+            <field name="DIRECTIVE_PRIORITY">*</field>
+            <field name="DIRECTIVE_DISABLED">*</field>
+            <field name="DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE">*</field>
+            <field name="DIRECTIVE_KINGDOM">*</field>
+            <field name="DIRECTIVE_CATEGORY">*</field>
+            <statement name="NAME">
+              <block type="rule" id="*">
+                <field name="RULE">Rule</field>
+                <field name="RULE_NAME">*</field>
+                <field name="RULE_STAGE">*</field>
+                <field name="RULE_OCCURRENCE">*</field>
+                <field name="RULE_PLUGIN_ID">*</field>
+                <field name="RULE_PLUGIN_SID">*</field>
+                <field name="RULE_FROM">*</field>
+                <field name="RULE_TO">*</field>
+                <field name="RULE_TYPE">*</field>
+                <field name="RULE_PROTOCOL">*</field>
+                <field name="RULE_PORT_FROM">*</field>
+                <field name="RULE_PORT_TO">*</field>
+                <field name="RULE_RELIABILITY">*</field>
+                <field name="RULE_TIMEOUT">*</field>
+                <next>
+                  <block type="rule" id="*">
+                    <field name="RULE">Rule</field>
+                    <field name="RULE_NAME">*</field>
+                    <field name="RULE_STAGE">*</field>
+                    <field name="RULE_OCCURRENCE">*</field>
+                    <field name="RULE_PLUGIN_ID">*</field>
+                    <field name="RULE_PLUGIN_SID">*</field>
+                    <field name="RULE_FROM">*</field>
+                    <field name="RULE_TO">*</field>
+                    <field name="RULE_TYPE">*</field>
+                    <field name="RULE_PROTOCOL">*</field>
+                    <field name="RULE_PORT_FROM">*</field>
+                    <field name="RULE_PORT_TO">*</field>
+                    <field name="RULE_RELIABILITY">*</field>
+                    <field name="RULE_TIMEOUT">*</field>
+                    <next>
+                      <block type="rule" id="*">
+                        <field name="RULE">Rule</field>
+                        <field name="RULE_NAME">*</field>
+                        <field name="RULE_STAGE">*</field>
+                        <field name="RULE_OCCURRENCE">*</field>
+                        <field name="RULE_PLUGIN_ID">*</field>
+                        <field name="RULE_PLUGIN_SID">...</field>
+                        <field name="RULE_FROM">*</field>
+                        <field name="RULE_TO">*</field>
+                        <field name="RULE_TYPE">*</field>
+                        <field name="RULE_PROTOCOL">*</field>
+                        <field name="RULE_PORT_FROM">*</field>
+                        <field name="RULE_PORT_TO">*</field>
+                        <field name="RULE_RELIABILITY">*</field>
+                        <field name="RULE_TIMEOUT">*</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </xml>
+
+        <xml id="workspaceBlocks_task4_solution3" style="display: none">
+          <block type="directive" id="*" x="*" y="*">
+            <field name="DIRECTIVE">Directive</field>
+            <field name="DIRECTIVE_ID">*</field>
+            <field name="DIRECTIVE_NAME">*</field>
+            <field name="DIRECTIVE_PRIORITY">*</field>
+            <field name="DIRECTIVE_DISABLED">*</field>
+            <field name="DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE">*</field>
+            <field name="DIRECTIVE_KINGDOM">*</field>
+            <field name="DIRECTIVE_CATEGORY">*</field>
+            <statement name="NAME">
+              <block type="rule" id="*">
+                <field name="RULE">Rule</field>
+                <field name="RULE_NAME">*</field>
+                <field name="RULE_STAGE">*</field>
+                <field name="RULE_OCCURRENCE">*</field>
+                <field name="RULE_PLUGIN_ID">*</field>
+                <field name="RULE_PLUGIN_SID">*</field>
+                <field name="RULE_FROM">*</field>
+                <field name="RULE_TO">*</field>
+                <field name="RULE_TYPE">*</field>
+                <field name="RULE_PROTOCOL">*</field>
+                <field name="RULE_PORT_FROM">*</field>
+                <field name="RULE_PORT_TO">*</field>
+                <field name="RULE_RELIABILITY">*</field>
+                <field name="RULE_TIMEOUT">*</field>
+                <next>
+                  <block type="rule" id="*">
+                    <field name="RULE">Rule</field>
+                    <field name="RULE_NAME">*</field>
+                    <field name="RULE_STAGE">*</field>
+                    <field name="RULE_OCCURRENCE">*</field>
+                    <field name="RULE_PLUGIN_ID">*</field>
+                    <field name="RULE_PLUGIN_SID">*</field>
+                    <field name="RULE_FROM">*</field>
+                    <field name="RULE_TO">*</field>
+                    <field name="RULE_TYPE">*</field>
+                    <field name="RULE_PROTOCOL">*</field>
+                    <field name="RULE_PORT_FROM">*</field>
+                    <field name="RULE_PORT_TO">*</field>
+                    <field name="RULE_RELIABILITY">*</field>
+                    <field name="RULE_TIMEOUT">*</field>
+                    <next>
+                      <block type="rule" id="*">
+                        <field name="RULE">Rule</field>
+                        <field name="RULE_NAME">*</field>
+                        <field name="RULE_STAGE">*</field>
+                        <field name="RULE_OCCURRENCE">1</field>
+                        <field name="RULE_PLUGIN_ID">*</field>
+                        <field name="RULE_PLUGIN_SID">*</field>
+                        <field name="RULE_FROM">*</field>
+                        <field name="RULE_TO">*</field>
+                        <field name="RULE_TYPE">*</field>
+                        <field name="RULE_PROTOCOL">*</field>
+                        <field name="RULE_PORT_FROM">*</field>
+                        <field name="RULE_PORT_TO">*</field>
+                        <field name="RULE_RELIABILITY">*</field>
+                        <field name="RULE_TIMEOUT">*</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </xml>
+
+        <xml id="workspaceBlocks_task4_empty3" style="display: none">
+          <block type="directive" id="*" x="*" y="*">
+            <field name="DIRECTIVE">Directive</field>
+            <field name="DIRECTIVE_ID">*</field>
+            <field name="DIRECTIVE_NAME">*</field>
+            <field name="DIRECTIVE_PRIORITY">*</field>
+            <field name="DIRECTIVE_DISABLED">*</field>
+            <field name="DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE">*</field>
+            <field name="DIRECTIVE_KINGDOM">*</field>
+            <field name="DIRECTIVE_CATEGORY">*</field>
+            <statement name="NAME">
+              <block type="rule" id="*">
+                <field name="RULE">Rule</field>
+                <field name="RULE_NAME">*</field>
+                <field name="RULE_STAGE">*</field>
+                <field name="RULE_OCCURRENCE">*</field>
+                <field name="RULE_PLUGIN_ID">*</field>
+                <field name="RULE_PLUGIN_SID">*</field>
+                <field name="RULE_FROM">*</field>
+                <field name="RULE_TO">*</field>
+                <field name="RULE_TYPE">*</field>
+                <field name="RULE_PROTOCOL">*</field>
+                <field name="RULE_PORT_FROM">*</field>
+                <field name="RULE_PORT_TO">*</field>
+                <field name="RULE_RELIABILITY">*</field>
+                <field name="RULE_TIMEOUT">*</field>
+                <next>
+                  <block type="rule" id="*">
+                    <field name="RULE">Rule</field>
+                    <field name="RULE_NAME">*</field>
+                    <field name="RULE_STAGE">*</field>
+                    <field name="RULE_OCCURRENCE">*</field>
+                    <field name="RULE_PLUGIN_ID">*</field>
+                    <field name="RULE_PLUGIN_SID">*</field>
+                    <field name="RULE_FROM">*</field>
+                    <field name="RULE_TO">*</field>
+                    <field name="RULE_TYPE">*</field>
+                    <field name="RULE_PROTOCOL">*</field>
+                    <field name="RULE_PORT_FROM">*</field>
+                    <field name="RULE_PORT_TO">*</field>
+                    <field name="RULE_RELIABILITY">*</field>
+                    <field name="RULE_TIMEOUT">*</field>
+                    <next>
+                      <block type="rule" id="*">
+                        <field name="RULE">Rule</field>
+                        <field name="RULE_NAME">*</field>
+                        <field name="RULE_STAGE">*</field>
+                        <field name="RULE_OCCURRENCE">...</field>
+                        <field name="RULE_PLUGIN_ID">*</field>
+                        <field name="RULE_PLUGIN_SID">*</field>
+                        <field name="RULE_FROM">*</field>
+                        <field name="RULE_TO">*</field>
+                        <field name="RULE_TYPE">*</field>
+                        <field name="RULE_PROTOCOL">*</field>
+                        <field name="RULE_PORT_FROM">*</field>
+                        <field name="RULE_PORT_TO">*</field>
+                        <field name="RULE_RELIABILITY">*</field>
+                        <field name="RULE_TIMEOUT">*</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </xml>
+
+        <xml id="workspaceBlocks_task4_solution4" style="display: none">
+          <block type="directive" id="*" x="*" y="*">
+            <field name="DIRECTIVE">Directive</field>
+            <field name="DIRECTIVE_ID">*</field>
+            <field name="DIRECTIVE_NAME">*</field>
+            <field name="DIRECTIVE_PRIORITY">*</field>
+            <field name="DIRECTIVE_DISABLED">*</field>
+            <field name="DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE">*</field>
+            <field name="DIRECTIVE_KINGDOM">*</field>
+            <field name="DIRECTIVE_CATEGORY">*</field>
+            <statement name="NAME">
+              <block type="rule" id="*">
+                <field name="RULE">Rule</field>
+                <field name="RULE_NAME">*</field>
+                <field name="RULE_STAGE">*</field>
+                <field name="RULE_OCCURRENCE">*</field>
+                <field name="RULE_PLUGIN_ID">*</field>
+                <field name="RULE_PLUGIN_SID">*</field>
+                <field name="RULE_FROM">*</field>
+                <field name="RULE_TO">*</field>
+                <field name="RULE_TYPE">*</field>
+                <field name="RULE_PROTOCOL">*</field>
+                <field name="RULE_PORT_FROM">*</field>
+                <field name="RULE_PORT_TO">*</field>
+                <field name="RULE_RELIABILITY">*</field>
+                <field name="RULE_TIMEOUT">*</field>
+                <next>
+                  <block type="rule" id="*">
+                    <field name="RULE">Rule</field>
+                    <field name="RULE_NAME">*</field>
+                    <field name="RULE_STAGE">*</field>
+                    <field name="RULE_OCCURRENCE">*</field>
+                    <field name="RULE_PLUGIN_ID">*</field>
+                    <field name="RULE_PLUGIN_SID">*</field>
+                    <field name="RULE_FROM">*</field>
+                    <field name="RULE_TO">*</field>
+                    <field name="RULE_TYPE">*</field>
+                    <field name="RULE_PROTOCOL">*</field>
+                    <field name="RULE_PORT_FROM">*</field>
+                    <field name="RULE_PORT_TO">*</field>
+                    <field name="RULE_RELIABILITY">*</field>
+                    <field name="RULE_TIMEOUT">*</field>
+                    <next>
+                      <block type="rule" id="*">
+                        <field name="RULE">Rule</field>
+                        <field name="RULE_NAME">*</field>
+                        <field name="RULE_STAGE">*</field>
+                        <field name="RULE_OCCURRENCE">*</field>
+                        <field name="RULE_PLUGIN_ID">*</field>
+                        <field name="RULE_PLUGIN_SID">*</field>
+                        <field name="RULE_FROM">:1</field>
+                        <field name="RULE_TO">*</field>
+                        <field name="RULE_TYPE">*</field>
+                        <field name="RULE_PROTOCOL">*</field>
+                        <field name="RULE_PORT_FROM">*</field>
+                        <field name="RULE_PORT_TO">*</field>
+                        <field name="RULE_RELIABILITY">*</field>
+                        <field name="RULE_TIMEOUT">*</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </xml>
+
+        <xml id="workspaceBlocks_task4_empty4" style="display: none">
+          <block type="directive" id="*" x="*" y="*">
+            <field name="DIRECTIVE">Directive</field>
+            <field name="DIRECTIVE_ID">*</field>
+            <field name="DIRECTIVE_NAME">*</field>
+            <field name="DIRECTIVE_PRIORITY">*</field>
+            <field name="DIRECTIVE_DISABLED">*</field>
+            <field name="DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE">*</field>
+            <field name="DIRECTIVE_KINGDOM">*</field>
+            <field name="DIRECTIVE_CATEGORY">*</field>
+            <statement name="NAME">
+              <block type="rule" id="*">
+                <field name="RULE">Rule</field>
+                <field name="RULE_NAME">*</field>
+                <field name="RULE_STAGE">*</field>
+                <field name="RULE_OCCURRENCE">*</field>
+                <field name="RULE_PLUGIN_ID">*</field>
+                <field name="RULE_PLUGIN_SID">*</field>
+                <field name="RULE_FROM">*</field>
+                <field name="RULE_TO">*</field>
+                <field name="RULE_TYPE">*</field>
+                <field name="RULE_PROTOCOL">*</field>
+                <field name="RULE_PORT_FROM">*</field>
+                <field name="RULE_PORT_TO">*</field>
+                <field name="RULE_RELIABILITY">*</field>
+                <field name="RULE_TIMEOUT">*</field>
+                <next>
+                  <block type="rule" id="*">
+                    <field name="RULE">Rule</field>
+                    <field name="RULE_NAME">*</field>
+                    <field name="RULE_STAGE">*</field>
+                    <field name="RULE_OCCURRENCE">*</field>
+                    <field name="RULE_PLUGIN_ID">*</field>
+                    <field name="RULE_PLUGIN_SID">*</field>
+                    <field name="RULE_FROM">*</field>
+                    <field name="RULE_TO">*</field>
+                    <field name="RULE_TYPE">*</field>
+                    <field name="RULE_PROTOCOL">*</field>
+                    <field name="RULE_PORT_FROM">*</field>
+                    <field name="RULE_PORT_TO">*</field>
+                    <field name="RULE_RELIABILITY">*</field>
+                    <field name="RULE_TIMEOUT">*</field>
+                    <next>
+                      <block type="rule" id="*">
+                        <field name="RULE">Rule</field>
+                        <field name="RULE_NAME">*</field>
+                        <field name="RULE_STAGE">*</field>
+                        <field name="RULE_OCCURRENCE">*</field>
+                        <field name="RULE_PLUGIN_ID">*</field>
+                        <field name="RULE_PLUGIN_SID">*</field>
+                        <field name="RULE_FROM">...</field>
+                        <field name="RULE_TO">*</field>
+                        <field name="RULE_TYPE">*</field>
+                        <field name="RULE_PROTOCOL">*</field>
+                        <field name="RULE_PORT_FROM">*</field>
+                        <field name="RULE_PORT_TO">*</field>
+                        <field name="RULE_RELIABILITY">*</field>
+                        <field name="RULE_TIMEOUT">*</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </xml>
+
+        <!-- -------------------------------------------------------------- -->
+
+        <xml id="workspaceBlocks_task5" style="display: none">
+          <block type="directive" id="directive_task5" x="0" y="30">
+            <field name="DIRECTIVE">Directive</field>
+            <field name="DIRECTIVE_ID">1</field>
+            <field name="DIRECTIVE_NAME">Unknown IP in network</field>
+            <field name="DIRECTIVE_PRIORITY">3</field>
+            <field name="DIRECTIVE_DISABLED">DIRECTIVE_DISABLED_FALSE</field>
+            <field name="DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE">DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE_FALSE</field>
+            <field name="DIRECTIVE_KINGDOM">Attacks</field>
+            <field name="DIRECTIVE_CATEGORY">Integrity-Violation</field>
+            <statement name="NAME">
+              <block type="rule" id="rule_task5">
+                <field name="RULE">Rule</field>
+                <field name="RULE_NAME">FIREWALL-WARNING</field>
+                <field name="RULE_STAGE">1</field>
+                <field name="RULE_OCCURRENCE">1</field>
+                <field name="RULE_PLUGIN_ID">1008</field>
+                <field name="RULE_PLUGIN_SID">9</field>
+                <field name="RULE_FROM">ANY</field>
+                <field name="RULE_TO">ANY</field>
+                <field name="RULE_TYPE">PluginRule</field>
+                <field name="RULE_PROTOCOL">ANY</field>
+                <field name="RULE_PORT_FROM">ANY</field>
+                <field name="RULE_PORT_TO">ANY</field>
+                <field name="RULE_RELIABILITY">10</field>
+                <field name="RULE_TIMEOUT">0</field>
+              </block>
+            </statement>
+          </block>
+        </xml>
+
+        <xml id="workspaceBlocks_task5_solution" style="display: none">
+          <block type="directive" id="*" x="0" y="30">
+            <field name="DIRECTIVE">Directive</field>
+            <field name="DIRECTIVE_ID">4</field>
+            <field name="DIRECTIVE_NAME">Log File Manipulation</field>
+            <field name="DIRECTIVE_PRIORITY">3</field>
+            <field name="DIRECTIVE_DISABLED">DIRECTIVE_DISABLED_FALSE</field>
+            <field name="DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE">DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE_FALSE</field>
+            <field name="DIRECTIVE_KINGDOM">Attacks</field>
+            <field name="DIRECTIVE_CATEGORY">Integrity-Violation</field>
+            <statement name="NAME">
+              <block type="rule" id="*">
+                <field name="RULE">Rule</field>
+                <field name="RULE_NAME">LOG FILE MANIPULATION</field>
+                <field name="RULE_STAGE">1</field>
+                <field name="RULE_OCCURRENCE">1</field>
+                <field name="RULE_PLUGIN_ID">1008</field>
+                <field name="RULE_PLUGIN_SID">8</field>
+                <field name="RULE_FROM">ANY</field>
+                <field name="RULE_TO">ANY</field>
+                <field name="RULE_TYPE">PluginRule</field>
+                <field name="RULE_PROTOCOL">ANY</field>
+                <field name="RULE_PORT_FROM">ANY</field>
+                <field name="RULE_PORT_TO">ANY</field>
+                <field name="RULE_RELIABILITY">10</field>
+                <field name="RULE_TIMEOUT">0</field>
+              </block>
+            </statement>
+          </block>
+        </xml>
+
+        <xml id="workspaceBlocks_task5_solution0" style="display: none">
+          <block type="directive" id="*" x="*" y="*">
+            <field name="DIRECTIVE">Directive</field>
+            <field name="DIRECTIVE_ID">4</field>
+            <field name="DIRECTIVE_NAME">*</field>
+            <field name="DIRECTIVE_PRIORITY">*</field>
+            <field name="DIRECTIVE_DISABLED">*</field>
+            <field name="DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE">*</field>
+            <field name="DIRECTIVE_KINGDOM">*</field>
+            <field name="DIRECTIVE_CATEGORY">*</field>
+            <statement name="NAME">
+              <block type="rule" id="*">
+                <field name="RULE">Rule</field>
+                <field name="RULE_NAME">*</field>
+                <field name="RULE_STAGE">*</field>
+                <field name="RULE_OCCURRENCE">*</field>
+                <field name="RULE_PLUGIN_ID">*</field>
+                <field name="RULE_PLUGIN_SID">*</field>
+                <field name="RULE_FROM">*</field>
+                <field name="RULE_TO">*</field>
+                <field name="RULE_TYPE">*</field>
+                <field name="RULE_PROTOCOL">*</field>
+                <field name="RULE_PORT_FROM">*</field>
+                <field name="RULE_PORT_TO">*</field>
+                <field name="RULE_RELIABILITY">*</field>
+                <field name="RULE_TIMEOUT">*</field>
+              </block>
+            </statement>
+          </block>
+        </xml>
+
+        <xml id="workspaceBlocks_task5_solution1" style="display: none">
+          <block type="directive" id="*" x="*" y="*">
+            <field name="DIRECTIVE">Directive</field>
+            <field name="DIRECTIVE_ID">*</field>
+            <field name="DIRECTIVE_NAME">Log File Manipulation</field>
+            <field name="DIRECTIVE_PRIORITY">*</field>
+            <field name="DIRECTIVE_DISABLED">*</field>
+            <field name="DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE">*</field>
+            <field name="DIRECTIVE_KINGDOM">*</field>
+            <field name="DIRECTIVE_CATEGORY">*</field>
+            <statement name="NAME">
+              <block type="rule" id="*">
+                <field name="RULE">Rule</field>
+                <field name="RULE_NAME">*</field>
+                <field name="RULE_STAGE">*</field>
+                <field name="RULE_OCCURRENCE">*</field>
+                <field name="RULE_PLUGIN_ID">*</field>
+                <field name="RULE_PLUGIN_SID">*</field>
+                <field name="RULE_FROM">*</field>
+                <field name="RULE_TO">*</field>
+                <field name="RULE_TYPE">*</field>
+                <field name="RULE_PROTOCOL">*</field>
+                <field name="RULE_PORT_FROM">*</field>
+                <field name="RULE_PORT_TO">*</field>
+                <field name="RULE_RELIABILITY">*</field>
+                <field name="RULE_TIMEOUT">*</field>
+              </block>
+            </statement>
+          </block>
+        </xml>
+
+        <xml id="workspaceBlocks_task5_solution2" style="display: none">
+          <block type="directive" id="*" x="*" y="*">
+            <field name="DIRECTIVE">Directive</field>
+            <field name="DIRECTIVE_ID">*</field>
+            <field name="DIRECTIVE_NAME">*</field>
+            <field name="DIRECTIVE_PRIORITY">*</field>
+            <field name="DIRECTIVE_DISABLED">*</field>
+            <field name="DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE">*</field>
+            <field name="DIRECTIVE_KINGDOM">*</field>
+            <field name="DIRECTIVE_CATEGORY">*</field>
+            <statement name="NAME">
+              <block type="rule" id="*">
+                <field name="RULE">Rule</field>
+                <field name="RULE_NAME">LOG FILE MANIPULATION</field>
+                <field name="RULE_STAGE">*</field>
+                <field name="RULE_OCCURRENCE">*</field>
+                <field name="RULE_PLUGIN_ID">*</field>
+                <field name="RULE_PLUGIN_SID">*</field>
+                <field name="RULE_FROM">*</field>
+                <field name="RULE_TO">*</field>
+                <field name="RULE_TYPE">*</field>
+                <field name="RULE_PROTOCOL">*</field>
+                <field name="RULE_PORT_FROM">*</field>
+                <field name="RULE_PORT_TO">*</field>
+                <field name="RULE_RELIABILITY">*</field>
+                <field name="RULE_TIMEOUT">*</field>
+              </block>
+            </statement>
+          </block>
+        </xml>
+
+        <xml id="workspaceBlocks_task5_solution3" style="display: none">
+          <block type="directive" id="*" x="*" y="*">
+            <field name="DIRECTIVE">Directive</field>
+            <field name="DIRECTIVE_ID">*</field>
+            <field name="DIRECTIVE_NAME">*</field>
+            <field name="DIRECTIVE_PRIORITY">*</field>
+            <field name="DIRECTIVE_DISABLED">*</field>
+            <field name="DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE">*</field>
+            <field name="DIRECTIVE_KINGDOM">*</field>
+            <field name="DIRECTIVE_CATEGORY">*</field>
+            <statement name="NAME">
+              <block type="rule" id="*">
+                <field name="RULE">Rule</field>
+                <field name="RULE_NAME">*</field>
+                <field name="RULE_STAGE">*</field>
+                <field name="RULE_OCCURRENCE">*</field>
+                <field name="RULE_PLUGIN_ID">*</field>
+                <field name="RULE_PLUGIN_SID">8</field>
+                <field name="RULE_FROM">*</field>
+                <field name="RULE_TO">*</field>
+                <field name="RULE_TYPE">*</field>
+                <field name="RULE_PROTOCOL">*</field>
+                <field name="RULE_PORT_FROM">*</field>
+                <field name="RULE_PORT_TO">*</field>
+                <field name="RULE_RELIABILITY">*</field>
+                <field name="RULE_TIMEOUT">*</field>
+              </block>
+            </statement>
+          </block>
+        </xml>
+
+        <!-- -------------------------------------------------------------- -->
+
+        <xml id="workspaceBlocks_task6" style="display: none">
+          <block type="directive" id="directive_task6" x="0" y="30">
+            <field name="DIRECTIVE">Directive</field>
+            <field name="DIRECTIVE_ID">17</field>
+            <field name="DIRECTIVE_NAME">Suspicious ARP-Request</field>
+            <field name="DIRECTIVE_PRIORITY">3</field>
+            <field name="DIRECTIVE_DISABLED">DIRECTIVE_DISABLED_FALSE</field>
+            <field name="DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE">DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE_FALSE</field>
+            <field name="DIRECTIVE_KINGDOM">Attacks</field>
+            <field name="DIRECTIVE_CATEGORY">Disruption</field>
+            <statement name="NAME">
+              <block type="rule" id="rule_task6_1">
+                <field name="RULE">Rule</field>
+                <field name="RULE_NAME">ARP-REQUEST</field>
+                <field name="RULE_STAGE">1</field>
+                <field name="RULE_OCCURRENCE">1</field>
+                <field name="RULE_PLUGIN_ID">1008</field>
+                <field name="RULE_PLUGIN_SID">13</field>
+                <field name="RULE_FROM">ANY</field>
+                <field name="RULE_TO">ANY</field>
+                <field name="RULE_TYPE">PluginRule</field>
+                <field name="RULE_PROTOCOL">ANY</field>
+                <field name="RULE_PORT_FROM">ANY</field>
+                <field name="RULE_PORT_TO">ANY</field>
+                <field name="RULE_RELIABILITY">2</field>
+                <field name="RULE_TIMEOUT">0</field>
+                <next>
+                  <block type="rule" id="rule_task6_2">
+                    <field name="RULE">Rule</field>
+                    <field name="RULE_NAME">ARP-REQUEST</field>
+                    <field name="RULE_STAGE">2</field>
+                    <field name="RULE_OCCURRENCE">3</field>
+                    <field name="RULE_PLUGIN_ID">1008</field>
+                    <field name="RULE_PLUGIN_SID">13</field>
+                    <field name="RULE_FROM">:1</field>
+                    <field name="RULE_TO">ANY</field>
+                    <field name="RULE_TYPE">PluginRule</field>
+                    <field name="RULE_PROTOCOL">ANY</field>
+                    <field name="RULE_PORT_FROM">ANY</field>
+                    <field name="RULE_PORT_TO">ANY</field>
+                    <field name="RULE_RELIABILITY">8</field>
+                    <field name="RULE_TIMEOUT">60</field>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </xml>
+
+        <xml id="workspaceBlocks_task6_solution" style="display: none">
+          <block type="directive" id="*" x="0" y="30">
+            <field name="DIRECTIVE">Directive</field>
+            <field name="DIRECTIVE_ID">5</field>
+            <field name="DIRECTIVE_NAME">ICMP-DOS-Attack</field>
+            <field name="DIRECTIVE_PRIORITY">3</field>
+            <field name="DIRECTIVE_DISABLED">DIRECTIVE_DISABLED_FALSE</field>
+            <field name="DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE">DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE_FALSE</field>
+            <field name="DIRECTIVE_KINGDOM">Attacks</field>
+            <field name="DIRECTIVE_CATEGORY">Disruption</field>
+            <statement name="NAME">
+              <block type="rule" id="*">
+                <field name="RULE">Rule</field>
+                <field name="RULE_NAME">ICMP-REQUEST</field>
+                <field name="RULE_STAGE">1</field>
+                <field name="RULE_OCCURRENCE">1</field>
+                <field name="RULE_PLUGIN_ID">1008</field>
+                <field name="RULE_PLUGIN_SID">11</field>
+                <field name="RULE_FROM">ANY</field>
+                <field name="RULE_TO">ANY</field>
+                <field name="RULE_TYPE">PluginRule</field>
+                <field name="RULE_PROTOCOL">ANY</field>
+                <field name="RULE_PORT_FROM">ANY</field>
+                <field name="RULE_PORT_TO">ANY</field>
+                <field name="RULE_RELIABILITY">2</field>
+                <field name="RULE_TIMEOUT">0</field>
+                <next>
+                  <block type="rule" id="*">
+                    <field name="RULE">Rule</field>
+                    <field name="RULE_NAME">ICMP-REQUEST</field>
+                    <field name="RULE_STAGE">2</field>
+                    <field name="RULE_OCCURRENCE">1000</field>
+                    <field name="RULE_PLUGIN_ID">1008</field>
+                    <field name="RULE_PLUGIN_SID">11</field>
+                    <field name="RULE_FROM">ANY</field>
+                    <field name="RULE_TO">:1</field>
+                    <field name="RULE_TYPE">PluginRule</field>
+                    <field name="RULE_PROTOCOL">ANY</field>
+                    <field name="RULE_PORT_FROM">ANY</field>
+                    <field name="RULE_PORT_TO">ANY</field>
+                    <field name="RULE_RELIABILITY">8</field>
+                    <field name="RULE_TIMEOUT">60</field>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </xml>
+
+        <xml id="workspaceBlocks_task6_solution0" style="display: none">
+          <block type="directive" id="*" x="*" y="*">
+            <field name="DIRECTIVE">Directive</field>
+            <field name="DIRECTIVE_ID">5</field>
+            <field name="DIRECTIVE_NAME">*</field>
+            <field name="DIRECTIVE_PRIORITY">*</field>
+            <field name="DIRECTIVE_DISABLED">*</field>
+            <field name="DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE">*</field>
+            <field name="DIRECTIVE_KINGDOM">*</field>
+            <field name="DIRECTIVE_CATEGORY">*</field>
+            <statement name="NAME">
+              <block type="rule" id="*">
+                <field name="RULE">Rule</field>
+                <field name="RULE_NAME">*</field>
+                <field name="RULE_STAGE">*</field>
+                <field name="RULE_OCCURRENCE">*</field>
+                <field name="RULE_PLUGIN_ID">*</field>
+                <field name="RULE_PLUGIN_SID">*</field>
+                <field name="RULE_FROM">*</field>
+                <field name="RULE_TO">*</field>
+                <field name="RULE_TYPE">*</field>
+                <field name="RULE_PROTOCOL">*</field>
+                <field name="RULE_PORT_FROM">*</field>
+                <field name="RULE_PORT_TO">*</field>
+                <field name="RULE_RELIABILITY">*</field>
+                <field name="RULE_TIMEOUT">*</field>
+                <next>
+                  <block type="rule" id="*">
+                    <field name="RULE">Rule</field>
+                    <field name="RULE_NAME">*</field>
+                    <field name="RULE_STAGE">*</field>
+                    <field name="RULE_OCCURRENCE">*</field>
+                    <field name="RULE_PLUGIN_ID">*</field>
+                    <field name="RULE_PLUGIN_SID">*</field>
+                    <field name="RULE_FROM">*</field>
+                    <field name="RULE_TO">*</field>
+                    <field name="RULE_TYPE">*</field>
+                    <field name="RULE_PROTOCOL">*</field>
+                    <field name="RULE_PORT_FROM">*</field>
+                    <field name="RULE_PORT_TO">*</field>
+                    <field name="RULE_RELIABILITY">*</field>
+                    <field name="RULE_TIMEOUT">*</field>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </xml>
+
+        <xml id="workspaceBlocks_task6_solution1" style="display: none">
+          <block type="directive" id="*" x="*" y="*">
+            <field name="DIRECTIVE">Directive</field>
+            <field name="DIRECTIVE_ID">*</field>
+            <field name="DIRECTIVE_NAME">ICMP-DOS-Attack</field>
+            <field name="DIRECTIVE_PRIORITY">*</field>
+            <field name="DIRECTIVE_DISABLED">*</field>
+            <field name="DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE">*</field>
+            <field name="DIRECTIVE_KINGDOM">*</field>
+            <field name="DIRECTIVE_CATEGORY">*</field>
+            <statement name="NAME">
+              <block type="rule" id="*">
+                <field name="RULE">Rule</field>
+                <field name="RULE_NAME">*</field>
+                <field name="RULE_STAGE">*</field>
+                <field name="RULE_OCCURRENCE">*</field>
+                <field name="RULE_PLUGIN_ID">*</field>
+                <field name="RULE_PLUGIN_SID">*</field>
+                <field name="RULE_FROM">*</field>
+                <field name="RULE_TO">*</field>
+                <field name="RULE_TYPE">*</field>
+                <field name="RULE_PROTOCOL">*</field>
+                <field name="RULE_PORT_FROM">*</field>
+                <field name="RULE_PORT_TO">*</field>
+                <field name="RULE_RELIABILITY">*</field>
+                <field name="RULE_TIMEOUT">*</field>
+                <next>
+                  <block type="rule" id="*">
+                    <field name="RULE">Rule</field>
+                    <field name="RULE_NAME">*</field>
+                    <field name="RULE_STAGE">*</field>
+                    <field name="RULE_OCCURRENCE">*</field>
+                    <field name="RULE_PLUGIN_ID">*</field>
+                    <field name="RULE_PLUGIN_SID">*</field>
+                    <field name="RULE_FROM">*</field>
+                    <field name="RULE_TO">*</field>
+                    <field name="RULE_TYPE">*</field>
+                    <field name="RULE_PROTOCOL">*</field>
+                    <field name="RULE_PORT_FROM">*</field>
+                    <field name="RULE_PORT_TO">*</field>
+                    <field name="RULE_RELIABILITY">*</field>
+                    <field name="RULE_TIMEOUT">*</field>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </xml>
+
+        <xml id="workspaceBlocks_task6_solution2" style="display: none">
+          <block type="directive" id="*" x="*" y="*">
+            <field name="DIRECTIVE">Directive</field>
+            <field name="DIRECTIVE_ID">*</field>
+            <field name="DIRECTIVE_NAME">*</field>
+            <field name="DIRECTIVE_PRIORITY">*</field>
+            <field name="DIRECTIVE_DISABLED">*</field>
+            <field name="DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE">*</field>
+            <field name="DIRECTIVE_KINGDOM">*</field>
+            <field name="DIRECTIVE_CATEGORY">*</field>
+            <statement name="NAME">
+              <block type="rule" id="*">
+                <field name="RULE">Rule</field>
+                <field name="RULE_NAME">ICMP-REQUEST</field>
+                <field name="RULE_STAGE">*</field>
+                <field name="RULE_OCCURRENCE">*</field>
+                <field name="RULE_PLUGIN_ID">*</field>
+                <field name="RULE_PLUGIN_SID">*</field>
+                <field name="RULE_FROM">*</field>
+                <field name="RULE_TO">*</field>
+                <field name="RULE_TYPE">*</field>
+                <field name="RULE_PROTOCOL">*</field>
+                <field name="RULE_PORT_FROM">*</field>
+                <field name="RULE_PORT_TO">*</field>
+                <field name="RULE_RELIABILITY">*</field>
+                <field name="RULE_TIMEOUT">*</field>
+                <next>
+                  <block type="rule" id="*">
+                    <field name="RULE">Rule</field>
+                    <field name="RULE_NAME">*</field>
+                    <field name="RULE_STAGE">*</field>
+                    <field name="RULE_OCCURRENCE">*</field>
+                    <field name="RULE_PLUGIN_ID">*</field>
+                    <field name="RULE_PLUGIN_SID">*</field>
+                    <field name="RULE_FROM">*</field>
+                    <field name="RULE_TO">*</field>
+                    <field name="RULE_TYPE">*</field>
+                    <field name="RULE_PROTOCOL">*</field>
+                    <field name="RULE_PORT_FROM">*</field>
+                    <field name="RULE_PORT_TO">*</field>
+                    <field name="RULE_RELIABILITY">*</field>
+                    <field name="RULE_TIMEOUT">*</field>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </xml>
+
+        <xml id="workspaceBlocks_task6_solution3" style="display: none">
+          <block type="directive" id="*" x="*" y="*">
+            <field name="DIRECTIVE">Directive</field>
+            <field name="DIRECTIVE_ID">*</field>
+            <field name="DIRECTIVE_NAME">*</field>
+            <field name="DIRECTIVE_PRIORITY">*</field>
+            <field name="DIRECTIVE_DISABLED">*</field>
+            <field name="DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE">*</field>
+            <field name="DIRECTIVE_KINGDOM">*</field>
+            <field name="DIRECTIVE_CATEGORY">*</field>
+            <statement name="NAME">
+              <block type="rule" id="*">
+                <field name="RULE">Rule</field>
+                <field name="RULE_NAME">*</field>
+                <field name="RULE_STAGE">*</field>
+                <field name="RULE_OCCURRENCE">*</field>
+                <field name="RULE_PLUGIN_ID">*</field>
+                <field name="RULE_PLUGIN_SID">11</field>
+                <field name="RULE_FROM">*</field>
+                <field name="RULE_TO">*</field>
+                <field name="RULE_TYPE">*</field>
+                <field name="RULE_PROTOCOL">*</field>
+                <field name="RULE_PORT_FROM">*</field>
+                <field name="RULE_PORT_TO">*</field>
+                <field name="RULE_RELIABILITY">*</field>
+                <field name="RULE_TIMEOUT">*</field>
+                <next>
+                  <block type="rule" id="*">
+                    <field name="RULE">Rule</field>
+                    <field name="RULE_NAME">*</field>
+                    <field name="RULE_STAGE">*</field>
+                    <field name="RULE_OCCURRENCE">*</field>
+                    <field name="RULE_PLUGIN_ID">*</field>
+                    <field name="RULE_PLUGIN_SID">*</field>
+                    <field name="RULE_FROM">*</field>
+                    <field name="RULE_TO">*</field>
+                    <field name="RULE_TYPE">*</field>
+                    <field name="RULE_PROTOCOL">*</field>
+                    <field name="RULE_PORT_FROM">*</field>
+                    <field name="RULE_PORT_TO">*</field>
+                    <field name="RULE_RELIABILITY">*</field>
+                    <field name="RULE_TIMEOUT">*</field>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </xml>
+
+        <xml id="workspaceBlocks_task6_solution4" style="display: none">
+          <block type="directive" id="*" x="*" y="*">
+            <field name="DIRECTIVE">Directive</field>
+            <field name="DIRECTIVE_ID">*</field>
+            <field name="DIRECTIVE_NAME">*</field>
+            <field name="DIRECTIVE_PRIORITY">*</field>
+            <field name="DIRECTIVE_DISABLED">*</field>
+            <field name="DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE">*</field>
+            <field name="DIRECTIVE_KINGDOM">*</field>
+            <field name="DIRECTIVE_CATEGORY">*</field>
+            <statement name="NAME">
+              <block type="rule" id="*">
+                <field name="RULE">Rule</field>
+                <field name="RULE_NAME">*</field>
+                <field name="RULE_STAGE">*</field>
+                <field name="RULE_OCCURRENCE">*</field>
+                <field name="RULE_PLUGIN_ID">*</field>
+                <field name="RULE_PLUGIN_SID">*</field>
+                <field name="RULE_FROM">*</field>
+                <field name="RULE_TO">*</field>
+                <field name="RULE_TYPE">*</field>
+                <field name="RULE_PROTOCOL">*</field>
+                <field name="RULE_PORT_FROM">*</field>
+                <field name="RULE_PORT_TO">*</field>
+                <field name="RULE_RELIABILITY">*</field>
+                <field name="RULE_TIMEOUT">*</field>
+                <next>
+                  <block type="rule" id="*">
+                    <field name="RULE">Rule</field>
+                    <field name="RULE_NAME">ICMP-REQUEST</field>
+                    <field name="RULE_STAGE">*</field>
+                    <field name="RULE_OCCURRENCE">*</field>
+                    <field name="RULE_PLUGIN_ID">*</field>
+                    <field name="RULE_PLUGIN_SID">*</field>
+                    <field name="RULE_FROM">*</field>
+                    <field name="RULE_TO">*</field>
+                    <field name="RULE_TYPE">*</field>
+                    <field name="RULE_PROTOCOL">*</field>
+                    <field name="RULE_PORT_FROM">*</field>
+                    <field name="RULE_PORT_TO">*</field>
+                    <field name="RULE_RELIABILITY">*</field>
+                    <field name="RULE_TIMEOUT">*</field>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </xml>
+
+        <xml id="workspaceBlocks_task6_solution5" style="display: none">
+          <block type="directive" id="*" x="*" y="*">
+            <field name="DIRECTIVE">Directive</field>
+            <field name="DIRECTIVE_ID">*</field>
+            <field name="DIRECTIVE_NAME">*</field>
+            <field name="DIRECTIVE_PRIORITY">*</field>
+            <field name="DIRECTIVE_DISABLED">*</field>
+            <field name="DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE">*</field>
+            <field name="DIRECTIVE_KINGDOM">*</field>
+            <field name="DIRECTIVE_CATEGORY">*</field>
+            <statement name="NAME">
+              <block type="rule" id="*">
+                <field name="RULE">Rule</field>
+                <field name="RULE_NAME">*</field>
+                <field name="RULE_STAGE">*</field>
+                <field name="RULE_OCCURRENCE">*</field>
+                <field name="RULE_PLUGIN_ID">*</field>
+                <field name="RULE_PLUGIN_SID">*</field>
+                <field name="RULE_FROM">*</field>
+                <field name="RULE_TO">*</field>
+                <field name="RULE_TYPE">*</field>
+                <field name="RULE_PROTOCOL">*</field>
+                <field name="RULE_PORT_FROM">*</field>
+                <field name="RULE_PORT_TO">*</field>
+                <field name="RULE_RELIABILITY">*</field>
+                <field name="RULE_TIMEOUT">*</field>
+                <next>
+                  <block type="rule" id="*">
+                    <field name="RULE">Rule</field>
+                    <field name="RULE_NAME">*</field>
+                    <field name="RULE_STAGE">*</field>
+                    <field name="RULE_OCCURRENCE">1000</field>
+                    <field name="RULE_PLUGIN_ID">*</field>
+                    <field name="RULE_PLUGIN_SID">*</field>
+                    <field name="RULE_FROM">*</field>
+                    <field name="RULE_TO">*</field>
+                    <field name="RULE_TYPE">*</field>
+                    <field name="RULE_PROTOCOL">*</field>
+                    <field name="RULE_PORT_FROM">*</field>
+                    <field name="RULE_PORT_TO">*</field>
+                    <field name="RULE_RELIABILITY">*</field>
+                    <field name="RULE_TIMEOUT">*</field>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </xml>
+
+        <xml id="workspaceBlocks_task6_solution6" style="display: none">
+          <block type="directive" id="*" x="*" y="*">
+            <field name="DIRECTIVE">Directive</field>
+            <field name="DIRECTIVE_ID">*</field>
+            <field name="DIRECTIVE_NAME">*</field>
+            <field name="DIRECTIVE_PRIORITY">*</field>
+            <field name="DIRECTIVE_DISABLED">*</field>
+            <field name="DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE">*</field>
+            <field name="DIRECTIVE_KINGDOM">*</field>
+            <field name="DIRECTIVE_CATEGORY">*</field>
+            <statement name="NAME">
+              <block type="rule" id="*">
+                <field name="RULE">Rule</field>
+                <field name="RULE_NAME">*</field>
+                <field name="RULE_STAGE">*</field>
+                <field name="RULE_OCCURRENCE">*</field>
+                <field name="RULE_PLUGIN_ID">*</field>
+                <field name="RULE_PLUGIN_SID">*</field>
+                <field name="RULE_FROM">*</field>
+                <field name="RULE_TO">*</field>
+                <field name="RULE_TYPE">*</field>
+                <field name="RULE_PROTOCOL">*</field>
+                <field name="RULE_PORT_FROM">*</field>
+                <field name="RULE_PORT_TO">*</field>
+                <field name="RULE_RELIABILITY">*</field>
+                <field name="RULE_TIMEOUT">*</field>
+                <next>
+                  <block type="rule" id="*">
+                    <field name="RULE">Rule</field>
+                    <field name="RULE_NAME">*</field>
+                    <field name="RULE_STAGE">*</field>
+                    <field name="RULE_OCCURRENCE">*</field>
+                    <field name="RULE_PLUGIN_ID">*</field>
+                    <field name="RULE_PLUGIN_SID">*</field>
+                    <field name="RULE_FROM">ANY</field>
+                    <field name="RULE_TO">*</field>
+                    <field name="RULE_TYPE">*</field>
+                    <field name="RULE_PROTOCOL">*</field>
+                    <field name="RULE_PORT_FROM">*</field>
+                    <field name="RULE_PORT_TO">*</field>
+                    <field name="RULE_RELIABILITY">*</field>
+                    <field name="RULE_TIMEOUT">*</field>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </xml>
+
+        <xml id="workspaceBlocks_task6_solution7" style="display: none">
+          <block type="directive" id="*" x="*" y="*">
+            <field name="DIRECTIVE">Directive</field>
+            <field name="DIRECTIVE_ID">*</field>
+            <field name="DIRECTIVE_NAME">*</field>
+            <field name="DIRECTIVE_PRIORITY">*</field>
+            <field name="DIRECTIVE_DISABLED">*</field>
+            <field name="DIRECTIVE_ALL_RULES_ALWAYS_ACTIVE">*</field>
+            <field name="DIRECTIVE_KINGDOM">*</field>
+            <field name="DIRECTIVE_CATEGORY">*</field>
+            <statement name="NAME">
+              <block type="rule" id="*">
+                <field name="RULE">Rule</field>
+                <field name="RULE_NAME">*</field>
+                <field name="RULE_STAGE">*</field>
+                <field name="RULE_OCCURRENCE">*</field>
+                <field name="RULE_PLUGIN_ID">*</field>
+                <field name="RULE_PLUGIN_SID">*</field>
+                <field name="RULE_FROM">*</field>
+                <field name="RULE_TO">*</field>
+                <field name="RULE_TYPE">*</field>
+                <field name="RULE_PROTOCOL">*</field>
+                <field name="RULE_PORT_FROM">*</field>
+                <field name="RULE_PORT_TO">*</field>
+                <field name="RULE_RELIABILITY">*</field>
+                <field name="RULE_TIMEOUT">*</field>
+                <next>
+                  <block type="rule" id="*">
+                    <field name="RULE">Rule</field>
+                    <field name="RULE_NAME">*</field>
+                    <field name="RULE_STAGE">*</field>
+                    <field name="RULE_OCCURRENCE">*</field>
+                    <field name="RULE_PLUGIN_ID">*</field>
+                    <field name="RULE_PLUGIN_SID">*</field>
+                    <field name="RULE_FROM">*</field>
+                    <field name="RULE_TO">:1</field>
+                    <field name="RULE_TYPE">*</field>
+                    <field name="RULE_PROTOCOL">*</field>
+                    <field name="RULE_PORT_FROM">*</field>
+                    <field name="RULE_PORT_TO">*</field>
+                    <field name="RULE_RELIABILITY">*</field>
+                    <field name="RULE_TIMEOUT">*</field>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </xml>
+
+        <!-- -------------------------------------------------------------- -->
+
         <!--Startpage-->
         <div v-if="!gameStarted" class="is-vhcentered has-text-centered">
+
             <h1 class="is-json title mb-6">Welcome to DigitalTwinCyberrange.</h1>
             <h2 class="is-json subtitle mb-6">
                 A project of University of Regensburg and Ionian University.
@@ -35,7 +3101,36 @@
 
                 </form>
             </div>
+
+          <!--<div id="blocklyDivx" style="height: 480px; width:900px;"></div>
+          <textarea id="codeGenerated"></textarea>-->
+
+          <!--<div style="display:none1;">
+            <div id="blocklyDiv" style="float: left; width: 1400px; height: 1000px"></div>
+
+            <xml id="toolbox" style="display: none">
+              <block type="dictionary"></block>
+              <block type="array"></block>
+              <block type="number"></block>
+              <block type="string"></block>
+            </xml>
+
+            <div style="margin-left: 74%; width: 24%; height: 100%;display:none;">
+              <button onclickNot='interpretJSONarea()'>interpret JSON from the textarea below</button>
+              <textarea id=json_area style="height: 95%; width: 100%"></textarea>
+            </div>
+          </div>-->
+
+          <!--<div id="blockly1"></div>-->
+
+          <!--<BlocklyComponent id="blockly1">
+            <block type="directive"></block>
+            <block type="rule"></block>
+          </BlocklyComponent>-->
+
+
         </div>
+
 
         <!--Endpage-->
         <div v-if="gameCompleted" class="is-vhcentered has-text-centered">
@@ -60,7 +3155,7 @@
 
             <div class="columns">
                 <div class="column is-fixed is-full"
-                     :class="{ 'is-half': !fullscreen }"> 
+                     :class="{ 'is-half': !fullscreen }">
                     <section v-if="kibanaOn">
                         <figure class="pb-5">
                             <iframe :src="kibanaUrl"
@@ -68,9 +3163,9 @@
                         </figure>
                     </section>
 
-               
+
                     <nav class="navbar is-fixed-bottom is-transparent mb-1">
-                        
+
                         <div class="navbar-brand navbar-background is-half">
                             <div class="">
                                 <div class="navbar-brand">
@@ -145,7 +3240,7 @@
 
                 <div class="column right is-half" v-if="!fullscreen">
 
-  
+
                     <video-tile :infoData="VideoInfo[0]" :order="this.order">
                     </video-tile>
                     <dir-info-1 :order="this.order"> </dir-info-1>
@@ -259,6 +3354,36 @@ import VideoInfo from "./data/video_data.js";
 import IDs from "./data/usernames.js";
 import { userDashboard } from "@/firebase";
 
+import BlocklyComponent from './components/BlocklyComponent.vue'
+import Blockly from 'blockly';
+import './blockly/cyberrange';
+import themeTransparent from './blockly/theme-transparent';
+
+console.log(BlocklyComponent);
+console.log(Blockly);
+console.log(themeTransparent);
+//import tool from "diff-js-xml";
+
+/*
+import "./blockly/blockly_compressed.js";
+import "./blockly/msg/js/en.js";
+import "./blockly/field_textbutton.js";
+import "./blockly/menuly_override.js";
+import "./blockly/menuly_blocks.js";
+import "./blockly/menuly_codegen.js";
+import "./blockly/menuly_2blocks.js";
+*/
+
+/*function updateJSONarea() {
+  // eslint-disable-next-line no-undef
+  document.getElementById('json_area').value = Blockly.JSON.fromWorkspace( Blockly.getMainWorkspace() );
+}*/
+
+/*function interpretJSONarea() {
+  // eslint-disable-next-line no-undef
+  Blockly.JSON.toWorkspace( document.getElementById('json_area').value, Blockly.getMainWorkspace() );
+}*/
+
 export default {
   name: "App",
   components: {
@@ -271,11 +3396,137 @@ export default {
     DirInfo3,
     DirInfo4,
     DirInfo5,
+    //BlocklyComponent,
   },
 
+  /*async mounted() {
+    if (!window.g_blockly_workspace) {
+      var scriptSrcs = [
+        //"https://cdn.jsdelivr.net/npm/blockly@1.0.0/blockly_compressed.js",
+        //"https://cdn.jsdelivr.net/npm/blockly@1.0.0/blocks_compressed.js",
+        //"https://cdn.jsdelivr.net/npm/blockly@1.0.0/msg/js/en.js",
+        //"https://cdn.jsdelivr.net/npm/blockly@1.0.0/python_compressed.js"
+        "https://uversy.com/cyberrange/blockly/blockly_compressed.js",
+        "https://uversy.com/cyberrange/blockly/msg/js/en.js",
+        "https://uversy.com/cyberrange/blockly/field_textbutton.js",
+        "https://uversy.com/cyberrange/blockly/menuly_override.js",
+        "https://uversy.com/cyberrange/blockly/menuly_blocks.js",
+        "https://uversy.com/cyberrange/blockly/menuly_codegen.js",
+        "https://uversy.com/cyberrange/blockly/menuly_2blocks.js"
+      ];
+
+      for (let idx = 0; idx < scriptSrcs.length; idx++) {
+        await new Promise(function(resolve, reject) {
+          console.log(reject);
+          //console.log(scriptSrcs)
+          let script = document.createElement("script");
+          script.onload = () => {
+            //console.log(scriptSrcs[idx]);
+            resolve(scriptSrcs[idx] + " loaded");
+          };
+          script.async = true;
+          script.src = scriptSrcs[idx];
+          document.head.appendChild(script);
+        });
+      }
+
+      var toolbox = `<xml id="toolbox" style="display: none"><category name="Category 1"><block type="variables_set"><field name="VAR" id="g4BT=E+!t}]z](sJAEP">i</field></block><block type="controls_if"/><block type="variables_set"><field name="VAR" id="g4BT=E+!t}]z](sJAEP">i</field></block><block type="logic_compare"><field name="OP">EQ</field></block><block type="text_print"><value name="TEXT"><shadow type="text"><field name="TEXT">abc</field></shadow></value><next><block type="controls_whileUntil"><field name="MODE">WHILE</field></block></next></block><block type="procedures_ifreturn"><mutation value="1"/></block><block type="text"><field name="TEXT"/></block></category><category name="Variables" colour="#a55b80" custom="VARIABLE"/><category name="Functions" colour="#995ba5" custom="PROCEDURE"/></xml>`;
+      console.log(toolbox);
+      this.$nextTick(function() {
+
+        // eslint-disable-next-line no-undef
+        Blockly.inject(document.getElementById('blocklyDiv'), {
+          //rtl: true,
+          toolbox: document.getElementById('toolbox'),
+          media: 'media/',    // to avoid reaching to the web for icons
+          sound: false,
+          collapse: true, comments: true, disable: false, scrollbars: true, trashcan: false // those ones are automatically true when there are categories
+        });
+
+        //Blockly.JSON.toWorkspace( 'null', Blockly.getMainWorkspace() ); // load the initial state using our own JSON converter
+
+        //let json_nothing = 'null';
+        let json = '';
+        json = '{"name":"John", "input":"", "age":"30", "car":null}';
+        json = '{ "directives": [ { "id": 5, "name": "ICMP-DOS-Attack", "priority": 3, "disabled": false, "all_rules_always_active": false, "kingdom": "Attacks", "category": "Disruption", "rules": [ { "name": "ICMP-REQUEST", "stage": 1, "plugin_id": 1008, "plugin_sid": [ 11 ], "occurrence": 1, "from": "ANY", "to": "ANY", "type": "PluginRule", "port_from": "ANY", "port_to": "ANY", "protocol": "ANY", "reliability": 2, "timeout": 0 }, { "name": "ICMP-REQUEST", "stage": 2, "plugin_id": 1008, "plugin_sid": [ 11 ], "occurrence": 1000, "from": "ANY", "to": ":1", "type": "PluginRule", "port_from": "ANY", "port_to": "ANY", "protocol": "ANY", "reliability": 8, "timeout": 60 } ] } ] }';
+        json = '{"id":5,"name":"ICMP-DOS-Attack","priority":3,"disabled":false,"all_rules_always_active":false,"kingdom":"Attacks","category":"Disruption","rules":[{"name":"ICMP-REQUEST","stage":1,"plugin_id":1008,"plugin_sid":[11],"occurrence":1,"from":"ANY","to":"ANY","type":"PluginRule","port_from":"ANY","port_to":"ANY","protocol":"ANY","reliability":2,"timeout":0},{"name":"ICMP-REQUEST","stage":2,"plugin_id":1008,"plugin_sid":[11],"occurrence":1000,"from":"ANY","to":":1","type":"PluginRule","port_from":"ANY","port_to":"ANY","protocol":"ANY","reliability":8,"timeout":60}]}';
+
+        // eslint-disable-next-line no-undef
+        Blockly.JSON.toWorkspace(json, Blockly.getMainWorkspace());
+
+        // eslint-disable-next-line no-undef
+        let allBlocks = Blockly.mainWorkspace.getAllBlocks();
+        console.log(allBlocks);
+
+        allBlocks.forEach(function(block){
+          console.log(block);
+          console.log(block.getFieldValue());
+          console.log(block.getInput());
+
+          if(typeof block["inputList"][0]["fieldRow"][1] !== 'undefined' && typeof block["inputList"][0]["fieldRow"][1]["text_"] !== 'undefined') {
+            console.log(block["inputList"][0]["fieldRow"][1]["text_"]);
+          }
+        });
+
+        // eslint-disable-next-line no-undef
+        //Blockly.addChangeListener(updateJSONarea);
+
+      });
+    }
+  },*/
+
+  mounted: function () {
+    this.$nextTick(function () {
+      /*console.log("Start custom block");
+
+      var toolbox = document.getElementById("toolbox_disabled");
+
+      var options = {
+        toolbox : toolbox,
+        toolboxPosition : 'start',
+        collapse : false,
+        comments : false,
+        disable : false,
+        grid: {
+          spacing: 20,
+          length: 3,
+          colour: '#ccc',
+          snap: true
+        },
+        maxBlocks : 10,
+        trashcan : false,
+        horizontalLayout : false,
+        css : true,
+        media : 'https://blockly-demo.appspot.com/static/media/',
+        rtl : false,
+        scrollbars : false,
+        sounds : false,
+        oneBasedIndex : true,
+        readOnly: false
+      };
+
+      var workspaceStart = Blockly.inject("blockly1", options);
+      //this.workspace = workspaceStart;
+
+      var workspaceBlocks = document.getElementById("workspaceBlocks_task2");
+
+      Blockly.Xml.domToWorkspace(workspaceBlocks, workspaceStart);*/
+    })
+  },
 
   data() {
+
+    var showBlocklyTest = false; //Default Value -> True: Show Blockly, False: Show JSON
+
+    let uri = window.location.search.substring(1);
+    let params = new URLSearchParams(uri);
+
+    if(typeof params.get("blockly") !== 'undefined' && params.get("blockly") !== null) {
+      showBlocklyTest = true;
+    }
+
     return {
+      showBlockly: showBlocklyTest,
       Usernames: IDs,
       Task1: Task1,
       Task2: Task2,
@@ -321,7 +3572,6 @@ export default {
       fullscreen: false,
       kibanaOn: true,
       scrollPos: null,
-
       kibanaUrl:
         window.location.href.replace("7080", "5605") +
         "app/kibana#/dashboard/87c18520-b337-11e8-b3e4-11404c6637fe?_g=(refreshInterval:(pause:!f,value:20000),time:(from:now-15m,to:now))&_a=(description:'Kibana dashboard for DSIEM',filters:!(),fullScreenMode:!f,options:(darkTheme:!f,hidePanelTitles:!f,useMargins:!t),panels:!((embeddableConfig:(vis:!n),gridData:(h:10,i:'2',w:18,x:0,y:9),id:ed4a2ca0-b335-11e8-b3e4-11404c6637fe,panelIndex:'2',type:visualization,version:'7.6.1'),(embeddableConfig:(spy:!n),gridData:(h:9,i:'7',w:22,x:12,y:0),id:a0f5c810-b339-11e8-b3e4-11404c6637fe,panelIndex:'7',type:visualization,version:'7.6.1'),(embeddableConfig:(vis:(legendOpen:!f)),gridData:(h:10,i:'8',w:16,x:18,y:9),id:'56c8e620-b337-11e8-b3e4-11404c6637fe',panelIndex:'8',type:visualization,version:'7.6.1'),(embeddableConfig:(),gridData:(h:9,i:'9',w:14,x:34,y:0),id:b4844b80-b45c-11e8-b3e4-11404c6637fe,panelIndex:'9',type:visualization,version:'7.6.1'),(embeddableConfig:(vis:(defaultColors:('0 - 20':'rgb(0,104,55)','20 - 50':'rgb(255,255,190)','50 - 100':'rgb(165,0,38)'),legendOpen:!t)),gridData:(h:9,i:'10',w:12,x:0,y:0),id:'217b62e0-b45e-11e8-b3e4-11404c6637fe',panelIndex:'10',type:visualization,version:'7.6.1'),(embeddableConfig:(),gridData:(h:16,i:'11',w:11,x:0,y:19),id:'820da8f0-b465-11e8-b3e4-11404c6637fe',panelIndex:'11',type:visualization,version:'7.6.1'),(embeddableConfig:(title:Alarms),gridData:(h:10,i:'12',w:14,x:34,y:9),id:'9badafd0-c009-11e8-b3e4-11404c6637fe',panelIndex:'12',title:Alarms,type:visualization,version:'7.6.1'),(embeddableConfig:(),gridData:(h:17,i:'14',w:48,x:0,y:35),id:c7aa9f10-e365-11e8-9c9b-556fd2a389b2,panelIndex:'14',type:search,version:'7.6.1'),(embeddableConfig:(),gridData:(h:16,i:'15',w:37,x:11,y:19),id:'334c77b0-b338-11e8-b3e4-11404c6637fe',panelIndex:'15',type:search,version:'7.6.1')),query:(language:lucene,query:''),timeRestore:!f,title:SIEM,viewMode:view)",
@@ -333,7 +3583,7 @@ export default {
   methods: {
     validateId(){
       var message = localStorage.getItem('storedData');
-      
+
       console.log(message)
 
 
@@ -350,10 +3600,10 @@ export default {
         this.wrongUsername=false;
         this.gameStarted = true;
         this.restartDigitalTwin();
-        this.retrieveUserData(); 
-        
+        this.retrieveUserData();
+
       }
-      
+
       window.onbeforeunload = function() { return "Your work will be lost."; };
 
     },
@@ -364,7 +3614,7 @@ export default {
       this.dashboard = snapshot.docs.map((doc) => doc.data());
     },
 
-    
+
 
     async uploadPoints() {
 
@@ -372,7 +3622,7 @@ export default {
         points: this.points,
         level: this.tasksCompleted,
         startTime: this.startTime,
-    
+
       });
             this.getMarker();
 
@@ -396,7 +3646,7 @@ export default {
     markAsCompleted(taskTimes) {
       //save timer information here
       this.tasksCompleted += 1;
-      this.uploadPoints() 
+      this.uploadPoints()
       this.taskTimes.push(taskTimes);
       this.uploadEvaluationData();
     },
@@ -404,14 +3654,14 @@ export default {
     restartDigitalTwin(){
      this.$http.get(window.location.href.replace("7080", "9090")+"restart_dt").then((response) => {
          console.log(response.data)
-}) 
+})
 /*this.$http.get("http://192.168.2.158:9090/restart").then((response) => {
   console.log(response.data)
 })*/
 
     },
 
-    retrieveUserData() { 
+    retrieveUserData() {
       var docRef = userDashboard.doc(String(this.traineeID));
 
       docRef
@@ -420,8 +3670,8 @@ export default {
           if (doc.exists) {
             this.round = doc.data().round; //in order to only show the trainees from the same round on the dashboard
 
-            if(doc.data().startTime != null){ 
-            //get data from user who logged in before, for this reason check if startTime was already put 
+            if(doc.data().startTime != null){
+            //get data from user who logged in before, for this reason check if startTime was already put
             this.points = doc.data().points;
             this.tasksCompleted = doc.data().level;
             this.startTime = doc.data().startTime;
@@ -430,7 +3680,7 @@ export default {
             } else{
               //registered player who didn't log in before
             this.tasksCompleted = 0;
-            this.startTime = new Date(); 
+            this.startTime = new Date();
             userDashboard.doc(this.traineeID).update({
         startTime: this.startTime,
       });
@@ -438,7 +3688,7 @@ export default {
             for this reason it is stored in the localStorage (read in the browser console with "localStorage"), from here the user's progress can be read in case of a refresh
             this prevents the user from losing their progress when refreshing the page or intentionally trying to cheat by earning points for submitting a blank twice */
             var storedTries = {task1: [3], task2: [3,3], task3: [3,3,3,3,3,3,3,3,3], task4: [3,3,3,3,3],task5: [5], task6: [5]};
-            var blanksCompleted = {task2: 0, task3: 0, task4: 0};
+            var blanksCompleted = {task2: 0, task3: 0, task4: 0}
             localStorage.setItem("storedData",JSON.stringify(storedTries))
             localStorage.setItem("blanksCompleted",JSON.stringify(blanksCompleted))
              }
@@ -501,10 +3751,10 @@ export default {
     scrollBack(){
        setTimeout(() => {
          window.scrollTo(0,this.scrollPos);
- 
-   
+
+
 })
-     
+
     },
 
     rememberScrollPos(){
@@ -519,11 +3769,11 @@ export default {
     },
 
     submitPoints(points2) {
+      console.log("submitPoints: "+points2);
       this.points += points2;
       this.uploadPoints();
-
     },
-  },
+  }
 
 };
 </script>
@@ -531,4 +3781,95 @@ export default {
 <style>
 @import "./../css/bulma.css";
 @import "./../css/bulma-tooltip.css";
+.blocklyContainer {
+  width: 100%;
+}
+.blocklyDiv {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#blockly_task2 {
+  height: 480px;
+}
+
+#blockly_task3 {
+  height: 850px;
+}
+
+#blockly_task4 {
+  height: 850px;
+}
+
+#blockly_task5 {
+  height: 480px;
+}
+
+#blockly_task6 {
+  height:650px;
+}
+
+.submitContainer {
+
+}
+
+.submitContainer .submitItem {
+  padding: 2rem 0;
+}
+
+.submitContainer .submitItem:not(:last-child) {
+  border-bottom:2px solid #dbdbdb;
+}
+
+.error-message-blockly {
+  display:none;
+}
+
+.blockly-input, .blockly-duplicate {
+  display:inline-block;
+  margin-bottom: 8px;
+}
+
+.blockly-input .name, .duplicate-content {
+  font-weight: bold;
+}
+
+.blockly-submit button {
+  display: inline-block !important;
+}
+
+.blockly-hint {
+  display: block;
+}
+
+.blockly-message span {
+  display: block;
+  margin-top: 2px;
+  margin-bottom: 6px;
+}
+
+.blocklyDiv {
+  border: 2px solid #dbdbdb !important;
+}
+
+.blocklyWorkspace rect {
+  stroke-width: 0px !important;
+}
+
+.display-none {
+  display: none !important;
+}
+
+.submitContainer ul {
+  list-style: disc outside;
+  margin: 1rem 2rem 0 2rem;
+}
+
+.no-tries-left {
+  display: block;
+  margin-top:30px;
+  margin-bottom:20px;
+}
 </style>
