@@ -48,12 +48,12 @@ const db = firebase.firestore()
 
 
 // collection references
-const userDashboard = db.collection('cyberrangeVisualProgramming')
-
+const userDashboard = db.collection('visualCR')
+const VM_db = db.collection('visualPseudonyms')
 
 // export utils/refs
 export {
 db,
-userDashboard
+userDashboard, VM_db
 
 }

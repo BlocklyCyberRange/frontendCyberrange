@@ -33,6 +33,20 @@ display: table !important; }
   user-select: none;
 }
 
+.input-label-long {
+  border-radius: 0px !important;
+  outline: 0 !important;
+  border-width: 0 0 2px !important;
+  box-shadow: none !important;
+  width: 40% !important;
+  display: table-cell !important;
+  margin-top: 0 !important;
+  padding-left: 0 !important;
+  padding-bottom: 0 !important;
+  pointer-events: none;
+}
+
+
 .input-label-2{
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -651,7 +665,7 @@ margin-right: 2rem !important;
   box-shadow: none;
   display: inline-flex;
   font-size: 1rem;
-  
+  float:left;
   justify-content: flex-start;
   line-height: 1.5;
   padding-bottom: calc(0.5em - 1px);
