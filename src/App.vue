@@ -3174,7 +3174,11 @@
 <u><a class="title is-json is-primary-darker " href="https://quizizz.com/join?gc=07101609">
 final quiz</a></u>
 and let one of the trainers know when you finished. 
+<br> Please use again your <strong>NDS-account</strong> to register for the quiz.
             </h2>
+
+    
+
           
 
         </div>
