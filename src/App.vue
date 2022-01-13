@@ -3171,8 +3171,8 @@
 
             <h2 class="subtitle mb-6">
                 To complete the cyber range training please take part in our
-<a class="title is-json is-primary-darker " href="https://quizizz.com/join?gc=58940713">
-final quiz</a>
+<u><a class="title is-json is-primary-darker " href="https://quizizz.com/join?gc=07101609">
+final quiz</a></u>
 and let one of the trainers know when you finished. 
             </h2>
           
