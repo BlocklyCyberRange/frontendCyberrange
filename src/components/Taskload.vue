@@ -191,7 +191,7 @@ export default {
           this.$emit('submit-tlx', rating);
       },
       validateInput() {
-           if(this.tlx_q1 == "" || this.tlx_q2 == "" || this.tlx_q3 == "" || this.tlx_q3 == ""){
+           if(this.tlx_q1 == "" || this.tlx_q2 == "" || this.tlx_q3 == "" || this.tlx_q4 == ""){
         this.emptyInput=true;
       }
       else {
