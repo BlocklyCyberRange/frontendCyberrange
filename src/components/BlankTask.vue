@@ -401,7 +401,8 @@ export default {
       if (this.taskData.level < this.tasksCompleted) {
         return true;
       } else {
-        this.checkProgress();
+         this.checkProgress()
+        
         return false;
       }
     },
@@ -423,25 +424,27 @@ export default {
      checkProgress() {
       //NEW
 
+       console.log("BLANKS COMPLETED: ", this.blanks_completed)
+
       try {
+        console.log("blanks completed: ", this.blanks_completed)
         if (this.blanks_completed == Object.keys(this.taskData.blanks).length) {
-          console.log(true);
+
           this.showTlx = true;
           this.taskStarted = true;
           this.showTask = true;
+          
         } else if (this.blanks_completed > 0) {
           this.showTask = true;
           this.taskStarted = true;
+          
+         
+
         }
       } catch (err) {
         console.log("localStorage empty");
       }
     },
-
-
-
-
-
 
 
 
@@ -959,7 +962,7 @@ export default {
       const el = document.getElementById(id);
       setTimeout(() => {
         el.scrollIntoView(false);
-      });
+      },100);
     },
 
     getBlanksCompleted() {
@@ -972,13 +975,16 @@ export default {
       }
     },
     completeTask(points) {
+
+
       if (this.timestamp_before == null) {
-        //set start time of task with first submit
+        //set start time of task with first submit, this gives not a fully accurate time span but an ok solution
         this.timestamp_before = new Date();
       }
       if (points != 0) {
         this.$emit("submit-points", points);
       }
+
       this.pointsOverall += points;
       this.blanks_completed += 1;
       try {

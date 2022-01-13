@@ -141,6 +141,7 @@ export default {
       if(this.taskData.level<this.tasksCompleted){
         return true;
       } else{
+        //this.checkProgress()
         return false;
       }
     }
@@ -160,6 +161,31 @@ export default {
                     console.log("localStorage empty")
                 }
 
+    },
+
+
+    checkProgress() {
+      //NEW
+
+      try {
+        
+         var tries = JSON.parse(localStorage.getItem("storedData"));
+         if (tries[this.taskData.tileNo] == 0 && !this.completedBefore){
+          
+          this.showTlx = true;
+          this.taskStarted = true;
+          this.showTask = true;
+
+         }
+               
+        
+        else if (this.blanks_completed > 0) {
+          this.showTask = true;
+          this.taskStarted = true;
+        }
+      } catch (err) {
+        console.log("localStorage empty");
+      }
     },
 
     

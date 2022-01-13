@@ -115,7 +115,7 @@
           >
             <font-awesome-icon icon="info-circle" />
           </span>
-          <button class="button is-rounded is-small" @click="resetJson()">
+          <button  v-if="!showBlockly" class="button is-rounded is-small" @click="resetJson()">
             RESET
           </button>
         </div>
@@ -178,7 +178,7 @@
         >
           <font-awesome-icon icon="info-circle" />
         </span>
-        <button class="button is-rounded is-small" @click="resetJson()">
+        <button v-if="!showBlockly" class="button is-rounded is-small" @click="resetJson()">
           RESET
         </button>
 
@@ -265,12 +265,17 @@ export default {
 
   },
 
-  /*mounted: function () {
+ mounted: function () {
     this.$nextTick(function () {
-      this.display_blockly_task();
+      if(this.showTask && this.taskStarted) {
+        if(document.getElementById('blockly_task' + this.taskData.blockly_task)) {
+          this.display_blockly_task();
+        }
+      }
     })
-  },*/
+  },
 
+  
   methods: {
     display_blockly_task() {
       var task = this.taskData.blockly_task;
