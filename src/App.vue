@@ -3066,38 +3066,60 @@
         <!-- -------------------------------------------------------------- -->
 
         <!--Startpage-->
-        <div v-if="!gameStarted" class="is-vhcentered has-text-centered">
+        
 
-            <h1 class="is-json title mb-6">Welcome to DigitalTwinCyberrange.</h1>
-            <h2 class="is-json subtitle mb-6">
-                A project of University of Regensburg and Ionian University.
-            </h2>
-            <div class="margin-big">
+            <div v-if="!gameStarted">
+      <!-- layout prior exercise: prompts user to login -->
+      <div class="is-vhcentered has-text-centered pt-6">
+      
+          <div class="columns is-hcentered mb-5">
+            <img class="image is-hcentered" style="width: 100px"
+              src="./assets/rocket.svg"
+            /> </div>
+        
+        <div class="is-json title ">
+          Welcome to SOCCyberRange! 
+          <div class="subtitle mb-6 pb-6"> A Cyber Range for SOC Analysts. </div> </div> 
+          
+    
+  
+
+          
+          <br>
+         
                 <form @submit.prevent="validateId()">
-                    <input class="input input-label-short is-size-6"
-                           :value="'Your ID: '" />
-                    <span>
-                        <input class="input is-size-6 blank-input"
-                               v-model="traineeID"
-                               :placeholder="'ID'" />
-                    </span>
-                    <div class="has-text-danger"
-                         v-if="emptyInput">
-                        ID cannot be empty.
-                    </div>
-                    <div class="has-text-danger"
-                         v-if="wrongUsername">
-                        ID not valid.
-                    </div>
+               <span>
+             <input
+              class="input input-label-long is-size-6 is-centered "
+              :value="'Your NDS Account: '"
+            />
+              </span>
+            <span>
+              <input
+                class="input input-short is-size-6 blank-input"
+                v-model.trim="traineeID"
+                :placeholder="'ID (e.g., glr02834)'"
+              />
+              </span>
+              
+           <br> <br>
+            <div class="has-text-danger" v-if="emptyInput">
+              User ID cannot be empty.
+            </div>
+            <div class="has-text-danger" v-if="wrongUserID">
+              User ID is not registered. 
+            </div>
 
-                    <div class="buttons is-centered mt-5">
-                        <button class="button submit-button is-rounded mt-5"
-                                type="submit"
-                                value="Submit"
-                                @click="validateId()">
-                            <span>START</span>
-                        </button>
-                    </div>
+            <div class="buttons is-centered mt-5">
+              <button
+                class="button submit-button is-rounded mt-5"
+                type="submit"
+                value="Submit"
+                @click="validateId()"
+              >
+                <span>START</span>
+              </button>
+            </div>
 
                 </form>
             </div>
@@ -3186,7 +3208,7 @@
                             item.userID == this.traineeID,
                         }">
                                                 <td>{{ index + 1 }}</td>
-                                                <td>{{ item.username }}</td>
+                                                <td>{{ item.pseudonym }}</td>
                                                 <td>{{ item.points }}</td>
                                                 <td>{{ item.level }}</td>
                                             </tr>
@@ -3247,6 +3269,7 @@
                     <question-task :taskData="Task1"
                                    @submit-points="submitPoints"
                                    @task-completed="markAsCompleted"
+                                   @submit-task-data="uploadTaskData"
                                    :order="this.order"
                                    :tasksCompleted="tasksCompleted">
                     </question-task>
@@ -3263,6 +3286,7 @@
                     <blank-task :taskData="Task2"
                                 @submit-points="submitPoints"
                                 @task-completed="markAsCompleted"
+                                @submit-task-data="uploadTaskData"
                                 v-if="tasksCompleted >= 1"
                                 :order="this.order"
                                 :tasksCompleted="tasksCompleted">
@@ -3281,6 +3305,7 @@
                     <blank-task :taskData="Task3"
                                 @submit-points="submitPoints"
                                 @task-completed="markAsCompleted"
+                                @submit-task-data="uploadTaskData"
                                 v-if="tasksCompleted >= 2"
                                 :order="this.order"
                                 :tasksCompleted="tasksCompleted">
@@ -3298,6 +3323,7 @@
                                 v-if="tasksCompleted >= 3"
                                 @submit-points="submitPoints"
                                 @task-completed="markAsCompleted"
+                                @submit-task-data="uploadTaskData"
                                 :order="this.order"
                                 :tasksCompleted="tasksCompleted">
                     </blank-task>
@@ -3309,6 +3335,7 @@
                                  v-if="tasksCompleted >= 4"
                                  @submit-points="submitPoints"
                                  @task-completed="markAsCompleted"
+                                 @submit-task-data="uploadTaskData"
                                  :order="this.order"
                                  :tasksCompleted="tasksCompleted">
                     </editor-task>
@@ -3320,6 +3347,7 @@
                                  v-if="tasksCompleted >= 5"
                                  @submit-points="submitPoints"
                                  @task-completed="markAsCompleted"
+                                 @submit-task-data="uploadTaskData"
                                  @finish-game="finishGame"
                                  :order="this.order"
                                  :tasksCompleted="tasksCompleted">
@@ -3353,6 +3381,7 @@ import Info5 from "./data/info_5.js";
 import VideoInfo from "./data/video_data.js";
 import IDs from "./data/usernames.js";
 import { userDashboard } from "@/firebase";
+import settings from "./Settings.js"
 
 import BlocklyComponent from './components/BlocklyComponent.vue'
 import Blockly from 'blockly';
@@ -3475,8 +3504,28 @@ export default {
     }
   },*/
 
-  mounted: function () {
+  mounted: 
+  
+
+  
+  function () {
+
+       this.url_param = new URL(location.href).searchParams.get("userID");
+    console.log(this.url_param);
+    if (this.url_param != null) {
+      this.traineeID = this.url_param;
+      var newUrl=this.removeURLParameter(location.href, "userID")
+      history.pushState({}, null, newUrl);
+      this.validateId();
+    } else {
+      console.log("url is empty"); }
+    
+
+    
     this.$nextTick(function () {
+
+     
+  
       /*console.log("Start custom block");
 
       var toolbox = document.getElementById("toolbox_disabled");
@@ -3512,7 +3561,11 @@ export default {
 
       Blockly.Xml.domToWorkspace(workspaceBlocks, workspaceStart);*/
     })
-  },
+  }
+  
+  
+    
+    ,
 
   data() {
 
@@ -3545,6 +3598,7 @@ export default {
       traineeID: null,
       taskTimes: [],
       startTime: null,
+      wrongUserID: false,
       wrongUsername: false,
       evaluationData: [],
       dashboard: null,
@@ -3570,7 +3624,8 @@ export default {
         "task6",
       ],
       fullscreen: false,
-      kibanaOn: true,
+      kibanaOn: settings.kibanaOn,
+      loginDisabled: settings.loginDisabled,
       scrollPos: null,
       kibanaUrl:
         window.location.href.replace("7080", "5605") +
@@ -3580,39 +3635,86 @@ export default {
     };
   },
 
+  
+
   methods: {
-    validateId(){
-      var message = localStorage.getItem('storedData');
+    validateId() { //NEW
 
-      console.log(message)
-
-
-      if (this.traineeID==null){
-        this.emptyInput=true
-        this.wrongUsername=false;
-      }
-      else if(!this.Usernames.includes(parseInt(this.traineeID))){
-            this.wrongUsername=true;
-            this.emptyInput=false;
-      }
-      else{
-        this.emptyInput=false;
-        this.wrongUsername=false;
+      if (this.traineeID == null) {
+        this.emptyInput = true;
+      } 
+      else {
+      var docRef = userDashboard.doc(String(this.traineeID));
+      docRef
+        .get()
+        .then((doc) => {
+          if (doc.exists) {
+        this.emptyInput = false;
         this.gameStarted = true;
-        this.restartDigitalTwin();
-        this.retrieveUserData();
+        
+       
+       
+        this.getUserPoints();
+              }
 
-      }
+             else {
+                this.wrongUserID= true;
+                
+      }})}
+      
+   window.onbeforeunload = function() {
+  return "Data will be lost if you leave the page, are you sure?";
+};
+    
+      
+      },
 
-      window.onbeforeunload = function() { return "Your work will be lost."; };
+      
+          removeURLParameter(url, parameter) { //NEW
+    //prefer to use l.search if you have a location/link object
+    var urlparts = url.split('?');   
+    if (urlparts.length >= 2) {
 
-    },
+        var prefix = encodeURIComponent(parameter) + '=';
+        var pars = urlparts[1].split(/[&;]/g);
+
+        //reverse iteration as may be destructive
+        for (var i = pars.length; i-- > 0;) {    
+            //idiom for string.startsWith
+            if (pars[i].lastIndexOf(prefix, 0) !== -1) {  
+                pars.splice(i, 1);
+            }
+        }
+
+        return urlparts[0] + (pars.length > 0 ? '?' + pars.join('&') : '');
+    }
+    return url;
+},
 
     async getMarker() {
       const snapshot = await userDashboard.where("round", "==", this.round).orderBy("points", "desc").get();
       //const snapshot = await userDashboard.orderBy("points", "desc").get();
       this.dashboard = snapshot.docs.map((doc) => doc.data());
     },
+
+     async uploadTaskData(fieldname, data) {
+
+      var docRef = userDashboard.doc(this.traineeID);
+
+
+      docRef.get()
+        .then((doc) => {
+          if (doc.exists) {
+
+            userDashboard.doc(this.traineeID).update({
+        [fieldname]: data
+      });
+            
+          }}
+          
+        ); 
+    },
+
 
 
 
@@ -3661,7 +3763,7 @@ export default {
 
     },
 
-    retrieveUserData() {
+    getUserPoints() {
       var docRef = userDashboard.doc(String(this.traineeID));
 
       docRef
@@ -3687,10 +3789,12 @@ export default {
            /*a user's progress within a task is not stored in firebase for performance reason and also because database updates are limited
             for this reason it is stored in the localStorage (read in the browser console with "localStorage"), from here the user's progress can be read in case of a refresh
             this prevents the user from losing their progress when refreshing the page or intentionally trying to cheat by earning points for submitting a blank twice */
-            var storedTries = {task1: [3], task2: [3,3], task3: [3,3,3,3,3,3,3,3,3], task4: [3,3,3,3,3],task5: [5], task6: [5]};
-            var blanksCompleted = {task2: 0, task3: 0, task4: 0}
+             var storedTries = {task1: [3], task2: [3,3], task3: [3,3,3,3,3,3,3,3,3], task4: [3,3,3,3,3],task5: [5], task6: [5]};
+            var blanksCompleted = {task2: 0, task3: 0, task4: 0};
+            var hints = {task1: 0, task2: 0, task3: 0, task4: 0,task5: 0, task6: 0};
             localStorage.setItem("storedData",JSON.stringify(storedTries))
             localStorage.setItem("blanksCompleted",JSON.stringify(blanksCompleted))
+            localStorage.setItem("hints",JSON.stringify(hints)) //NEW
              }
 
           } else {
@@ -3761,12 +3865,7 @@ export default {
       this.scrollPos = window.scrollY;
     },
 
-    prepareEmail() {
-      window.open(
-        "mailto:magdalena.glas@stud.uni-regensburg.de?subject=TraineeData&body=" +
-          this.evaluationData
-      );
-    },
+  
 
     submitPoints(points2) {
       console.log("submitPoints: "+points2);
