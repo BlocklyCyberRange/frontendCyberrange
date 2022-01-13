@@ -265,11 +265,11 @@ export default {
 
   },
 
-  mounted: function () {
+  /*mounted: function () {
     this.$nextTick(function () {
       this.display_blockly_task();
     })
-  },
+  },*/
 
   methods: {
     display_blockly_task() {
@@ -397,6 +397,8 @@ export default {
         String(this.timestamp_before)
       );
       this.scrollToElement(this.taskData.tileNo);
+
+      setTimeout(() => this.display_blockly_task(), 100);
     },
 
     submitOverallPoints() {
@@ -465,7 +467,7 @@ export default {
       this.json = this.taskData.directive
 
     },
-   
+
     completeTask() {
       this.taskCompleted = true;
       this.hintActivated = false;
