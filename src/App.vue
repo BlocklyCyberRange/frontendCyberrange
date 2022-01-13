@@ -3066,27 +3066,27 @@
         <!-- -------------------------------------------------------------- -->
 
         <!--Startpage-->
-        
+
 
             <div v-if="!gameStarted">
       <!-- layout prior exercise: prompts user to login -->
       <div class="is-vhcentered has-text-centered pt-6">
-      
+
           <div class="columns is-hcentered mb-5">
             <img class="image is-hcentered" style="width: 100px"
               src="./assets/rocket.svg"
             /> </div>
-        
-        <div class="is-json title ">
-          Welcome to SOCCyberRange! 
-          <div class="subtitle mb-6 pb-6"> A Cyber Range for SOC Analysts. </div> </div> 
-          
-    
-  
 
-          
+        <div class="is-json title ">
+          Welcome to SOCCyberRange!
+          <div class="subtitle mb-6 pb-6"> A Cyber Range for SOC Analysts. </div> </div>
+
+
+
+
+
           <br>
-         
+
                 <form @submit.prevent="validateId()">
                <span>
              <input
@@ -3098,16 +3098,16 @@
               <input
                 class="input input-short is-size-6 blank-input"
                 v-model.trim="traineeID"
-                :placeholder="'ID (e.g., glr02834)'"
+                :placeholder="'ID (e.g., abc12345)'"
               />
               </span>
-              
+
            <br> <br>
             <div class="has-text-danger" v-if="emptyInput">
               User ID cannot be empty.
             </div>
             <div class="has-text-danger" v-if="wrongUserID">
-              User ID is not registered. 
+              User ID is not registered.
             </div>
 
             <div class="buttons is-centered mt-5">
@@ -3173,13 +3173,13 @@
                 To complete the cyber range training please take part in our
 <u><a class="title is-json is-primary-darker " href="https://quizizz.com/join?gc=07101609">
 final quiz</a></u>
-and let one of the trainers know when you finished. 
+and let one of the trainers know when you finished.
 <br> Please use again your <strong>NDS-account</strong> to register for the quiz.
             </h2>
 
-    
 
-          
+
+
 
         </div>
 
@@ -3516,10 +3516,10 @@ export default {
     }
   },*/
 
-  mounted: 
-  
+  mounted:
 
-  
+
+
   function () {
 
        this.url_param = new URL(location.href).searchParams.get("userID");
@@ -3531,13 +3531,13 @@ export default {
       this.validateId();
     } else {
       console.log("url is empty"); }
-    
 
-    
+
+
     this.$nextTick(function () {
 
-     
-  
+
+
       /*console.log("Start custom block");
 
       var toolbox = document.getElementById("toolbox_disabled");
@@ -3574,9 +3574,9 @@ export default {
       Blockly.Xml.domToWorkspace(workspaceBlocks, workspaceStart);*/
     })
   }
-  
-  
-    
+
+
+
     ,
 
   data() {
@@ -3647,14 +3647,14 @@ export default {
     };
   },
 
-  
+
 
   methods: {
     validateId() { //NEW
 
       if (this.traineeID == null) {
         this.emptyInput = true;
-      } 
+      }
       else {
       var docRef = userDashboard.doc(String(this.traineeID));
       docRef
@@ -3663,37 +3663,37 @@ export default {
           if (doc.exists) {
         this.emptyInput = false;
         this.gameStarted = true;
-        
-       
-       
+
+
+
         this.getUserPoints();
               }
 
              else {
                 this.wrongUserID= true;
-                
+
       }})}
-      
+
    window.onbeforeunload = function() {
   return "Data will be lost if you leave the page, are you sure?";
 };
-    
-      
+
+
       },
 
-      
+
           removeURLParameter(url, parameter) { //NEW
     //prefer to use l.search if you have a location/link object
-    var urlparts = url.split('?');   
+    var urlparts = url.split('?');
     if (urlparts.length >= 2) {
 
         var prefix = encodeURIComponent(parameter) + '=';
         var pars = urlparts[1].split(/[&;]/g);
 
         //reverse iteration as may be destructive
-        for (var i = pars.length; i-- > 0;) {    
+        for (var i = pars.length; i-- > 0;) {
             //idiom for string.startsWith
-            if (pars[i].lastIndexOf(prefix, 0) !== -1) {  
+            if (pars[i].lastIndexOf(prefix, 0) !== -1) {
                 pars.splice(i, 1);
             }
         }
@@ -3721,10 +3721,10 @@ export default {
             userDashboard.doc(this.traineeID).update({
         [fieldname]: data
       });
-            
+
           }}
-          
-        ); 
+
+        );
     },
 
 
@@ -3877,7 +3877,7 @@ export default {
       this.scrollPos = window.scrollY;
     },
 
-  
+
 
     submitPoints(points2) {
       console.log("submitPoints: "+points2);

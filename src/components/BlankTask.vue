@@ -247,10 +247,17 @@
 
                       <span
               class="no-tries-left has-text-danger"
-              v-else-if="triesLeftBlockly[index]==0"
+              v-else-if="triesLeftBlockly[index]==0 && blanks[index].wrongTry"
             >
               Sorry. You have no tries left.
                         <br>
+                        The correct answer is: "{{correctAnswers[index]}}"
+            </span>
+
+                    <span
+                        class="no-tries-left"
+                        v-else-if="triesLeftBlockly[index]==0"
+                    >
                         The correct answer is: "{{correctAnswers[index]}}"
             </span>
 
@@ -631,6 +638,7 @@ export default {
 
           allTries3[this.taskData.tileNo][index] = 0;
           localStorage.setItem("storedData", JSON.stringify(allTries3));
+          this.update_getTriesLeftBlockly(allTries3);
         } catch (err) {
           console.log("localStorage empty");
         }
@@ -651,6 +659,7 @@ export default {
             console.log("noTriesLeftBlocklyBlank: " + this.noTriesLeftBlocklyBlank);
           }
           localStorage.setItem("storedData", JSON.stringify(allTries));
+          this.update_getTriesLeftBlockly(allTries);
         } catch (err) {
           console.log("localStorage empty");
         }
@@ -695,6 +704,12 @@ export default {
         return return_tries;
       }
     },
+
+    update_getTriesLeftBlockly(triesBlockly) {
+       console.log(triesBlockly);
+      //this.triesLeftBlockly = triesBlockly; //Not ready yet for production, there is still a dislay bug
+    },
+
     getNoTriesLeftBlockly() {
       if (localStorage.getItem("storedData") != null) {
         var triesFromLocalStorage = JSON.parse(
