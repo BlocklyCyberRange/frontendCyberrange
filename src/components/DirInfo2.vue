@@ -9,29 +9,29 @@
     >
 
     <text class="has-text-grey subtitle nice-subtitle">
-      
+
     </text-->
       <text class="has-text-yellow has-text-left title is-json "
           >2.1 Directive Header</text
         >
-      <img src="./../assets/information.svg" class="image is-pulled-right " style="height: 100px"> 
-    
-        
+      <img src="./../assets/information.svg" class="image is-pulled-right " style="height: 100px">
 
-         <div class="buttons is-left mt-5"> 
+
+
+         <div class="buttons is-left mt-5">
    <button class="button is-rounded submit-button" @click="proceed()" >CONTINUE</button>
    <button @click="this.showInfo=true;" class="button is-rounded is-light is-red-br" v-if="!showInfo">Show</button>
       <button @click="this.showInfo=false;" class="button is-rounded is-light" v-else>Hide</button>
 
 
-      </div> 
- 
-        
+      </div>
+
+
     <div class="columns mr-1">
       <div
         class="column mr-2 mb-5 content has-border-right is-size-6 has-text-justified"
       >
-    
+
 
         <!--p class="pt-3">
           SIEM systems correlate security events to detect if anything unwanted
@@ -40,9 +40,9 @@
           is met an alarm appears on the SIEM dashboard. This cyberrange aims to
           teach how to build these directives
         </p-->
-        
+
         <div v-if="showInfo" class="pt-4">
-            
+
           <p>
             Every directive consists of two parts: A <strong> Directive Header</strong> and a Rules Section.
 
@@ -57,29 +57,29 @@
               <strong class="">name:</strong> the name of the SIEM alarm
             </li>
           </ul>
-          
+
 
           <strong class="is-primary-darker">
               Example:
             </strong> <br>
 
           <p class="is-italic pt-1">
-            
-            The directive on the right will trigger the alarm <strong class="is-json">  <span class="is-primary-darker">"Sensor 3 disfunction"</span> </strong> with  <strong class="is-json">id: <span class="is-primary-darker">15</span></strong> <br> 
+
+            The directive on the right will trigger the alarm <strong class="is-json">  <span class="is-primary-darker">"Sensor 3 disfunction"</span> </strong> with  <strong class="is-json">id: <span class="is-primary-darker">15</span></strong> <br>
           </p>
 
            <figure class="image ml-1 mr-1">
           <img src="./../assets/Alarm.png" />
-        </figure> 
+        </figure>
 
 
 
-          
-         <div class="buttons is-left mt-5"> 
+
+         <div class="buttons is-left mt-5">
       <button @click="this.showAdditionalInformation=true;" class="button is-rounded " v-if="!showAdditionalInformation">Show More</button>
       <button @click="this.showAdditionalInformation=false;" class="button is-rounded " v-else>Show Less</button>
-      
-      </div> 
+
+      </div>
 
 
 
@@ -108,13 +108,13 @@
           </ul>
         </div>
 
-         <div class="buttons is-left mt-5"> 
+         <div class="buttons is-left mt-5">
 
-  
+
       </div>
-        
 
-       
+
+
 
         </div>
       </div>
@@ -129,12 +129,12 @@
         <div class="pl-1 pt-3 pb-3 pr-3">
         <span
           class="has-text-black is-json is-size-7"
-         
+
         >
        rules[{{ rules.length }}]:
         </span>
-          
-         
+
+
 
         <div
           class="is-rule"
@@ -155,7 +155,7 @@
      </div>
     </div>
      </div>
- 
+
 </template>
 
   <script>

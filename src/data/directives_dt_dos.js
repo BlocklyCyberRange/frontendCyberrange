@@ -1,6 +1,17 @@
 
   const Task6 =
   {
+      blockly_task: 6,
+      blockly_inputs: [
+          "\"id\" of \"directive\"",
+          "\"name\" of \"directive\"",
+          "\"name\" of \"rule 1\"",
+          "\"plugin_sid\" of \"rule 1\"",
+          "\"name\" of \"rule 2\"",
+          "\"occurrence\" of \"rule 2\"",
+          "\"from\" of \"rule 2\"",
+          "\"to\" of \"rule 2\""
+      ],
       title: "6.2 Task:DOS-Attack",
       tileNo: "task6",
       apiPath: "dos",
@@ -11,15 +22,15 @@
       'Whenever an ICMP-REQUEST is detected (in Stage 1), the rule in Stage 2 checks whether <strong>1000 more occurrences </strong> of ICMP-REQUEST in the next 60 seconds are sent to the <strong>same Destination IP</strong> as in Stage 1.'+
       ' Create a new directive by modifying the directive you have seen in 4.2. JSON is <strong>case sensitive</strong> so there is a difference whether something is spelled in upper or smaller case.'+
       '<div class="columns is-hcentered mt-5 "> <img src="https://cdn.worldvectorlogo.com/logos/elastic-kibana.svg" class="image" style="width: 30px"> <span class="ml-1 is-hcentered "> Use the search bar of the SIEM dashboard to find the event type (name and plugin_sid) you need. </span> </div>',
-     
-    
- 
+
+
+
       directiveSimilar: {
         directives: [
 
           {
               "id": 17,
-              "name": "Sucipicous ARP-Request",
+              "name": "Suspicious ARP-Request",
               "priority": 3,
               "disabled": false,
               "all_rules_always_active": false,
@@ -43,7 +54,7 @@
                       "reliability": 2,
                       "timeout": 0
                   },
-      
+
                   {
                       "name": "ARP-REQUEST",
                       "stage": 2,
@@ -61,16 +72,16 @@
                       "reliability": 8,
                       "timeout": 60
                   }
-                  
+
               ]
           }
       ]
       },
- 
+
       directive: {
           "directives": [
               {
-              
+
               "id": 5,
               "name": "ICMP-DOS-Attack",
               "priority": 3,
@@ -117,14 +128,13 @@
             }
           ]
         }
-        
-      
-   
-   
- 
-      
-   
- 
+
+
+
+
+
+
+
+
   }
  export default Task6;
- 

@@ -21,13 +21,13 @@ app.use(VueAxios, axios)
 app.component('vue-json-editor', vueJsonEditor)
 app.component('font-awesome-icon', FontAwesomeIcon)
 
-
-
-
 app.config.productionTip = false
+//app.config.mode = "production"
+app.config.ignoredElements = ['field','block','category','xml','mutation','value','sep']
+
+console.log(app.config)
 
 app.mount('#app')
-
 
 
 
