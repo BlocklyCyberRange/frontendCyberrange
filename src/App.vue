@@ -3789,7 +3789,7 @@ export default {
            /*a user's progress within a task is not stored in firebase for performance reason and also because database updates are limited
             for this reason it is stored in the localStorage (read in the browser console with "localStorage"), from here the user's progress can be read in case of a refresh
             this prevents the user from losing their progress when refreshing the page or intentionally trying to cheat by earning points for submitting a blank twice */
-             var storedTries = {task1: [3], task2: [3,3], task3: [3,3,3,3,3,3,3,3,3], task4: [3,3,3,3,3],task5: [5], task6: [5]};
+            var storedTries = {task1: [3], task2: [3,3], task3: [3,3,3,3,3,3,3,3,3], task4: [3,3,3,3,3],task5: [5], task6: [5]};
             var blanksCompleted = {task2: 0, task3: 0, task4: 0};
             var hints = {task1: 0, task2: 0, task3: 0, task4: 0,task5: 0, task6: 0};
             localStorage.setItem("storedData",JSON.stringify(storedTries))
