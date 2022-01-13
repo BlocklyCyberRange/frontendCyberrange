@@ -440,9 +440,6 @@ export default {
         } else if (this.blanks_completed > 0) {
           this.showTask = true;
           this.taskStarted = true;
-
-
-
         }
       } catch (err) {
         console.log("localStorage empty");
@@ -679,6 +676,8 @@ export default {
         this.triesLeftBlockly[index] > 0 && !this.blanks[index].rightTry
       );
     },
+
+
     getTriesLeftBlockly() {
       if (localStorage.getItem("storedData") != null) {
         console.log("Tries from localStorage");
@@ -984,6 +983,28 @@ export default {
         return 0;
       }
     },
+
+     removeURLParameter(url, parameter) { //NEW
+    //prefer to use l.search if you have a location/link object
+    var urlparts = url.split('?');
+    if (urlparts.length >= 2) {
+
+        var prefix = encodeURIComponent(parameter) ;
+        var pars = urlparts[1].split(/[&;]/g);
+
+        //reverse iteration as may be destructive
+        for (var i = pars.length; i-- > 0;) {
+            //idiom for string.startsWith
+            if (pars[i].lastIndexOf(prefix, 0) !== -1) {
+                pars.splice(i, 1);
+            }
+        }
+
+        return urlparts[0] + (pars.length > 0 ? '?' + pars.join('&') : '');
+    }
+    return url;
+},
+
     completeTask(points) {
 
 
@@ -1006,9 +1027,14 @@ export default {
       }
 
       if (this.blanks_completed == Object.keys(this.blanks).length) {
+
+
+         var newUrl=this.removeURLParameter(location.href, "blockly")
+
+
         this.$http
           .get(
-            window.location.href.replace("7080", "9090") + this.taskData.apiPath
+            newUrl.replace("7080", "9090") + this.taskData.apiPath
           )
           .then((response) => {
             console.log(response.data);
