@@ -250,6 +250,8 @@
               v-else-if="triesLeftBlockly[index]==0"
             >
               Sorry. You have no tries left.
+                        <br>
+                        The correct answer is: "{{correctAnswers[index]}}"
             </span>
 
 
@@ -375,6 +377,7 @@ export default {
       noTriesLeftBlockly: this.getNoTriesLeftBlockly(),
       pointsBlockly: null,
       noTriesLeftBlocklyBlank: false,
+      correctAnswers: this.getCorrectAnswers(),
     };
   },
 
@@ -402,7 +405,7 @@ export default {
         return true;
       } else {
          this.checkProgress()
-        
+
         return false;
       }
     },
@@ -433,12 +436,12 @@ export default {
           this.showTlx = true;
           this.taskStarted = true;
           this.showTask = true;
-          
+
         } else if (this.blanks_completed > 0) {
           this.showTask = true;
           this.taskStarted = true;
-          
-         
+
+
 
         }
       } catch (err) {
@@ -739,6 +742,13 @@ export default {
         return_tries_empty.push(false);
       }
       return return_tries_empty;
+    },
+    getCorrectAnswers() {
+      var return_correct_answers = [];
+      for (var i = 0; i < this.taskData.blanks.length; i++) {
+        return_correct_answers.push(this.taskData.blanks[i].answer);
+      }
+      return return_correct_answers;
     },
     replaceAll(str, find, replace) {
       //return str.replace(new RegExp(find, 'g'), replace); //does not work as expected...
