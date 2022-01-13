@@ -125,7 +125,7 @@
             <div
               class="submitContainer"
               v-if="!noTriesLeftBlockly && !completedBefore"
-            >
+            > <!--BUG HERE-->
               <ul>
                 <li
                   class="submitItem"
@@ -137,6 +137,8 @@
                   </span>
 
                   <br />
+
+                  <div v-if="triesLeftBlockly[index]>0">
 
                   <span class="blockly-duplicate">
                     Your current input: "<span
@@ -186,7 +188,7 @@
                       blanks[index].dataTooltip != null
                     "
                   >
-                    Get a hint:
+                    Buy a hint:
                     <span
                       class="
                         icon
@@ -208,6 +210,8 @@
                   >
                     Hint: {{ blanks[index].dataTooltip }} (-1 point)
                   </text>
+
+                  </div>
 
                   <span class="blockly-message">
                     <span
@@ -240,17 +244,21 @@
                       Great Try! You earned
                       {{ triesLeftBlockly[index] }} point(s).
                     </span>
+
+                      <span
+              class="no-tries-left has-text-danger"
+              v-else-if="triesLeftBlockly[index]==0"
+            >
+              Sorry. You have no tries left.
+            </span>
+
+
                   </span>
                 </li>
               </ul>
             </div>
 
-            <div
-              class="no-tries-left has-text-danger"
-              v-else-if="noTriesLeftBlockly"
-            >
-              Sorry. You have no tries left.
-            </div>
+          
           </div>
 
           <span :id="'jsonGroupContainer' + taskData.blockly_task">
@@ -366,6 +374,7 @@ export default {
       emptyInputBlockly: this.getEmptyInput(),
       noTriesLeftBlockly: this.getNoTriesLeftBlockly(),
       pointsBlockly: null,
+      noTriesLeftBlocklyBlank: false,
     };
   },
 
@@ -634,7 +643,9 @@ export default {
             allTries[this.taskData.tileNo][index] - 1;
           if (allTries[this.taskData.tileNo][index] <= 0) {
             console.log("noTriesLeftBlockly: " + index);
-            this.noTriesLeftBlockly = true;
+
+            this.noTriesLeftBlocklyBlank = true; //CHANGELENA
+            console.log("noTriesLeftBlocklyBlank: " + this.noTriesLeftBlocklyBlank);
           }
           localStorage.setItem("storedData", JSON.stringify(allTries));
         } catch (err) {
@@ -685,6 +696,8 @@ export default {
           localStorage.getItem("storedData")
         )[this.taskData.tileNo];
 
+        console.log("TRIES: ", triesFromLocalStorage)
+
         if (!this.completedBefore) {
           /*var counter_no = false;
 
@@ -698,6 +711,7 @@ export default {
           return counter_no;*/
 
           var counter_no = 0;
+          console.log("TRIES: ", triesFromLocalStorage)
 
           for (var i = 0; i < triesFromLocalStorage.length; i++) {
             counter_no += triesFromLocalStorage[i];

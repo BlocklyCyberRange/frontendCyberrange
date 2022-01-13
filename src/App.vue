@@ -3875,6 +3875,8 @@ export default {
   }
 
 };
+
+
 </script>
 
 <style>
@@ -3888,6 +3890,10 @@ export default {
   left: 0;
   right: 0;
   bottom: 0;
+}
+
+.directive-completed {
+  pointer-events: none !important;
 }
 
 #blockly_task2 {
