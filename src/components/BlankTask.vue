@@ -114,7 +114,7 @@
           v-if="!viewJson"
           :class="{ 'directive-completed': task_completed || completedBefore }"
         >
-          <div :id="'blocklyGroupContainer' + taskData.blockly_task">
+          <div v-if="showBlockly" :id="'blocklyGroupContainer' + taskData.blockly_task">
             <div class="blocklyContainer">
               <div
                 class="blocklyDiv"
@@ -258,10 +258,10 @@
               </ul>
             </div>
 
-          
+
           </div>
 
-          <span :id="'jsonGroupContainer' + taskData.blockly_task">
+          <span v-if="!showBlockly" :id="'jsonGroupContainer' + taskData.blockly_task">
             <span class="has-text-black is-json is-size-7">
               directives[{{ Object.keys(directive).length }}]:
             </span>
@@ -407,11 +407,11 @@ export default {
     },
   },
 
-  mounted: function () {
+  /*mounted: function () {
     this.$nextTick(function () {
       this.display_blockly_task();
     });
-  },
+  },*/
 
   methods: {
     /*display_task() {
@@ -438,7 +438,7 @@ export default {
       }
     },
 
-    
+
 
 
 
@@ -764,10 +764,10 @@ export default {
         console.log(this.blanks);
         //this.$parent.init_blockly_task(task);
 
-        var jsonContainerHide = document.getElementById(
+        /*var jsonContainerHide = document.getElementById(
           "jsonGroupContainer" + task
         );
-        jsonContainerHide.classList.add("display-none");
+        jsonContainerHide.classList.add("display-none");*/
 
         //localStorage.setItem("current_task", task);
         //this.current_task = task;
@@ -864,10 +864,10 @@ export default {
           }
         }
       } else {
-        var blocklyContainerHide = document.getElementById(
+        /*var blocklyContainerHide = document.getElementById(
           "blocklyGroupContainer" + task
         );
-        blocklyContainerHide.classList.add("display-none");
+        blocklyContainerHide.classList.add("display-none");*/
       }
     },
     /*get_workspace(task) {
@@ -897,6 +897,8 @@ export default {
         String(this.timestamp_before)
       );
       this.scrollToElement(this.taskData.tileNo);
+
+      //setTimeout(() => this.display_blockly_task(), 100);
     },
 
     submitOverallPoints() {
