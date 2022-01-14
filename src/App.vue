@@ -3275,8 +3275,11 @@ and let one of the trainers know when you finished.
                 <div class="column right is-half" v-if="!fullscreen">
 
 
-                    <video-tile :infoData="VideoInfo[0]" :order="this.order">
+                    <video-tile :infoData="VideoInfo[5]" :order="this.order" v-if="showBlockly">
                     </video-tile>
+                     <video-tile :infoData="VideoInfo[0]" :order="this.order" v-else>
+                    </video-tile>
+
                     <dir-info-1 :order="this.order"> </dir-info-1>
                     <question-task :taskData="Task1"
                                    @submit-points="submitPoints"
