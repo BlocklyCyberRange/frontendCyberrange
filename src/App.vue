@@ -3750,7 +3750,7 @@ export default {
     },
 
     proceedToQuiz() {
-      window.open("https://quizizz.com/join?gc=07101609", "_balnk").focus();
+      window.open("https://quizizz.com/join?gc=63416233", "_balnk").focus();
     },
 
     removeURLParameter(url, parameter) {
@@ -3887,6 +3887,7 @@ export default {
                 JSON.stringify(blanksCompleted)
               );
               localStorage.setItem("hints", JSON.stringify(hints)); //NEW
+              console.log("LOCALST SET")
             }
           } else {
             // if not only played with preset users
