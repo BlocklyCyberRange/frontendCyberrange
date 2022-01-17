@@ -140,6 +140,8 @@ export default {
         this.showTlx == false;
         return true;
       } else {
+
+
         this.checkProgress();
         return false;
       }
@@ -161,7 +163,9 @@ export default {
 
     checkProgress() {
       //NEW
-
+      setTimeout(() => {
+       
+    
       try {
         var tries = JSON.parse(localStorage.getItem("storedData"));
         if (tries[this.taskData.tileNo] == 0 && !this.completedBefore) {
@@ -174,7 +178,7 @@ export default {
         }
       } catch (err) {
         console.log("localStorage empty");
-      }
+      }   }, 500);
     },
 
     submitStartTime() {
