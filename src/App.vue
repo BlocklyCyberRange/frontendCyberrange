@@ -3188,27 +3188,34 @@
 
       <h1 class="is-json title mt-5">GameCompleted.</h1>
 
-      <h2 class="is-json subtitle  mb-2">
+      <h2 class="subtitle mb-2">
         <strong>Congratulations.</strong> With your help the attacker was
         defeated. You earned <strong>{{ this.points }} points.</strong>
       </h2>
       <br />
 
-      <h2 class="subtitle mb-6">
-        To complete the cyber range training please take part in our
-        <u
-          ><a
-            class="title is-json is-primary-darker "
-            href="https://quizizz.com/join?gc=07101609"
-          >
-            final quiz</a
-          ></u
-        >
+      <h2 class="subtitle ">
+        To complete the cyber range training please take part in our final quiz
         and let one of the trainers know when you finished.
         <br />
         Please use again your <strong>NDS-account</strong> to register for the
         quiz.
       </h2>
+
+      <div class="buttons is-centered pt-3 ">
+            <button
+              class="button submit-button is-rounded "
+              type="submit"
+              value="Submit"
+              @click="
+                proceedToQuiz();"
+                
+            
+            >
+              <span>Final Quiz &#10140;</span>
+            </button>
+          </div>
+
     </div>
 
     <!--Mainpage-->
@@ -3740,6 +3747,10 @@ export default {
       window.onbeforeunload = function() {
         return "Data will be lost if you leave the page, are you sure?";
       };
+    },
+
+    proceedToQuiz() {
+      window.open("https://quizizz.com/join?gc=07101609", "_balnk").focus();
     },
 
     removeURLParameter(url, parameter) {
