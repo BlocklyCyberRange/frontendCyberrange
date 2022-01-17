@@ -3887,7 +3887,7 @@ export default {
                 JSON.stringify(blanksCompleted)
               );
               localStorage.setItem("hints", JSON.stringify(hints)); //NEW
-              console.log("LOCALST SET")
+              
             }
           } else {
             // if not only played with preset users

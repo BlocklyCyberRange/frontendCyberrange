@@ -205,14 +205,16 @@ export default {
 
     submitHint() {
       //NEW
-
+try{
       var hints = JSON.parse(localStorage.getItem("hints"));
       var totalHints = hints[this.taskData.tileNo];
       this.$emit(
         "submit-task-data",
         this.taskData.tileNo + "_hints",
         totalHints
-      );
+      ); } catch (err) {
+        console.log("localStorage empty");
+      } 
     },
 
     submitEndTime() {
@@ -261,10 +263,11 @@ export default {
 
       if (this.blanks_completed == Object.keys(this.blanks).length) {
         this.task_completed = true;
+        this.showTlx = true;
         this.submitOverallPoints();
         this.submitEndTime();
         this.submitHint();
-        this.showTlx = true;
+
         this.scrollDown(this.taskData.tileNo);
       }
     },
