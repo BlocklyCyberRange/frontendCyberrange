@@ -419,14 +419,16 @@ export default {
 
     submitHint() {
       //NEW
-
+  try {
       var hints = JSON.parse(localStorage.getItem("hints"));
       var totalHints = hints[this.taskData.tileNo];
       this.$emit(
         "submit-task-data",
         this.taskData.tileNo + "_hints",
         totalHints
-      );
+      ); } catch (err) {
+        console.log("localStorage empty");
+      }
     },
 
     submitEndTime() {
