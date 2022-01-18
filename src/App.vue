@@ -3784,6 +3784,14 @@ export default {
     },
 
     async uploadTaskData(fieldname, data) {
+
+      await userDashboard.doc(this.traineeID).update({
+        [fieldname]: data,
+      });
+
+
+     console.log("updated: ", fieldname, data)
+      /*
       var docRef = userDashboard.doc(this.traineeID);
 
       docRef.get().then((doc) => {
@@ -3792,7 +3800,8 @@ export default {
             [fieldname]: data,
           });
         }
-      });
+        console.log("updated: ", fieldname, data)
+      }); */
     },
 
     async uploadPoints() {
