@@ -3925,7 +3925,7 @@ export default {
       );
       this.submitEvaluationData();
       this.uploadEvaluationData();
-      console.log("uploaded");
+      console.log("uploaded"); 
     },
 
     textToClipboard(text) {
