@@ -70,7 +70,7 @@
           <button
               @click="finishGame()"
               class="button is-rounded submit-button"
-              v-if="this.taskData.tileNo == 'task6' && this.tlxCompleted"
+              v-if="(this.taskData.tileNo == 'task6' && this.tlxCompleted) || (completedBefore)"
           >
             Finish Game
           </button>
