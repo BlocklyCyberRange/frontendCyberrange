@@ -3750,7 +3750,7 @@ export default {
     },
 
     proceedToQuiz() {
-      window.open("https://quizizz.com/join?gc=63416233", "_balnk").focus();
+      window.open("https://quizizz.com/join?gc=17505817", "_balnk").focus();
     },
 
     removeURLParameter(url, parameter) {
