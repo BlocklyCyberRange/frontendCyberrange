@@ -15,6 +15,7 @@
     "@fortawesome/vue-fontawesome": "^3.0.0-3",
     "axios": "^0.21.1",
     "blockly": "^3.20200924.4",
+    "chokidar": "^3.5.3",
     "core-js": "^3.6.5",
     "diff-js-xml": "^1.0.6",
     "firebase": "^8.2.6",
