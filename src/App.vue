@@ -3184,6 +3184,7 @@
         src="./assets/attackerDefeated.png"
         class="image is-hcentered pb-5"
         style="width: 300px"
+        v-if="!showFinalQuiz"
       />
 
       <h1 class="is-json title mt-5">GameCompleted.</h1>
@@ -3194,7 +3195,7 @@
       </h2>
       <br />
 
-      <h2 class="subtitle ">
+      <h2 class="subtitle is-6" >
         To complete the cyber range training please take part in our final quiz
         and let one of the trainers know when you finished.
         <br />
@@ -3208,13 +3209,20 @@
               type="submit"
               value="Submit"
               @click="
-                proceedToQuiz();"
+                //proceedToQuiz();
+                showFinalQuiz=true"
                 
-            
+            v-if="!showFinalQuiz"
             >
               <span>Final Quiz &#10140;</span>
             </button>
           </div>
+
+           <iframe v-if="showFinalQuiz"
+                src="https://quizizz.com/join?gc=17505817"
+                style="display: block; width: 100%; height: 50vh"
+                class="pt-6 pb-6 mb-6"
+              ></iframe>
 
     </div>
 
@@ -3682,8 +3690,8 @@ export default {
       Info5: Info5,
       emptyInput: false,
       tasksCompleted: 0,
-      gameCompleted: false,
-      gameStarted: false,
+      gameCompleted: true,
+      gameStarted: true,
       traineeID: null,
       taskTimes: [],
       startTime: null,
@@ -3694,6 +3702,7 @@ export default {
       points: null,
       round: null,
       hideScoreboard: false,
+      showFinalQuiz: false,
       order: [
         "video1",
         "info1",
