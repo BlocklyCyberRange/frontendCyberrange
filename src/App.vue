@@ -3183,7 +3183,7 @@
 
     <iframe
       v-if="showFinalQuiz"
-      src="https://quizizz.com/join?gc=17505817"
+      src="https://quizizz.com/join?gc=05084645"
       style="display: block; width: 100%; height: 50vh"
       class="pt-6 pb-6 mb-6"
     ></iframe>
