@@ -198,13 +198,13 @@ After this extensive and complex process, an additional problem caused by Blockl
 ### Learning material
 ![Cyberrange_Learning](https://user-images.githubusercontent.com/56884203/112633883-3302c900-8e3a-11eb-9ed7-7d9406a4b715.png)
 
-### JSON Version: Blank Task
+### JSON Version: Cloze Task
 ![Cyberrange_Task_A](https://user-images.githubusercontent.com/56884203/112633784-15356400-8e3a-11eb-80d4-822119da9c16.png)
 
 ### JSON Version: Editor Task
 ![Cyberrange_Task_B](https://user-images.githubusercontent.com/56884203/112633782-15356400-8e3a-11eb-8257-ae703441701c.png)
 
-### Blockly Version: Blank Task
+### Blockly Version: Cloze Task
 ![github-blockly-1](https://user-images.githubusercontent.com/7794412/159277461-ea2d6c9d-885b-4090-a757-c7ad7c06190e.png)
 
 ### Blockly Version: Editor Task
