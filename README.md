@@ -1,4 +1,10 @@
 # frontendCyberrange
+
+This prototype  is part of research effort to explore the potential of visual programming languages (VPL) for cyber range training. It builds up on the [DigitalTwinCyberRange Project](https://github.com/DigitalTwinSocCyberrange). For further documentation and installation instructions we would like to refer to the original project.
+
+A publication is in preparation and will be linked here as soon as it is available. 
+
+
 ## Table of Contents
 [1. Introduction](#introduction)  
 [2. Technical Integration of Blockly](#technical)    
